@@ -2,7 +2,7 @@
 title: "Dissertation — Extended Table of Contents v6"
 subtitle: "Restructured around local rigidity, grounding operations, and the six lines of support"
 author: Florin Cojocariu
-status: draft
+status: draft v2
 date: 2026-04-18
 ---
 
