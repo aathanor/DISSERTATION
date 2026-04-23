@@ -20,7 +20,7 @@ The dissertation distinguishes two operations by which a linguistic element can 
 
 Rigid designation in the Kripkean sense is the social stabilization of a more primitive phenomenon: local rigidity. Local rigidity is produced by live R-grounding in demonstrative encounter, where a word coordinates with a present particular without descriptive mediation. Proper names inherit and stabilize this achievement across absence. The thesis has two parts: an account of how local rigidity is lifted into a name at baptism, and an account of what happens after the baptismal community is gone and contemporary speakers use the name without direct access to its bearer. The second part is where the dissertation goes beyond the standard picture.
 
-##  The Four Lines of Support
+## The Four Lines of Support
 
 Taking as its starting point the semantic consensus that Kripke's formula presupposes rigidity and descriptions fail modally, the positive thesis is supported by four converging lines. Line 1: De re predication requires the prior isolation of a particular before any modal evaluation can occur. Line 2: Russell identified the exact cognitive mechanism for this isolation under demonstrative acquaintance, but restricted it too narrowly. Line 3: Ordinary baptism is not a semantic primitive, but the observable event where naming latches onto this already active demonstrative grip to preserve it across absence. Line 4: The necessary a posteriori becomes cognitively intelligible once the distinction between object-mode and concept-mode is drawn. No single line is load-bearing; the argument depends on their convergence to close the metasemantic gap.
 
@@ -30,15 +30,15 @@ The dissertation is a work in the metasemantics of singular reference. It procee
 
 ## Roadmap
 
-Chapter 2 examines the formal apparatus and what it presupposes. Chapter 3 reconstructs the Russell–Kripke transition and the modal failure of descriptions. Chapter 4 introduces the $x^o$/$x^c$ distinction and the grounding vocabulary, and shows why the grounding distinction does work the mode distinction alone cannot do. Chapter 5 gives the PRU account of rigid designation, baptism, absence, and later use. Chapter 6 addresses objections. Chapter 7 concludes and marks open problems.
+Chapter 2 examines the formal apparatus and what it presupposes. Chapter 3 reconstructs the Russell–Kripke transition and the modal failure of descriptions. Chapter 4 introduces the $x^o/x^c$ distinction and the grounding vocabulary, and shows why the grounding distinction does work the mode distinction alone cannot do. Chapter 5 gives the PRU account of rigid designation, baptism, absence, and later use. Chapter 6 addresses objections. Chapter 7 concludes and marks open problems.
 
 # Chapter 2 — Identity, Objects, and Designators
 
-This chapter develops Line 1 in depth. Kripke's formula works by construction at the extensional level, and its philosophical deployment depends on unspoken transitions from variables to encountered particulars to named individuals.
+This chapter establishes the semantic consensus to pinpoint the exact location of the metasemantic gap. Kripke's formula works by construction at the extensional level, and its philosophical deployment depends on unspoken transitions from variables to encountered particulars to named individuals. Exposing this three-way equivocation reveals what must be cognitively explained.
 
-## Kripke's Sentence: The Natural-Language Gloss
+## 2.1 Kripke's Sentence: The Natural-Language Gloss
 
-## The dog1/dog2 Rewrite
+## 2.2 The dog1/dog2 Rewrite
 
 ## 2.3 The Benjamin Franklin Passage: Two Slides
 
@@ -54,7 +54,7 @@ The chapter culminates in a restrained claim: the formula does not establish rig
 
 # Chapter 3 — From Russell to Kripke: Why Descriptions Cannot Do the Job
 
-This chapter develops Lines 2 and 3. Russell identified the mechanism and retreated; descriptions cannot generate rigidity from within; Kaplan's *dthat* shows this plainly; Kripke correctly names the phenomenon but leaves the cognitive operation unspecified.
+This chapter dispatches the descriptivist alternative to isolate the actual cognitive requirement (Line 2). Descriptions cannot generate rigidity from within; Kaplan's _dthat_ shows this plainly. By contrast, Russell identified the correct mechanism—direct, non-descriptive holding of a particular—but mistakenly tied it to Cartesian certainty. Kripke correctly names the phenomenon but leaves the cognitive operation unspecified.
 
 ## 3.1 The Descriptivist Programme
 
@@ -66,9 +66,9 @@ Russell's importance is that he identifies the relevant phenomenon: direct, non-
 
 Descriptions are world-relative and cannot by themselves ground the kind of cross-world sameness that rigid designation requires.
 
-## 3.4 Kaplan's *dthat* and Borrowed Rigidity
+## 3.4 Kaplan's _dthat_ and Borrowed Rigidity
 
-Descriptions do not become rigid from within. When they appear rigid, they borrow rigidity from an already secured referential hold. The invention of *dthat* is the clearest sign that the formal tradition recognized the gap even while trying to close it from within the description side.
+Descriptions do not become rigid from within. When they appear rigid, they borrow rigidity from an already secured referential hold. The invention of _dthat_ is the clearest sign that the formal tradition recognized the gap even while trying to close it from within the description side.
 
 ## 3.5 Kripke's Rigid Designation
 
@@ -80,7 +80,7 @@ The gap stated precisely: Russell had the mechanism but not the generalization; 
 
 # Chapter 4 — The $x^o$ / $x^c$ Distinction and the Grounding Operations
 
-This chapter is the analytical core. It introduces the distinction between object-mode and concept-mode, develops the two grounding operations formally, shows why the grounding distinction is not a restatement of the mode distinction, and uses the full vocabulary to treat three further lines of support.
+This chapter is the analytical core. It introduces the distinction between object-mode and concept-mode, develops the two grounding operations formally, and shows why the grounding distinction does work the mode distinction alone cannot do. It then deploys this vocabulary to explain the cognitive requirements of de re modality (Line 1) and the necessary a posteriori (Line 4).
 
 ## 4.1 Two Modes of One Word
 
@@ -88,11 +88,11 @@ A single word can function in object-mode ($x^o$), coordinating with a present o
 
 ## 4.2 A- and R-Grounding: Formal Statement
 
-R-grounding: $\mathcal{R}(x^o, x^c)$, where a word in object-mode is coordinated with an active experiential pattern activation $E(\{X\})$ and thereby ties a concept-word to a particular. A-grounding: $\mathcal{A}(\mathcal{D}, x^c)$, where a concept-word is tied to a value through a $\langle x \rangle$-resident structure $\mathcal{D}$ — a description, a bound variable under an assignment function, a logical or mathematical specification, a narrative attribution. The two operations are not rivals but different operations that do different work.
+R-grounding: $\mathcal{R}(x^o, x^c)$, where a word in object-mode is coordinated with an active experiential pattern activation $E({X})$ and thereby ties a concept-word to a particular. A-grounding: $\mathcal{A}(\mathcal{D}, x^c)$, where a concept-word is tied to a value through a $\langle x \rangle$-resident structure $\mathcal{D}$ — a description, a bound variable under an assignment function, a logical or mathematical specification, a narrative attribution. The two operations are not rivals but different operations that do different work.
 
 ## 4.3 Why the Grounding Distinction Is Not a Restatement
 
-The mode distinction and the grounding distinction are not two names for the same thing. Memory-based reference in absence — "the chair we saw in IKEA" — shows where they come apart. The word "chair" in this use is not functioning in object-mode (no active $E(\{CHAIR\})$) but not cleanly in concept-mode either (the reference is to a particular, not to the generic network of chair-talk). What resolves this is $\mathcal{A}(\mathcal{D}, chair^c)$, where $\mathcal{D}$ is descriptive material drawn from memory that retains a link to an earlier R-grounded encounter. This case is not cleanly describable with the mode distinction alone; the grounding distinction earns its place by handling it.
+The mode distinction and the grounding distinction are not two names for the same thing. Memory-based reference in absence — "the chair we saw in IKEA" — shows where they come apart. The word "chair" in this use is not functioning in object-mode (no active $E({CHAIR})$) but not cleanly in concept-mode either (the reference is to a particular, not to the generic network of chair-talk). What resolves this is $\mathcal{A}(\mathcal{D}, chair^c)$, where $\mathcal{D}$ is descriptive material drawn from memory that retains a link to an earlier R-grounded encounter. This case is not cleanly describable with the mode distinction alone; the grounding distinction earns its place by handling it.
 
 ## 4.4 Identity and the Necessary A Posteriori
 
@@ -102,7 +102,7 @@ The distinction resolves the puzzle by showing how one and the same statement ca
 
 De re predication presupposes prior fixation of a particular. This fixation is the functional role of $x^o$ in live cases and of the categorial feature of names in absence cases.
 
-## 4.6 Names as the $x^o$/$x^c$ Interface
+## 4.6 Names as the $x^o/x^c$ Interface
 
 Names join two strata: the object they track and the descriptive or narrative material speakers accumulate around them. This explains how a name can remain referentially stable even when the speaker's beliefs are thin or mistaken.
 
@@ -120,7 +120,7 @@ Necessary a posteriori identities, de re predication, selective ungrounding, and
 
 # Chapter 5 — The PRU Account of Rigid Designation
 
-This chapter is the positive account. The argumentative spine runs from the cognitive primitive through baptism as its lifting, to the problem of absence and its resolution through A-grounding, to the role of causal chains and a brief coda on possible worlds.
+This chapter is the positive account. The argumentative spine runs from the cognitive primitive through baptism as the observable lifting of a live demonstrative grip (Line 3), to the problem of absence and its resolution through A-grounding, to the role of causal chains and a brief coda on possible worlds.
 
 ## 5.1 PRU Vocabulary and $x^o$ as the Cognitive Primitive
 
@@ -174,7 +174,7 @@ The last objection is important because the dissertation uses the categorial cla
 
 ## 7.1 The Argument Reconstructed
 
-Rigid designation is the social stabilization of primitive local rigidity. Kripke's formal apparatus presupposes it. Russell glimpsed it. Descriptions cannot generate it. The $x^o$/$x^c$ distinction names it. PRU explains how baptism exports it into absence and how later speakers continue to use names without collapsing into descriptivism.
+Rigid designation is the social stabilization of primitive local rigidity. Kripke's formal apparatus presupposes it. Russell glimpsed it. Descriptions cannot generate it. The $x^o/x^c$ distinction names it. PRU explains how baptism exports it into absence and how later speakers continue to use names without collapsing into descriptivism.
 
 ## 7.2 What PRU Explains That Other Accounts Do Not
 
@@ -182,16 +182,17 @@ PRU explains both the origin of rigidity and the structure of later name use wit
 
 ## 7.3 Open Questions
 
-### 7.3.1 General-Term Rigidity
+## 7.3.1 General-Term Rigidity
 
-### 7.3.2 Fictional Names and Empty Reference
+## 7.3.2 Fictional Names and Empty Reference
 
-### 7.3.3 Mathematical Reference Without Baptism
+## 7.3.3 Mathematical Reference Without Baptism
 
-### 7.3.4 The Spectrum from Live R to Historical A
+## 7.3.4 The Spectrum from Live R to Historical A
 
-### 7.3.5 The Nature and Limits of Categorial Name-Competence
+## 7.3.5 The Nature and Limits of Categorial Name-Competence
 
-### 7.3.6 LLMs as a Diagnostic Case: $x^c$ Without $x^o$
+## 7.3.6 LLMs as a Diagnostic Case: $x^c$ Without $x^o$
 
-### 7.3.7 Existence Quantifiers Revisited
+## 7.3.7 Existence Quantifiers Revisited
+
