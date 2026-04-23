@@ -1,0 +1,27 @@
+# ── Dissertation folders to ignore ──────────────────────
+NOTES/
+ARHIVATE/
+PDFs/
+LATEX/
+
+# ── macOS system files ───────────────────────────────────
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+.AppleDouble
+.LSOverride
+Icon?
+
+# ── macOS directory metadata ─────────────────────────────
+**/.DS_Store
+
+# ── Zettlr workspace file ────────────────────────────────
+*.ztr-project
+.ztr-directory
+
+# ── Common temp/editor files ─────────────────────────────
+*.tmp
+*.bak
+*~
