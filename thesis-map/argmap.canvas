@@ -1,0 +1,478 @@
+{
+  "nodes": [
+    {
+      "id": "zone-notation",
+      "type": "text",
+      "x": 20,
+      "y": 0,
+      "width": 200,
+      "height": 16,
+      "text": "notation",
+      "role": "label"
+    },
+    {
+      "id": "xo-xc",
+      "type": "text",
+      "x": 20,
+      "y": 22,
+      "width": 400,
+      "height": 44,
+      "text": "**x\u1d52 / x\u1d9c Distinction**\ntwo modes of one word",
+      "kind": "notation-primary",
+      "color": "2"
+    },
+    {
+      "id": "xo",
+      "type": "text",
+      "x": 20,
+      "y": 76,
+      "width": 125,
+      "height": 34,
+      "text": "**x\u1d52 \u2014 object-mode**\n\"this x here\"",
+      "kind": "notation-secondary",
+      "color": "2"
+    },
+    {
+      "id": "R",
+      "type": "text",
+      "x": 158,
+      "y": 76,
+      "width": 125,
+      "height": 34,
+      "text": "**\ud835\udce1 \u2014 grounding op**\n\u27e8x\u27e9 \u2194 E({X})",
+      "kind": "notation-secondary",
+      "color": "2"
+    },
+    {
+      "id": "xc",
+      "type": "text",
+      "x": 295,
+      "y": 76,
+      "width": 125,
+      "height": 34,
+      "text": "**x\u1d9c \u2014 concept-mode**\n\"the x\", \"x is...\"",
+      "kind": "notation-secondary",
+      "color": "2"
+    },
+    {
+      "id": "zone-framing",
+      "type": "text",
+      "x": 20,
+      "y": 124,
+      "width": 200,
+      "height": 16,
+      "text": "framing",
+      "role": "label"
+    },
+    {
+      "id": "framing",
+      "type": "text",
+      "x": 20,
+      "y": 148,
+      "width": 400,
+      "height": 42,
+      "text": "**Language can locate, but not hold**\ncentral observation",
+      "kind": "framing",
+      "color": "3"
+    },
+    {
+      "id": "thesis",
+      "type": "text",
+      "x": 20,
+      "y": 200,
+      "width": 400,
+      "height": 50,
+      "text": "**Central Thesis**\nRigid designation = social stabilization of x\u1d52 tracking",
+      "kind": "thesis",
+      "color": "2"
+    },
+    {
+      "id": "zone-positions",
+      "type": "text",
+      "x": 20,
+      "y": 264,
+      "width": 220,
+      "height": 16,
+      "text": "positions in the debate",
+      "role": "label"
+    },
+    {
+      "id": "russell",
+      "type": "text",
+      "x": 10,
+      "y": 290,
+      "width": 110,
+      "height": 44,
+      "text": "**Russell**\nfound, then restricted",
+      "kind": "thinker",
+      "color": "5",
+      "shape": "ellipse"
+    },
+    {
+      "id": "kripke",
+      "type": "text",
+      "x": 165,
+      "y": 290,
+      "width": 110,
+      "height": 44,
+      "text": "**Kripke**\nextended, didn't supply",
+      "kind": "thinker",
+      "color": "5",
+      "shape": "ellipse"
+    },
+    {
+      "id": "pru",
+      "type": "text",
+      "x": 320,
+      "y": 290,
+      "width": 110,
+      "height": 44,
+      "text": "**PRU**\nproposed mechanism",
+      "kind": "proposal",
+      "color": "2",
+      "shape": "ellipse"
+    },
+    {
+      "id": "gap",
+      "type": "text",
+      "x": 120,
+      "y": 355,
+      "width": 200,
+      "height": 36,
+      "text": "**The Explanatory Gap**",
+      "kind": "gap",
+      "color": "6",
+      "dashed": true
+    },
+    {
+      "id": "zone-support",
+      "type": "text",
+      "x": 20,
+      "y": 406,
+      "width": 200,
+      "height": 16,
+      "text": "lines of support",
+      "role": "label"
+    },
+    {
+      "id": "line1",
+      "type": "text",
+      "x": 20,
+      "y": 432,
+      "width": 125,
+      "height": 32,
+      "text": "**1. Formula**\nextensional silence",
+      "kind": "support",
+      "color": "4"
+    },
+    {
+      "id": "line2",
+      "type": "text",
+      "x": 158,
+      "y": 432,
+      "width": 125,
+      "height": 32,
+      "text": "**2. Russell**\ndemonstratives",
+      "kind": "support",
+      "color": "4"
+    },
+    {
+      "id": "line3",
+      "type": "text",
+      "x": 295,
+      "y": 432,
+      "width": 125,
+      "height": 32,
+      "text": "**3. Descriptions**\nmodal failure",
+      "kind": "support",
+      "color": "4"
+    },
+    {
+      "id": "local-rigidity",
+      "type": "text",
+      "x": 90,
+      "y": 535,
+      "width": 260,
+      "height": 46,
+      "text": "**Local Rigidity**\nthe primitive form of reference",
+      "kind": "hub",
+      "color": "1"
+    },
+    {
+      "id": "line4",
+      "type": "text",
+      "x": 20,
+      "y": 472,
+      "width": 125,
+      "height": 32,
+      "text": "**4. De re**\npayoff, not support",
+      "kind": "explained",
+      "color": "4",
+      "dashed": true
+    },
+    {
+      "id": "line5",
+      "type": "text",
+      "x": 158,
+      "y": 472,
+      "width": 125,
+      "height": 32,
+      "text": "**5. Nec. a posteriori**\npayoff, not support",
+      "kind": "explained",
+      "color": "4",
+      "dashed": true
+    },
+    {
+      "id": "line6",
+      "type": "text",
+      "x": 295,
+      "y": 472,
+      "width": 125,
+      "height": 32,
+      "text": "**6. Baptism**\nlifting, not creation",
+      "kind": "support",
+      "color": "4"
+    },
+    {
+      "id": "zone-mechanism",
+      "type": "text",
+      "x": 20,
+      "y": 594,
+      "width": 200,
+      "height": 16,
+      "text": "mechanism",
+      "role": "label"
+    },
+    {
+      "id": "baptism",
+      "type": "text",
+      "x": 80,
+      "y": 620,
+      "width": 280,
+      "height": 36,
+      "text": "**Baptism as Lifting**\n\ud835\udce1(h\u1d52, N\u1d9c) \u2014 portable demonstratives",
+      "kind": "mechanism",
+      "color": "2"
+    },
+    {
+      "id": "zone-chapters",
+      "type": "text",
+      "x": 20,
+      "y": 672,
+      "width": 200,
+      "height": 16,
+      "text": "chapter structure",
+      "role": "label"
+    },
+    {
+      "id": "ch1",
+      "type": "text",
+      "x": 20,
+      "y": 698,
+      "width": 400,
+      "height": 28,
+      "text": "**Ch. 1 \u2014 Introduction**",
+      "kind": "chapter",
+      "color": "6"
+    },
+    {
+      "id": "ch2",
+      "type": "text",
+      "x": 20,
+      "y": 730,
+      "width": 400,
+      "height": 28,
+      "text": "**Ch. 2 \u2014 Identity, Objects, and Designators**",
+      "kind": "chapter",
+      "color": "6"
+    },
+    {
+      "id": "ch3",
+      "type": "text",
+      "x": 20,
+      "y": 762,
+      "width": 400,
+      "height": 28,
+      "text": "**Ch. 3 \u2014 From Russell to Kripke**",
+      "kind": "chapter",
+      "color": "6"
+    },
+    {
+      "id": "ch4",
+      "type": "text",
+      "x": 20,
+      "y": 794,
+      "width": 400,
+      "height": 28,
+      "text": "**Ch. 4 \u2014 The x\u1d52 / x\u1d9c Distinction**",
+      "kind": "chapter",
+      "color": "6"
+    },
+    {
+      "id": "ch5",
+      "type": "text",
+      "x": 20,
+      "y": 826,
+      "width": 400,
+      "height": 28,
+      "text": "**Ch. 5 \u2014 The PRU Account of Rigid Designation**",
+      "kind": "chapter",
+      "color": "6"
+    },
+    {
+      "id": "ch6",
+      "type": "text",
+      "x": 20,
+      "y": 858,
+      "width": 400,
+      "height": 28,
+      "text": "**Ch. 6 \u2014 Objections and Replies**",
+      "kind": "chapter",
+      "color": "6"
+    },
+    {
+      "id": "ch7",
+      "type": "text",
+      "x": 20,
+      "y": 890,
+      "width": 400,
+      "height": 28,
+      "text": "**Ch. 7 \u2014 Conclusions and Future Research**",
+      "kind": "chapter",
+      "color": "6"
+    },
+    {
+      "id": "zone-anchors",
+      "type": "text",
+      "x": 20,
+      "y": 934,
+      "width": 200,
+      "height": 16,
+      "text": "key anchors",
+      "role": "label"
+    },
+    {
+      "id": "witt",
+      "type": "text",
+      "x": 20,
+      "y": 960,
+      "width": 195,
+      "height": 32,
+      "text": "**Wittgenstein 5.5303**\nidentity is between designators",
+      "kind": "anchor",
+      "color": "6"
+    },
+    {
+      "id": "franklin",
+      "type": "text",
+      "x": 225,
+      "y": 960,
+      "width": 195,
+      "height": 32,
+      "text": "**Benjamin Franklin passage**\nthe slide caught in Kripke's text",
+      "kind": "anchor",
+      "color": "6"
+    },
+    {
+      "id": "seven-steps",
+      "type": "text",
+      "x": 20,
+      "y": 1000,
+      "width": 195,
+      "height": 32,
+      "text": "**The Argument in Seven Steps**\nlinear reconstruction",
+      "kind": "anchor-highlight",
+      "color": "3"
+    },
+    {
+      "id": "whats-new",
+      "type": "text",
+      "x": 225,
+      "y": 1000,
+      "width": 195,
+      "height": 32,
+      "text": "**What is New / Inherited**\ncontribution boundary",
+      "kind": "anchor-highlight",
+      "color": "3"
+    }
+  ],
+  "edges": [
+    {
+      "id": "edge-0",
+      "fromNode": "xo-xc",
+      "toNode": "xo",
+      "fromEnd": "none",
+      "toEnd": "none"
+    },
+    {
+      "id": "edge-1",
+      "fromNode": "xo-xc",
+      "toNode": "R",
+      "fromEnd": "none",
+      "toEnd": "none"
+    },
+    {
+      "id": "edge-2",
+      "fromNode": "xo-xc",
+      "toNode": "xc",
+      "fromEnd": "none",
+      "toEnd": "none"
+    },
+    {
+      "id": "edge-3",
+      "fromNode": "russell",
+      "toNode": "kripke",
+      "fromEnd": "none",
+      "toEnd": "none"
+    },
+    {
+      "id": "edge-4",
+      "fromNode": "kripke",
+      "toNode": "pru",
+      "fromEnd": "none",
+      "toEnd": "none"
+    },
+    {
+      "id": "edge-5",
+      "fromNode": "kripke",
+      "toNode": "gap",
+      "fromEnd": "none",
+      "toEnd": "none"
+    },
+    {
+      "id": "edge-6",
+      "fromNode": "line1",
+      "toNode": "local-rigidity",
+      "fromEnd": "none",
+      "toEnd": "none"
+    },
+    {
+      "id": "edge-7",
+      "fromNode": "line2",
+      "toNode": "local-rigidity",
+      "fromEnd": "none",
+      "toEnd": "none"
+    },
+    {
+      "id": "edge-8",
+      "fromNode": "line3",
+      "toNode": "local-rigidity",
+      "fromEnd": "none",
+      "toEnd": "none"
+    },
+    {
+      "id": "edge-9",
+      "fromNode": "line6",
+      "toNode": "local-rigidity",
+      "fromEnd": "none",
+      "toEnd": "none"
+    },
+    {
+      "id": "edge-10",
+      "fromNode": "local-rigidity",
+      "toNode": "baptism",
+      "fromEnd": "none",
+      "toEnd": "none"
+    }
+  ]
+}
