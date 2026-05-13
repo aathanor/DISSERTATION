@@ -1,11 +1,11 @@
 ---
-title: "Line 4 — De re modality"
-kind: "Convergence: holding an individual fixed before modal evaluation"
-related: [line1, line3, witt, local-rigidity]
+title: "De re modality"
+kind: "What the framework explains (Ch 4)"
+related: [xo-xc, local-rigidity, ch4]
 ---
 
 De re modality requires picking out an individual independently of any description before modal evaluation can begin. The fixing has to happen first; only then can we ask what is necessary or contingent of that individual.
 
-This is local rigidity functioning as the precondition of modal claims about objects. The medieval de dicto / de re distinction had the same purpose. The problem is ancient; PRU recovers something cognition always already does, rather than introducing something exotic.
+This is local rigidity functioning as the precondition of modal claims about objects. The medieval *de dicto / de re* distinction had the same purpose. The $x^o / x^c$ distinction recovers the phenomenon: *de re* is modal evaluation after the particular has been fixed ($x^o$ mode); *de dicto* keeps the description live ($x^c$ mode) and re-evaluates world by world.
 
-(Honest framing note: this entry is essentially the central claim restated. "Isolate a particular before modal evaluation" just *is* local rigidity. It illustrates the framework rather than independently supporting it — closer to a payoff than a line of evidence. Flagged for downgrading or relabeling.)
+Placement in the dissertation: Chapter 4, §4.3 (rigidity as a property of $x^o$-mode designation), as a demonstration that the distinction does logical work beyond the philosophy of names.
