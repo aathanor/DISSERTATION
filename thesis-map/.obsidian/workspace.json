@@ -15,9 +15,9 @@
               "state": {
                 "file": "argmap.canvas",
                 "viewState": {
-                  "x": 227.5,
-                  "y": 640.5,
-                  "zoom": -0.5497131324646265
+                  "x": 220,
+                  "y": 481,
+                  "zoom": 0
                 }
               },
               "icon": "lucide-layout-dashboard",
@@ -188,8 +188,9 @@
   },
   "active": "cc5a1d39f3417656",
   "lastOpenFiles": [
+    "content/xo-xc.md",
+    "argmap.canvas",
     "content/ch1.md",
-    "content/line1.md",
-    "argmap.canvas"
+    "content/line1.md"
   ]
 }

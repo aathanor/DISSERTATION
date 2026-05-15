@@ -1,488 +1,54 @@
 {
-  "nodes": [
-    {
-      "id": "zone-notation",
-      "type": "text",
-      "x": 20,
-      "y": 0,
-      "width": 200,
-      "height": 14,
-      "text": "notation",
-      "role": "label"
-    },
-    {
-      "id": "xo-xc",
-      "type": "text",
-      "x": 20,
-      "y": 18,
-      "width": 400,
-      "height": 44,
-      "text": "**x\u1d52 / x\u1d9c Distinction**\ntwo modes of one word",
-      "kind": "notation-primary",
-      "color": "2"
-    },
-    {
-      "id": "xo",
-      "type": "text",
-      "x": 20,
-      "y": 66,
-      "width": 125,
-      "height": 34,
-      "text": "**x\u1d52 \u2014 object-mode**\n\"this x here\"",
-      "kind": "notation-secondary",
-      "color": "2"
-    },
-    {
-      "id": "R",
-      "type": "text",
-      "x": 158,
-      "y": 66,
-      "width": 125,
-      "height": 34,
-      "text": "**\ud835\udce1 \u2014 grounding op**\n\u27e8x\u27e9 \u2194 E({X})",
-      "kind": "notation-secondary",
-      "color": "2"
-    },
-    {
-      "id": "xc",
-      "type": "text",
-      "x": 295,
-      "y": 66,
-      "width": 125,
-      "height": 34,
-      "text": "**x\u1d9c \u2014 concept-mode**\n\"the x\", \"x is...\"",
-      "kind": "notation-secondary",
-      "color": "2"
-    },
-    {
-      "id": "zone-framing",
-      "type": "text",
-      "x": 20,
-      "y": 114,
-      "width": 200,
-      "height": 14,
-      "text": "framing",
-      "role": "label"
-    },
-    {
-      "id": "framing",
-      "type": "text",
-      "x": 20,
-      "y": 132,
-      "width": 400,
-      "height": 44,
-      "text": "**Language can locate, but not hold**\ncentral observation",
-      "kind": "framing",
-      "color": "3"
-    },
-    {
-      "id": "thesis",
-      "type": "text",
-      "x": 20,
-      "y": 180,
-      "width": 400,
-      "height": 48,
-      "text": "**Central Thesis**\nRigid designation = social stabilization of x\u1d52 tracking",
-      "kind": "thesis",
-      "color": "2"
-    },
-    {
-      "id": "zone-positions",
-      "type": "text",
-      "x": 20,
-      "y": 242,
-      "width": 230,
-      "height": 14,
-      "text": "positions in the debate",
-      "role": "label"
-    },
-    {
-      "id": "russell",
-      "type": "text",
-      "x": 20,
-      "y": 260,
-      "width": 120,
-      "height": 44,
-      "text": "**Russell**\nfound, then restricted",
-      "kind": "thinker",
-      "color": "5",
-      "shape": "ellipse"
-    },
-    {
-      "id": "kripke",
-      "type": "text",
-      "x": 160,
-      "y": 260,
-      "width": 120,
-      "height": 44,
-      "text": "**Kripke**\nextended, didn't supply",
-      "kind": "thinker",
-      "color": "5",
-      "shape": "ellipse"
-    },
-    {
-      "id": "pru",
-      "type": "text",
-      "x": 300,
-      "y": 260,
-      "width": 120,
-      "height": 44,
-      "text": "**PRU**\nproposed mechanism",
-      "kind": "proposal",
-      "color": "2",
-      "shape": "ellipse"
-    },
-    {
-      "id": "gap",
-      "type": "text",
-      "x": 120,
-      "y": 312,
-      "width": 200,
-      "height": 34,
-      "text": "**The Explanatory Gap**",
-      "kind": "gap",
-      "color": "6",
-      "dashed": true
-    },
-    {
-      "id": "zone-support",
-      "type": "text",
-      "x": 20,
-      "y": 360,
-      "width": 200,
-      "height": 14,
-      "text": "lines of support",
-      "role": "label"
-    },
-    {
-      "id": "line1",
-      "type": "text",
-      "x": 20,
-      "y": 378,
-      "width": 93,
-      "height": 36,
-      "text": "**1. Formula**\nextensional silence",
-      "kind": "support",
-      "color": "4"
-    },
-    {
-      "id": "line2",
-      "type": "text",
-      "x": 117,
-      "y": 378,
-      "width": 93,
-      "height": 36,
-      "text": "**2. Russell**\ndemonstratives",
-      "kind": "support",
-      "color": "4"
-    },
-    {
-      "id": "line3",
-      "type": "text",
-      "x": 214,
-      "y": 378,
-      "width": 93,
-      "height": 36,
-      "text": "**3. Descriptions**\nmodal failure",
-      "kind": "support",
-      "color": "4"
-    },
-    {
-      "id": "line6",
-      "type": "text",
-      "x": 311,
-      "y": 378,
-      "width": 93,
-      "height": 36,
-      "text": "**6. Baptism**\nlifting, not creation",
-      "kind": "support",
-      "color": "4"
-    },
-    {
-      "id": "local-rigidity",
-      "type": "text",
-      "x": 90,
-      "y": 428,
-      "width": 260,
-      "height": 50,
-      "text": "**Local Rigidity**\nthe primitive form of reference",
-      "kind": "hub",
-      "color": "1"
-    },
-    {
-      "id": "zone-mechanism",
-      "type": "text",
-      "x": 20,
-      "y": 488,
-      "width": 200,
-      "height": 14,
-      "text": "mechanism",
-      "role": "label"
-    },
-    {
-      "id": "baptism",
-      "type": "text",
-      "x": 80,
-      "y": 506,
-      "width": 280,
-      "height": 36,
-      "text": "**Baptism as Lifting**\n\ud835\udce1(h\u1d52, N\u1d9c) \u2014 portable demonstratives",
-      "kind": "mechanism",
-      "color": "2"
-    },
-    {
-      "id": "zone-explained",
-      "type": "text",
-      "x": 20,
-      "y": 556,
-      "width": 260,
-      "height": 14,
-      "text": "what the account explains",
-      "role": "label"
-    },
-    {
-      "id": "line4",
-      "type": "text",
-      "x": 50,
-      "y": 574,
-      "width": 155,
-      "height": 36,
-      "text": "**De re modality**\ntreated in Ch 4 (\u00a74.3)",
-      "kind": "explained",
-      "color": "4",
-      "dashed": true
-    },
-    {
-      "id": "line5",
-      "type": "text",
-      "x": 235,
-      "y": 574,
-      "width": 155,
-      "height": 36,
-      "text": "**Necessary a posteriori**\ntreated in Ch 5",
-      "kind": "explained",
-      "color": "4",
-      "dashed": true
-    },
-    {
-      "id": "zone-chapters",
-      "type": "text",
-      "x": 20,
-      "y": 624,
-      "width": 200,
-      "height": 14,
-      "text": "chapter structure",
-      "role": "label"
-    },
-    {
-      "id": "ch1",
-      "type": "text",
-      "x": 20,
-      "y": 642,
-      "width": 400,
-      "height": 28,
-      "text": "**Ch. 1 \u2014 Introduction**",
-      "kind": "chapter",
-      "color": "6"
-    },
-    {
-      "id": "ch2",
-      "type": "text",
-      "x": 20,
-      "y": 674,
-      "width": 400,
-      "height": 28,
-      "text": "**Ch. 2 \u2014 Identity, Objects, and Designators**",
-      "kind": "chapter",
-      "color": "6"
-    },
-    {
-      "id": "ch3",
-      "type": "text",
-      "x": 20,
-      "y": 706,
-      "width": 400,
-      "height": 28,
-      "text": "**Ch. 3 \u2014 From Russell to Kripke**",
-      "kind": "chapter",
-      "color": "6"
-    },
-    {
-      "id": "ch4",
-      "type": "text",
-      "x": 20,
-      "y": 738,
-      "width": 400,
-      "height": 28,
-      "text": "**Ch. 4 \u2014 The x\u1d52 / x\u1d9c Distinction**",
-      "kind": "chapter",
-      "color": "6"
-    },
-    {
-      "id": "ch5",
-      "type": "text",
-      "x": 20,
-      "y": 770,
-      "width": 400,
-      "height": 28,
-      "text": "**Ch. 5 \u2014 The PRU Account of Rigid Designation**",
-      "kind": "chapter",
-      "color": "6"
-    },
-    {
-      "id": "ch6",
-      "type": "text",
-      "x": 20,
-      "y": 802,
-      "width": 400,
-      "height": 28,
-      "text": "**Ch. 6 \u2014 Objections and Replies**",
-      "kind": "chapter",
-      "color": "6"
-    },
-    {
-      "id": "ch7",
-      "type": "text",
-      "x": 20,
-      "y": 834,
-      "width": 400,
-      "height": 28,
-      "text": "**Ch. 7 \u2014 Conclusions and Future Research**",
-      "kind": "chapter",
-      "color": "6"
-    },
-    {
-      "id": "zone-anchors",
-      "type": "text",
-      "x": 20,
-      "y": 876,
-      "width": 200,
-      "height": 14,
-      "text": "key anchors",
-      "role": "label"
-    },
-    {
-      "id": "witt",
-      "type": "text",
-      "x": 20,
-      "y": 894,
-      "width": 195,
-      "height": 32,
-      "text": "**Wittgenstein 5.5303**\nidentity is between designators",
-      "kind": "anchor",
-      "color": "6"
-    },
-    {
-      "id": "franklin",
-      "type": "text",
-      "x": 225,
-      "y": 894,
-      "width": 195,
-      "height": 32,
-      "text": "**Benjamin Franklin passage**\nthe slide in Kripke's text",
-      "kind": "anchor",
-      "color": "6"
-    },
-    {
-      "id": "seven-steps",
-      "type": "text",
-      "x": 20,
-      "y": 930,
-      "width": 195,
-      "height": 32,
-      "text": "**The Argument in Seven Steps**\nlinear reconstruction",
-      "kind": "anchor-highlight",
-      "color": "3"
-    },
-    {
-      "id": "whats-new",
-      "type": "text",
-      "x": 225,
-      "y": 930,
-      "width": 195,
-      "height": 32,
-      "text": "**What is New / Inherited**\ncontribution boundary",
-      "kind": "anchor-highlight",
-      "color": "3"
-    }
-  ],
-  "edges": [
-    {
-      "id": "e0",
-      "fromNode": "xo-xc",
-      "toNode": "xo",
-      "fromEnd": "none",
-      "toEnd": "none"
-    },
-    {
-      "id": "e1",
-      "fromNode": "xo-xc",
-      "toNode": "R",
-      "fromEnd": "none",
-      "toEnd": "none"
-    },
-    {
-      "id": "e2",
-      "fromNode": "xo-xc",
-      "toNode": "xc",
-      "fromEnd": "none",
-      "toEnd": "none"
-    },
-    {
-      "id": "e3",
-      "fromNode": "russell",
-      "toNode": "kripke",
-      "fromEnd": "none",
-      "toEnd": "none"
-    },
-    {
-      "id": "e4",
-      "fromNode": "kripke",
-      "toNode": "pru",
-      "fromEnd": "none",
-      "toEnd": "none"
-    },
-    {
-      "id": "e5",
-      "fromNode": "kripke",
-      "toNode": "gap",
-      "fromEnd": "none",
-      "toEnd": "none"
-    },
-    {
-      "id": "e6",
-      "fromNode": "line1",
-      "toNode": "local-rigidity",
-      "fromEnd": "none",
-      "toEnd": "none"
-    },
-    {
-      "id": "e7",
-      "fromNode": "line2",
-      "toNode": "local-rigidity",
-      "fromEnd": "none",
-      "toEnd": "none"
-    },
-    {
-      "id": "e8",
-      "fromNode": "line3",
-      "toNode": "local-rigidity",
-      "fromEnd": "none",
-      "toEnd": "none"
-    },
-    {
-      "id": "e9",
-      "fromNode": "line6",
-      "toNode": "local-rigidity",
-      "fromEnd": "none",
-      "toEnd": "none"
-    },
-    {
-      "id": "e10",
-      "fromNode": "local-rigidity",
-      "toNode": "baptism",
-      "fromEnd": "none",
-      "toEnd": "none"
-    }
-  ]
+	"nodes":[
+		{"id":"zone-notation","type":"text","x":20,"y":0,"width":200,"height":14,"text":"notation","role":"label"},
+		{"id":"xo-xc","type":"text","x":20,"y":18,"width":400,"height":44,"text":"**xᵒ / xᶜ Distinction**\ntwo modes of one word","kind":"notation-primary","color":"2"},
+		{"id":"xo","type":"text","x":20,"y":66,"width":125,"height":34,"text":"**xᵒ — object-mode**\n\"this x here\"","kind":"notation-secondary","color":"2"},
+		{"id":"R","type":"text","x":158,"y":66,"width":125,"height":34,"text":"**𝓡 — grounding op**\n⟨x⟩ ↔ E({X})","kind":"notation-secondary","color":"2"},
+		{"id":"xc","type":"text","x":295,"y":66,"width":125,"height":34,"text":"**xᶜ — concept-mode**\n\"the x\", \"x is...\"","kind":"notation-secondary","color":"2"},
+		{"id":"zone-framing","type":"text","x":20,"y":114,"width":200,"height":14,"text":"framing","role":"label"},
+		{"id":"framing","type":"text","x":20,"y":132,"width":400,"height":44,"text":"**Language can locate, but not hold**\ncentral observation","kind":"framing","color":"3"},
+		{"id":"thesis","type":"text","x":20,"y":180,"width":400,"height":48,"text":"**Central Thesis**\nRigid designation = social stabilization of xᵒ tracking","kind":"thesis","color":"2"},
+		{"id":"zone-positions","type":"text","x":20,"y":242,"width":230,"height":14,"text":"positions in the debate","role":"label"},
+		{"id":"russell","type":"text","x":20,"y":260,"width":120,"height":44,"text":"**Russell**\nfound, then restricted","kind":"thinker","color":"5","shape":"ellipse"},
+		{"id":"kripke","type":"text","x":160,"y":260,"width":120,"height":44,"text":"**Kripke**\nextended, didn't supply","kind":"thinker","color":"5","shape":"ellipse"},
+		{"id":"pru","type":"text","x":300,"y":260,"width":120,"height":44,"text":"**PRU**\nproposed mechanism","kind":"proposal","color":"2","shape":"ellipse"},
+		{"id":"gap","type":"text","x":120,"y":312,"width":200,"height":34,"text":"**The Explanatory Gap**","kind":"gap","color":"6","dashed":true},
+		{"id":"zone-support","type":"text","x":20,"y":360,"width":200,"height":14,"text":"lines of support","role":"label"},
+		{"id":"line1","type":"text","x":20,"y":378,"width":93,"height":36,"text":"**1. Formula**\nextensional silence","kind":"support","color":"4"},
+		{"id":"line2","type":"text","x":117,"y":378,"width":93,"height":36,"text":"**2. Russell**\ndemonstratives","kind":"support","color":"4"},
+		{"id":"line3","type":"text","x":214,"y":378,"width":93,"height":36,"text":"**3. Descriptions**\nmodal failure","kind":"support","color":"4"},
+		{"id":"line6","type":"text","x":311,"y":378,"width":93,"height":36,"text":"**6. Baptism**\nlifting, not creation","kind":"support","color":"4"},
+		{"id":"local-rigidity","type":"text","x":90,"y":428,"width":260,"height":50,"text":"**Local Rigidity**\nthe primitive form of reference","kind":"hub","color":"1"},
+		{"id":"zone-mechanism","type":"text","x":20,"y":488,"width":200,"height":14,"text":"mechanism","role":"label"},
+		{"id":"baptism","type":"text","x":80,"y":506,"width":280,"height":36,"text":"**Baptism as Lifting**\n𝓡(hᵒ, Nᶜ) — portable demonstratives","kind":"mechanism","color":"2"},
+		{"id":"zone-explained","type":"text","x":20,"y":556,"width":260,"height":14,"text":"what the account explains","role":"label"},
+		{"id":"line4","type":"text","x":50,"y":574,"width":155,"height":36,"text":"**De re modality**\ntreated in Ch 4 (§4.3)","kind":"explained","color":"4","dashed":true},
+		{"id":"line5","type":"text","x":235,"y":574,"width":155,"height":36,"text":"**Necessary a posteriori**\ntreated in Ch 5","kind":"explained","color":"4","dashed":true},
+		{"id":"zone-chapters","type":"text","x":20,"y":624,"width":200,"height":14,"text":"chapter structure","role":"label"},
+		{"id":"ch1","type":"text","x":20,"y":642,"width":400,"height":28,"text":"**Ch. 1 — Introduction**","kind":"chapter","color":"6"},
+		{"id":"ch2","type":"text","x":20,"y":674,"width":400,"height":28,"text":"**Ch. 2 — Identity, Objects, and Designators**","kind":"chapter","color":"6"},
+		{"id":"ch3","type":"text","x":20,"y":706,"width":400,"height":28,"text":"**Ch. 3 — From Russell to Kripke**","kind":"chapter","color":"6"},
+		{"id":"ch4","type":"text","x":20,"y":738,"width":400,"height":28,"text":"**Ch. 4 — The xᵒ / xᶜ Distinction**","kind":"chapter","color":"6"},
+		{"id":"ch5","type":"text","x":20,"y":770,"width":400,"height":28,"text":"**Ch. 5 — The PRU Account of Rigid Designation**","kind":"chapter","color":"6"},
+		{"id":"ch6","type":"text","x":20,"y":802,"width":400,"height":28,"text":"**Ch. 6 — Objections and Replies**","kind":"chapter","color":"6"},
+		{"id":"ch7","type":"text","x":20,"y":834,"width":400,"height":28,"text":"**Ch. 7 — Conclusions and Future Research**","kind":"chapter","color":"6"},
+		{"id":"zone-anchors","type":"text","x":20,"y":876,"width":200,"height":14,"text":"key anchors","role":"label"},
+		{"id":"witt","type":"text","x":20,"y":894,"width":195,"height":32,"text":"**Wittgenstein 5.5303**\nidentity is between designators","kind":"anchor","color":"6"},
+		{"id":"franklin","type":"text","x":225,"y":894,"width":195,"height":32,"text":"**Benjamin Franklin passage**\nthe slide in Kripke's text","kind":"anchor","color":"6"},
+		{"id":"seven-steps","type":"text","x":20,"y":930,"width":195,"height":32,"text":"**The Argument in Seven Steps**\nlinear reconstruction","kind":"anchor-highlight","color":"3"},
+		{"id":"whats-new","type":"text","x":225,"y":930,"width":195,"height":32,"text":"**What is New / Inherited**\ncontribution boundary","kind":"anchor-highlight","color":"3"}
+	],
+	"edges":[
+		{"id":"e0","fromNode":"xo-xc","toNode":"xo","fromEnd":"none","toEnd":"none","fromSide":"bottom","toSide":"top"},
+		{"id":"e1","fromNode":"xo-xc","toNode":"R","fromEnd":"none","toEnd":"none","fromSide":"bottom","toSide":"top"},
+		{"id":"e2","fromNode":"xo-xc","toNode":"xc","fromEnd":"none","toEnd":"none","fromSide":"bottom","toSide":"top"},
+		{"id":"e3","fromNode":"russell","toNode":"kripke","fromEnd":"none","toEnd":"none","fromSide":"right","toSide":"left"},
+		{"id":"e4","fromNode":"kripke","toNode":"pru","fromEnd":"none","toEnd":"none","fromSide":"right","toSide":"left"},
+		{"id":"e5","fromNode":"kripke","toNode":"gap","fromEnd":"none","toEnd":"none","fromSide":"bottom","toSide":"top"},
+		{"id":"e6","fromNode":"line1","toNode":"local-rigidity","fromEnd":"none","toEnd":"none","fromSide":"right","toSide":"top"},
+		{"id":"e7","fromNode":"line2","toNode":"local-rigidity","fromEnd":"none","toEnd":"none","fromSide":"bottom","toSide":"top"},
+		{"id":"e8","fromNode":"line3","toNode":"local-rigidity","fromEnd":"none","toEnd":"none","fromSide":"bottom","toSide":"top"},
+		{"id":"e9","fromNode":"line6","toNode":"local-rigidity","fromEnd":"none","toEnd":"none","fromSide":"bottom","toSide":"top"},
+		{"id":"e10","fromNode":"local-rigidity","toNode":"baptism","fromEnd":"none","toEnd":"none","fromSide":"bottom","toSide":"top"}
+	]
 }
