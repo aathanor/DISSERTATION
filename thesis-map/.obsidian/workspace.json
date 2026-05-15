@@ -11,17 +11,14 @@
             "id": "cc5a1d39f3417656",
             "type": "leaf",
             "state": {
-              "type": "canvas",
+              "type": "markdown",
               "state": {
-                "file": "argmap.canvas",
-                "viewState": {
-                  "x": 220,
-                  "y": 891.7480227501959,
-                  "zoom": -0.1757509931068981
-                }
+                "file": "content/ch1.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "lucide-layout-dashboard",
-              "title": "argmap"
+              "icon": "lucide-file",
+              "title": "ch1"
             }
           }
         ]
@@ -97,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "argmap.canvas",
+                "file": "content/ch1.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -107,7 +104,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for argmap"
+              "title": "Backlinks for ch1"
             }
           },
           {
@@ -116,12 +113,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "argmap.canvas",
+                "file": "content/ch1.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from argmap"
+              "title": "Outgoing links from ch1"
             }
           },
           {
@@ -159,13 +156,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "argmap.canvas",
+                "file": "content/ch1.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of argmap"
+              "title": "Outline of ch1"
             }
           }
         ]
@@ -188,6 +185,7 @@
   },
   "active": "cc5a1d39f3417656",
   "lastOpenFiles": [
+    "content/line1.md",
     "content/ch1.md",
     "argmap.canvas"
   ]
