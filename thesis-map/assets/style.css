@@ -19,7 +19,7 @@ body {
   font-family: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Palatino, Georgia, serif;
   background: var(--bg);
   color: var(--ink);
-  font-size: 14px;
+  font-size: 16px;
   line-height: 1.55;
 }
 .layout {
@@ -46,13 +46,13 @@ body {
   padding-bottom: 14px;
 }
 .title-block h1 {
-  font-size: 17px;
+  font-size: 18px;
   font-weight: 600;
   margin: 0 0 4px 0;
   letter-spacing: 0.01em;
 }
 .title-block .subtitle {
-  font-size: 13px;
+  font-size: 14px;
   color: var(--muted);
   font-style: italic;
 }
