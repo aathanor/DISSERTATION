@@ -11,14 +11,17 @@
             "id": "cc5a1d39f3417656",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "canvas",
               "state": {
-                "file": "content/ch1.md",
-                "mode": "source",
-                "source": false
+                "file": "argmap.canvas",
+                "viewState": {
+                  "x": 227.5,
+                  "y": 640.5,
+                  "zoom": -0.5497131324646265
+                }
               },
-              "icon": "lucide-file",
-              "title": "ch1"
+              "icon": "lucide-layout-dashboard",
+              "title": "argmap"
             }
           }
         ]
@@ -185,8 +188,8 @@
   },
   "active": "cc5a1d39f3417656",
   "lastOpenFiles": [
-    "content/line1.md",
     "content/ch1.md",
+    "content/line1.md",
     "argmap.canvas"
   ]
 }

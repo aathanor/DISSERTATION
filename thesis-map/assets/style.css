@@ -98,35 +98,37 @@ svg.argmap .group-label {
   text-transform: uppercase;
 }
 
-/* Node typography — adjust here, not in JS. */
+/* Node typography — adjust here, not in JS.
+   kind-* classes are set by the renderer from the node's "kind" field in argmap.canvas. */
 svg.argmap .node-title {
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 600;
   fill: var(--ink);
 }
 svg.argmap .node-subtitle {
-  font-size: 11px;
+  font-size: 12px;
   fill: var(--muted);
 }
 
-/* Per-kind type overrides. Add or tweak to taste. */
-svg.argmap .kind-hub .node-title       { font-size: 16px; }
-svg.argmap .kind-hub .node-subtitle    { font-size: 12px; }
-svg.argmap .kind-thesis .node-title    { font-size: 15px; }
-svg.argmap .kind-framing .node-title   { font-size: 14px; }
-svg.argmap .kind-chapter .node-title   { font-size: 13px; font-weight: 600; }
-svg.argmap .kind-chapter .node-subtitle{ font-size: 11px; }
-svg.argmap .kind-notation-secondary .node-title    { font-size: 12px; }
-svg.argmap .kind-notation-secondary .node-subtitle { font-size: 10px; }
-svg.argmap .kind-support .node-title   { font-size: 12px; }
-svg.argmap .kind-support .node-subtitle{ font-size: 10px; }
-svg.argmap .kind-explained .node-title { font-size: 12px; }
-svg.argmap .kind-explained .node-subtitle { font-size: 10px; }
-svg.argmap .kind-anchor .node-title    { font-size: 12px; }
-svg.argmap .kind-anchor .node-subtitle { font-size: 10px; }
-svg.argmap .kind-anchor-highlight .node-title    { font-size: 12px; }
-svg.argmap .kind-anchor-highlight .node-subtitle { font-size: 10px; }
-svg.argmap .kind-gap .node-title       { font-size: 13px; }
+/* Per-kind overrides — add new kinds here as needed. */
+svg.argmap .kind-hub .node-title        { font-size: 18px; }
+svg.argmap .kind-hub .node-subtitle     { font-size: 13px; fill: #f1e3b9; }
+svg.argmap .kind-thesis .node-title     { font-size: 16px; }
+svg.argmap .kind-framing .node-title    { font-size: 15px; }
+svg.argmap .kind-notation-secondary .node-title    { font-size: 13px; }
+svg.argmap .kind-notation-secondary .node-subtitle { font-size: 11px; }
+svg.argmap .kind-chapter .node-title    { font-size: 13px; font-weight: 600; }
+svg.argmap .kind-support .node-title    { font-size: 13px; }
+svg.argmap .kind-support .node-subtitle { font-size: 11px; }
+svg.argmap .kind-explained .node-title  { font-size: 13px; }
+svg.argmap .kind-explained .node-subtitle { font-size: 11px; }
+svg.argmap .kind-anchor .node-title     { font-size: 13px; }
+svg.argmap .kind-anchor .node-subtitle  { font-size: 11px; }
+svg.argmap .kind-anchor-highlight .node-title    { font-size: 13px; }
+svg.argmap .kind-anchor-highlight .node-subtitle { font-size: 11px; }
+svg.argmap .kind-thinker .node-title    { font-size: 14px; }
+svg.argmap .kind-thinker .node-subtitle { font-size: 11px; }
+svg.argmap .kind-gap .node-title        { font-size: 13px; }
 
 /* Content pane */
 .framing-quote {

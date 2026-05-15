@@ -65,30 +65,11 @@
 const SVG_NS = 'http://www.w3.org/2000/svg';
 
 const STATE = {
-  content: {},   // id -> {title, kind, related, body}
-  canvas: null,  // parsed argmap.canvas
-  current: null,
-};
-
-/* Visual styles keyed by node "kind" (custom field in argmap.canvas).
-   Edit colors here or move to CSS variables if you want theme switching. */
-const KIND_STYLES = {
-  'notation-primary':   { fill: '#efdcc8', stroke: '#a8492b', sw: 1.2 },
-  'notation-secondary': { fill: '#fdf5e8', stroke: '#a8492b', sw: 1.0 },
-  'framing':            { fill: '#f1e3b9', stroke: '#b78a2a', sw: 1.2 },
-  'thesis':             { fill: '#efdcc8', stroke: '#a8492b', sw: 1.5 },
-  'thinker':            { fill: '#d1dde6', stroke: '#4f6c87', sw: 1.2 },
-  'proposal':           { fill: '#efdcc8', stroke: '#a8492b', sw: 1.5 },
-  'gap':                { fill: '#fbf7ee', stroke: '#a8492b', sw: 1.2 },
-  'support':            { fill: '#e1e3c8', stroke: '#6c7449', sw: 1.0 },
-  'explained':          { fill: '#f5f1d8', stroke: '#a89a5c', sw: 1.0 },
-  'hub':                { fill: '#a8492b', stroke: '#762f17', sw: 1.5,
-                          titleColor: '#fbf7ee', subtitleColor: '#f1e3b9' },
-  'mechanism':          { fill: '#fdf5e8', stroke: '#a8492b', sw: 1.0 },
-  'chapter':            { fill: '#fbf7ee', stroke: '#b5a98e', sw: 1.0 },
-  'anchor':             { fill: '#fbf7ee', stroke: '#b5a98e', sw: 1.0 },
-  'anchor-highlight':   { fill: '#f1e3b9', stroke: '#b78a2a', sw: 1.2 },
-  'default':            { fill: '#fbf7ee', stroke: '#b5a98e', sw: 1.0 },
+  content:     {},    // id -> {title, kind, related, body}
+  canvas:      null,  // parsed argmap.canvas
+  kindStyles:  {},    // kind -> style object  (from assets/styles.json)
+  colorProxy:  {},    // canvas color "1"-"6" -> kind name
+  current:     null,
 };
 
 /* ---------- YAML front matter parser (minimal) ---------- */
@@ -118,18 +99,22 @@ function parseFrontMatter(raw) {
   return { meta, body };
 }
 
-/* ---------- Load manifest, content, and canvas ---------- */
+/* ---------- Load manifest, content, canvas, and styles ---------- */
 async function loadAll() {
-  // Parallel fetch of manifest and canvas
-  const [manifestRes, canvasRes] = await Promise.all([
+  const [manifestRes, canvasRes, stylesRes] = await Promise.all([
     fetch('nodes.json'),
     fetch('argmap.canvas'),
+    fetch('assets/styles.json'),
   ]);
   if (!manifestRes.ok) throw new Error('Could not load nodes.json');
-  if (!canvasRes.ok) throw new Error('Could not load argmap.canvas');
+  if (!canvasRes.ok)   throw new Error('Could not load argmap.canvas');
+  if (!stylesRes.ok)   throw new Error('Could not load assets/styles.json');
 
-  const manifest = await manifestRes.json();
-  STATE.canvas = await canvasRes.json();
+  const manifest     = await manifestRes.json();
+  STATE.canvas       = await canvasRes.json();
+  const stylesData   = await stylesRes.json();
+  STATE.kindStyles   = stylesData.kinds   || {};
+  STATE.colorProxy   = stylesData.colorProxy || {};
 
   // Load all md files in parallel
   await Promise.all(manifest.files.map(async (path) => {
@@ -246,10 +231,12 @@ function drawLabel(svg, n) {
 }
 
 function drawNode(svg, n) {
-  const style = KIND_STYLES[n.kind] || KIND_STYLES.default;
+  // Resolve kind: explicit field → color proxy → default
+  const kind = n.kind || STATE.colorProxy[n.color] || 'default';
+  const style = STATE.kindStyles[kind] || STATE.kindStyles['default'] || { fill: '#fbf7ee', stroke: '#b5a98e', sw: 1.0 };
 
   const g = document.createElementNS(SVG_NS, 'g');
-  g.setAttribute('class', `node kind-${n.kind || 'default'}`);
+  g.setAttribute('class', `node kind-${kind}`);
   g.setAttribute('data-id', n.id);
 
   // Background shape
