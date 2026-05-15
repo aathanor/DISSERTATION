@@ -91,12 +91,42 @@ svg.argmap .node.related ellipse {
 svg.argmap .edge { stroke: #b5a98e; stroke-width: 1.2; fill: none; }
 svg.argmap .edge.thick { stroke-width: 1.6; }
 svg.argmap .group-label {
-  font-size: 9.5px;
+  font-size: 12px;
   fill: var(--muted);
   font-style: italic;
   letter-spacing: 0.04em;
   text-transform: uppercase;
 }
+
+/* Node typography — adjust here, not in JS. */
+svg.argmap .node-title {
+  font-size: 14px;
+  font-weight: 600;
+  fill: var(--ink);
+}
+svg.argmap .node-subtitle {
+  font-size: 11px;
+  fill: var(--muted);
+}
+
+/* Per-kind type overrides. Add or tweak to taste. */
+svg.argmap .kind-hub .node-title       { font-size: 16px; }
+svg.argmap .kind-hub .node-subtitle    { font-size: 12px; }
+svg.argmap .kind-thesis .node-title    { font-size: 15px; }
+svg.argmap .kind-framing .node-title   { font-size: 14px; }
+svg.argmap .kind-chapter .node-title   { font-size: 13px; font-weight: 600; }
+svg.argmap .kind-chapter .node-subtitle{ font-size: 11px; }
+svg.argmap .kind-notation-secondary .node-title    { font-size: 12px; }
+svg.argmap .kind-notation-secondary .node-subtitle { font-size: 10px; }
+svg.argmap .kind-support .node-title   { font-size: 12px; }
+svg.argmap .kind-support .node-subtitle{ font-size: 10px; }
+svg.argmap .kind-explained .node-title { font-size: 12px; }
+svg.argmap .kind-explained .node-subtitle { font-size: 10px; }
+svg.argmap .kind-anchor .node-title    { font-size: 12px; }
+svg.argmap .kind-anchor .node-subtitle { font-size: 10px; }
+svg.argmap .kind-anchor-highlight .node-title    { font-size: 12px; }
+svg.argmap .kind-anchor-highlight .node-subtitle { font-size: 10px; }
+svg.argmap .kind-gap .node-title       { font-size: 13px; }
 
 /* Content pane */
 .framing-quote {

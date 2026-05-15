@@ -249,7 +249,7 @@ function drawNode(svg, n) {
   const style = KIND_STYLES[n.kind] || KIND_STYLES.default;
 
   const g = document.createElementNS(SVG_NS, 'g');
-  g.setAttribute('class', 'node');
+  g.setAttribute('class', `node kind-${n.kind || 'default'}`);
   g.setAttribute('data-id', n.id);
 
   // Background shape
@@ -281,22 +281,20 @@ function drawNode(svg, n) {
   title = title.replace(/^#+\s*/, '').replace(/\*\*/g, '').replace(/__/g, '');
   const subtitle = lines.slice(1).join(' ').replace(/\*\*/g, '').replace(/__/g, '');
 
-  // Pick font sizes based on box size
-  const small = n.height < 38;
-  const titleSize = small ? 10.5 : 12;
-  const subtitleSize = small ? 9 : 10;
-
+  // Title
   const tTitle = document.createElementNS(SVG_NS, 'text');
   tTitle.setAttribute('x', n.x + n.width / 2);
   tTitle.setAttribute('text-anchor', 'middle');
-  tTitle.setAttribute('font-size', titleSize);
-  tTitle.setAttribute('font-weight', '600');
+  tTitle.setAttribute('class', 'node-title');
   if (style.titleColor) tTitle.setAttribute('fill', style.titleColor);
-  // Vertical positioning: if there's a subtitle, title above midline; otherwise centered
+  // Vertical positioning: title sits above midline when there's a subtitle, otherwise centered.
+  // The vertical-alignment fine-tune lives in CSS via dominant-baseline.
   if (subtitle) {
-    tTitle.setAttribute('y', n.y + n.height / 2 - 1);
+    tTitle.setAttribute('y', n.y + n.height / 2 - 2);
+    tTitle.setAttribute('dominant-baseline', 'alphabetic');
   } else {
-    tTitle.setAttribute('y', n.y + n.height / 2 + titleSize / 3);
+    tTitle.setAttribute('y', n.y + n.height / 2);
+    tTitle.setAttribute('dominant-baseline', 'middle');
   }
   tTitle.textContent = title;
   g.appendChild(tTitle);
@@ -304,10 +302,11 @@ function drawNode(svg, n) {
   if (subtitle) {
     const tSub = document.createElementNS(SVG_NS, 'text');
     tSub.setAttribute('x', n.x + n.width / 2);
-    tSub.setAttribute('y', n.y + n.height / 2 + subtitleSize + 2);
+    tSub.setAttribute('y', n.y + n.height / 2 + 2);
     tSub.setAttribute('text-anchor', 'middle');
-    tSub.setAttribute('font-size', subtitleSize);
-    tSub.setAttribute('fill', style.subtitleColor || '#6b6358');
+    tSub.setAttribute('class', 'node-subtitle');
+    tSub.setAttribute('dominant-baseline', 'hanging');
+    if (style.subtitleColor) tSub.setAttribute('fill', style.subtitleColor);
     tSub.textContent = subtitle;
     g.appendChild(tSub);
   }
