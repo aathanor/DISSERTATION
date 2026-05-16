@@ -4,7 +4,7 @@ kind: "PRU notation"
 related: [xo, xc, baptism, xo-xc]
 ---
 
-$\mathcal{R}$ connects $\langle x \rangle$ (the linguistic dimension) to $E\{X\}$ (the experiential dimension). It is the operator that makes coordination between language and experience possible.
+$\mathcal{R}$ connects $\langle x \rangle$ (the linguistic dimension) to $E(\{X\})$ (the experiential dimension). It is the operator that makes coordination between language and experience possible.
 
 $\mathcal{R}$ is foundational developmentally, not a continuous requirement. Humans spend most of their time in $\langle x \rangle$-space; what $\mathcal{R}$ secures is that this space is anchored, not that anchoring is continuously active.
 

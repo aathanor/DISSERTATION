@@ -302,6 +302,29 @@ function drawNode(svg, n) {
   svg.appendChild(g);
 }
 
+/* ---------- Math protection — shields $...$ and $$...$$ from marked.js ----------
+   marked.js treats \{ and \} as markdown escapes, stripping the backslashes before
+   KaTeX can see them. Solution: extract math blocks, replace with placeholders,
+   run marked, then restore the originals before KaTeX renders. */
+function protectMath(text) {
+  const blocks = [];
+  // Display math first ($$...$$)
+  text = text.replace(/\$\$([\s\S]*?)\$\$/g, (match) => {
+    blocks.push(match);
+    return `@@MATH${blocks.length - 1}@@`;
+  });
+  // Inline math ($...$) — single line only, no nested $
+  text = text.replace(/\$([^\n$]+?)\$/g, (match) => {
+    blocks.push(match);
+    return `@@MATH${blocks.length - 1}@@`;
+  });
+  return { text, blocks };
+}
+
+function restoreMath(html, blocks) {
+  return html.replace(/@@MATH(\d+)@@/g, (_, i) => blocks[parseInt(i, 10)]);
+}
+
 /* ---------- Render content panel for a given node id ---------- */
 function loadContent(id) {
   const n = STATE.content[id];
@@ -312,7 +335,8 @@ function loadContent(id) {
   }
   STATE.current = id;
 
-  const bodyHtml = marked.parse(n.body);
+  const { text: protected_, blocks } = protectMath(n.body);
+  const bodyHtml = restoreMath(marked.parse(protected_), blocks);
   const relatedHtml = (n.related || [])
     .map(rid => {
       const r = STATE.content[rid];
