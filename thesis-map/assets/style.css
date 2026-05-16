@@ -46,13 +46,13 @@ body {
   padding-bottom: 14px;
 }
 .title-block h1 {
-  font-size: 18px;
+  font-size: 17px;
   font-weight: 600;
   margin: 0 0 4px 0;
   letter-spacing: 0.01em;
 }
 .title-block .subtitle {
-  font-size: 14px;
+  font-size: 13px;
   color: var(--muted);
   font-style: italic;
 }
@@ -101,8 +101,8 @@ svg.argmap .group-label {
 /* Node typography — adjust here, not in JS.
    kind-* classes are set by the renderer from the node's "kind" field in argmap.canvas. */
 svg.argmap .node-title {
-  font-size: 13px;
-  font-weight: 500;
+  font-size: 12px;
+  font-weight: 600;
   fill: var(--ink);
 }
 svg.argmap .node-subtitle {
@@ -111,28 +111,34 @@ svg.argmap .node-subtitle {
 }
 
 /* Per-kind overrides — add new kinds here as needed. */
-svg.argmap .kind-hub .node-title        { font-size: 18px; }
-svg.argmap .kind-hub .node-subtitle     { font-size: 13px; fill: #f1e3b9; }
-svg.argmap .kind-thesis .node-title     { font-size: 16px; }
-svg.argmap .kind-framing .node-title    { font-size: 15px; }
-svg.argmap .kind-notation-secondary .node-title    { font-size: 13px; }
-svg.argmap .kind-notation-secondary .node-subtitle { font-size: 11px; }
-svg.argmap .kind-chapter .node-title    { font-size: 13px; font-weight: 600; }
-svg.argmap .kind-support .node-title    { font-size: 13px; }
-svg.argmap .kind-support .node-subtitle { font-size: 11px; }
-svg.argmap .kind-explained .node-title  { font-size: 13px; }
-svg.argmap .kind-explained .node-subtitle { font-size: 11px; }
-svg.argmap .kind-anchor .node-title     { font-size: 13px; }
-svg.argmap .kind-anchor .node-subtitle  { font-size: 11px; }
-svg.argmap .kind-anchor-highlight .node-title    { font-size: 13px; }
-svg.argmap .kind-anchor-highlight .node-subtitle { font-size: 11px; }
-svg.argmap .kind-thinker .node-title    { font-size: 14px; }
-svg.argmap .kind-thinker .node-subtitle { font-size: 11px; }
-svg.argmap .kind-gap .node-title        { font-size: 13px; }
+svg.argmap .kind-hub .node-title        { font-size: 15px; }
+svg.argmap .kind-hub .node-subtitle     { font-size: 11px; fill: #f1e3b9; }
+svg.argmap .kind-thesis .node-title     { font-size: 13px; }
+svg.argmap .kind-thesis .node-subtitle  { font-size: 10px; }
+svg.argmap .kind-framing .node-title    { font-size: 13px; }
+svg.argmap .kind-framing .node-subtitle { font-size: 10px; }
+svg.argmap .kind-notation-primary .node-title    { font-size: 12px; }
+svg.argmap .kind-notation-primary .node-subtitle { font-size: 10px; }
+svg.argmap .kind-notation-secondary .node-title    { font-size: 11px; }
+svg.argmap .kind-notation-secondary .node-subtitle { font-size: 9px; }
+svg.argmap .kind-chapter .node-title    { font-size: 12px; font-weight: 600; }
+svg.argmap .kind-support .node-title    { font-size: 11px; }
+svg.argmap .kind-support .node-subtitle { font-size: 9px; }
+svg.argmap .kind-explained .node-title  { font-size: 11px; }
+svg.argmap .kind-explained .node-subtitle { font-size: 9px; }
+svg.argmap .kind-anchor .node-title     { font-size: 11px; }
+svg.argmap .kind-anchor .node-subtitle  { font-size: 9px; }
+svg.argmap .kind-anchor-highlight .node-title    { font-size: 11px; }
+svg.argmap .kind-anchor-highlight .node-subtitle { font-size: 9px; }
+svg.argmap .kind-thinker .node-title    { font-size: 13px; }
+svg.argmap .kind-thinker .node-subtitle { font-size: 10px; }
+svg.argmap .kind-gap .node-title        { font-size: 12px; }
+svg.argmap .kind-mechanism .node-title  { font-size: 12px; }
+svg.argmap .kind-mechanism .node-subtitle { font-size: 10px; }
 
 /* Content pane */
 .framing-quote {
-  font-size: 16px;
+  font-size: 19px;
   line-height: 1.5;
   font-style: italic;
   color: var(--ink);
@@ -143,7 +149,7 @@ svg.argmap .kind-gap .node-title        { font-size: 13px; }
   border-radius: 2px;
 }
 .content h1 {
-  font-size: 19px;
+  font-size: 22px;
   font-weight: 600;
   margin: 0 0 6px 0;
 }
