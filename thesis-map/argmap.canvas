@@ -1,7 +1,5 @@
 {
 	"nodes":[
-		{"id":"zone-notation","type":"text","text":"notation","role":"label","x":20,"y":0,"width":200,"height":14},
-		{"id":"xo-xc","type":"text","text":"**xᵒ / xᶜ Distinction**\ntwo modes of one word","kind":"notation-primary","x":67,"y":18,"width":291,"height":50},
 		{"id":"xo","type":"text","text":"**xᵒ — object-mode**\n\"this x here\"","kind":"notation-secondary","x":20,"y":66,"width":125,"height":34,"color":"5"},
 		{"id":"R","type":"text","text":"**𝓡 — grounding op**\n⟨x⟩ ↔ E({X})","kind":"notation-secondary","x":158,"y":66,"width":125,"height":34,"color":"4"},
 		{"id":"xc","type":"text","text":"**xᶜ — concept-mode**\n\"the x\", \"x is...\"","kind":"notation-secondary","x":295,"y":66,"width":125,"height":34,"color":"5"},
@@ -36,7 +34,9 @@
 		{"id":"witt","type":"text","text":"**Wittgenstein 5.5303**\nidentity is between designators","kind":"anchor","x":20,"y":894,"width":195,"height":32,"color":"6"},
 		{"id":"franklin","type":"text","text":"**Benjamin Franklin passage**\nthe slide in Kripke's text","kind":"anchor","x":225,"y":894,"width":195,"height":32,"color":"6"},
 		{"id":"seven-steps","type":"text","text":"**The Argument in Seven Steps**\nlinear reconstruction","kind":"anchor-highlight","x":20,"y":930,"width":195,"height":32,"color":"3"},
-		{"id":"whats-new","type":"text","text":"**What is New / Inherited**\ncontribution boundary","kind":"anchor-highlight","x":225,"y":930,"width":195,"height":32,"color":"3"}
+		{"id":"whats-new","type":"text","text":"**What is New / Inherited**\ncontribution boundary","kind":"anchor-highlight","x":225,"y":930,"width":195,"height":32,"color":"3"},
+		{"id":"xo-xc","type":"text","text":"**xᵒ / xᶜ Distinction**\ntwo modes of one word","kind":"notation-primary","x":113,"y":7,"width":207,"height":50},
+		{"id":"zone-notation","type":"text","text":"notation","role":"label","x":21,"y":-63,"width":200,"height":50}
 	],
 	"edges":[
 		{"id":"e3","fromNode":"russell","fromSide":"right","toNode":"kripke","toSide":"left","toEnd":"none"},
