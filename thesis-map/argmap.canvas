@@ -1,7 +1,7 @@
 {
 	"nodes":[
 		{"id":"zone-notation","type":"text","text":"notation","role":"label","x":20,"y":0,"width":200,"height":14},
-		{"id":"xo-xc","type":"text","text":"**xᵒ / xᶜ Distinction**\ntwo modes of one word","kind":"notation-primary","x":20,"y":18,"width":400,"height":44},
+		{"id":"xo-xc","type":"text","text":"**xᵒ / xᶜ Distinction**\ntwo modes of one word","kind":"notation-primary","x":67,"y":18,"width":291,"height":50},
 		{"id":"xo","type":"text","text":"**xᵒ — object-mode**\n\"this x here\"","kind":"notation-secondary","x":20,"y":66,"width":125,"height":34,"color":"5"},
 		{"id":"R","type":"text","text":"**𝓡 — grounding op**\n⟨x⟩ ↔ E({X})","kind":"notation-secondary","x":158,"y":66,"width":125,"height":34,"color":"4"},
 		{"id":"xc","type":"text","text":"**xᶜ — concept-mode**\n\"the x\", \"x is...\"","kind":"notation-secondary","x":295,"y":66,"width":125,"height":34,"color":"5"},
