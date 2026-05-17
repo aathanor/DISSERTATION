@@ -376,23 +376,19 @@ function loadContent(id) {
     });
   }
 
-  // Update map highlighting
+  // Update map highlighting — only mark the one active node.
+  // Related nodes are visible in the right panel "See also" section; marking
+  // them here as well creates the appearance of multiple active selections.
   const mapSvg = document.querySelector('svg.argmap');
   mapSvg.classList.add('has-active');
   document.querySelectorAll('svg.argmap .node').forEach(el => {
-    el.classList.remove('active', 'related');
+    el.classList.remove('active');
   });
   const activeEl = document.querySelector(`svg.argmap .node[data-id="${id}"]`);
   if (activeEl) {
     activeEl.classList.add('active');
-    // Scroll the active node into view inside the map pane if it isn't visible.
-    // SVG nodes don't support scrollIntoView reliably across browsers, so compute manually.
     scrollMapToNode(activeEl);
   }
-  (n.related || []).forEach(rid => {
-    const rel = document.querySelector(`svg.argmap .node[data-id="${rid}"]`);
-    if (rel) rel.classList.add('related');
-  });
 
   document.querySelector('.content-pane').scrollTop = 0;
 

@@ -77,10 +77,12 @@ svg.argmap .node {
 svg.argmap .node:hover { filter: brightness(0.96) drop-shadow(0 2px 4px rgba(0,0,0,0.08)); }
 
 /* When a node is active (selected), fade non-active nodes so the selection stands out.
-   Hovering an unrelated node restores its opacity, so the user can preview without losing context. */
+   Hovering a faded node temporarily restores it, so the user can preview without losing the selection.
+   Note: related nodes (linked from the right panel "See also") are NOT specially highlighted on the
+   map — that information is already visible as clickable links, and marking them here would create
+   the appearance of multiple active nodes. */
 svg.argmap.has-active .node              { opacity: 0.28; }
 svg.argmap.has-active .node.active       { opacity: 1; }
-svg.argmap.has-active .node.related      { opacity: 0.85; }
 svg.argmap.has-active .node:hover        { opacity: 1; }
 
 svg.argmap .node.active rect,
@@ -89,14 +91,8 @@ svg.argmap .node.active ellipse {
   stroke: var(--accent);
   stroke-width: 2.5;
 }
-svg.argmap .node.related rect,
-svg.argmap .node.related circle,
-svg.argmap .node.related ellipse {
-  stroke: var(--amber);
-  stroke-width: 1.8;
-}
 
-/* Edges also fade so the active node visually dominates */
+/* Edges fade too so the active node visually dominates */
 svg.argmap.has-active .edge              { opacity: 0.35; }
 
 svg.argmap .edge { stroke: #b5a98e; stroke-width: 1.2; fill: none; transition: opacity 0.18s ease; }
