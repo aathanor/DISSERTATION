@@ -241,7 +241,12 @@
       "width": 200,
       "height": 14,
       "text": "extended ToC",
-      "role": "label"
+      "role": "label",
+      "link": {
+        "href": "assets/Local%20Rigidity%20Thesis%20Extended%20ToC.pdf",
+        "label": "\u2193 PDF",
+        "download": "Local Rigidity Thesis Extended ToC.pdf"
+      }
     },
     {
       "id": "ch1",

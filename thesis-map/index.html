@@ -216,6 +216,27 @@ function drawLabel(svg, n) {
   t.setAttribute('class', 'group-label');
   t.textContent = n.text || '';
   svg.appendChild(t);
+
+  // Optional download link rendered next to the label text
+  if (n.link && n.link.href) {
+    // Measure label width so the link sits to its right.
+    // The label has no defined font size in CSS context here; estimate
+    // based on character count × average em advance for our 9px italic label.
+    const labelText = n.text || '';
+    const approxLabelWidth = labelText.length * 5.2 + 12;
+    const a = document.createElementNS(SVG_NS, 'a');
+    a.setAttributeNS('http://www.w3.org/1999/xlink', 'href', n.link.href);
+    a.setAttribute('href', n.link.href);
+    a.setAttribute('target', '_blank');
+    a.setAttribute('download', n.link.download || '');
+    const linkText = document.createElementNS(SVG_NS, 'text');
+    linkText.setAttribute('x', n.x + approxLabelWidth);
+    linkText.setAttribute('y', n.y + n.height - 2);
+    linkText.setAttribute('class', 'group-label-link');
+    linkText.textContent = n.link.label || '↓';
+    a.appendChild(linkText);
+    svg.appendChild(a);
+  }
 }
 
 function drawNode(svg, n) {
@@ -246,7 +267,7 @@ function drawNode(svg, n) {
   shape.setAttribute('fill', style.fill);
   shape.setAttribute('stroke', style.stroke);
   shape.setAttribute('stroke-width', style.sw);
-  if (n.dashed) shape.setAttribute('stroke-dasharray', '3 2');
+  // (dashed field deliberately ignored — all borders render solid for visual clarity)
   g.appendChild(shape);
 
   // Parse text (markdown-ish: "**Title**\nsubtitle")
@@ -356,11 +377,18 @@ function loadContent(id) {
   }
 
   // Update map highlighting
+  const mapSvg = document.querySelector('svg.argmap');
+  mapSvg.classList.add('has-active');
   document.querySelectorAll('svg.argmap .node').forEach(el => {
     el.classList.remove('active', 'related');
   });
   const activeEl = document.querySelector(`svg.argmap .node[data-id="${id}"]`);
-  if (activeEl) activeEl.classList.add('active');
+  if (activeEl) {
+    activeEl.classList.add('active');
+    // Scroll the active node into view inside the map pane if it isn't visible.
+    // SVG nodes don't support scrollIntoView reliably across browsers, so compute manually.
+    scrollMapToNode(activeEl);
+  }
   (n.related || []).forEach(rid => {
     const rel = document.querySelector(`svg.argmap .node[data-id="${rid}"]`);
     if (rel) rel.classList.add('related');
@@ -371,6 +399,31 @@ function loadContent(id) {
   if (location.hash !== `#${id}`) {
     history.replaceState(null, '', `#${id}`);
   }
+}
+
+/* Scroll the map pane so that the given SVG node element is comfortably in view. */
+function scrollMapToNode(svgNodeEl) {
+  const pane = document.querySelector('.map-pane');
+  const svg  = document.querySelector('svg.argmap');
+  if (!pane || !svg) return;
+
+  // Position of the node relative to the SVG, then mapped to pane pixels via SVG's
+  // rendered bounding box (which accounts for viewBox → pixel scaling).
+  const shape = svgNodeEl.querySelector('rect, ellipse');
+  if (!shape) return;
+  const nodeBox = shape.getBoundingClientRect();
+  const paneBox = pane.getBoundingClientRect();
+
+  // If the node is already comfortably within the visible pane region, do nothing.
+  const margin = 40;
+  const topInPane    = nodeBox.top    - paneBox.top;
+  const bottomInPane = nodeBox.bottom - paneBox.top;
+  if (topInPane >= margin && bottomInPane <= paneBox.height - margin) return;
+
+  // Center the node vertically in the pane.
+  const nodeCenterY = (topInPane + bottomInPane) / 2;
+  const delta = nodeCenterY - paneBox.height / 2;
+  pane.scrollTo({ top: pane.scrollTop + delta, behavior: 'smooth' });
 }
 
 function escapeHtml(s) {
