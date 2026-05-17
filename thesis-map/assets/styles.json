@@ -1,27 +1,41 @@
 {
-  "colorProxy": {
-    "1": "hub",
-    "2": "thesis",
-    "3": "framing",
-    "4": "support",
-    "5": "thinker",
-    "6": "chapter"
+  "_categories": {
+    "foundations": "PRU notation and definitions (light blue)",
+    "sota":        "Russell, Kripke, the explanatory gap (light green)",
+    "thesis":      "Central thesis + central observation, fused (green)",
+    "argument":    "Lines of support, mechanism, hub (light red)",
+    "toc":         "Extended ToC chapter nodes (neutral)",
+    "anchor":      "Key anchors (light gray)"
   },
+
+  "colorProxy": {
+    "1": "argument",
+    "2": "thesis",
+    "3": "foundations",
+    "4": "sota",
+    "5": "toc",
+    "6": "anchor"
+  },
+
   "kinds": {
-    "hub":                { "fill": "#a8492b", "stroke": "#762f17", "sw": 1.5, "titleColor": "#fbf7ee", "subtitleColor": "#f1e3b9" },
-    "thesis":             { "fill": "#efdcc8", "stroke": "#a8492b", "sw": 1.5 },
-    "notation-primary":   { "fill": "#efdcc8", "stroke": "#a8492b", "sw": 1.2 },
-    "notation-secondary": { "fill": "#fdf5e8", "stroke": "#a8492b", "sw": 1.0 },
-    "framing":            { "fill": "#f1e3b9", "stroke": "#b78a2a", "sw": 1.2 },
-    "thinker":            { "fill": "#d1dde6", "stroke": "#4f6c87", "sw": 1.2 },
-    "proposal":           { "fill": "#efdcc8", "stroke": "#a8492b", "sw": 1.5 },
-    "gap":                { "fill": "#fbf7ee", "stroke": "#a8492b", "sw": 1.2 },
-    "support":            { "fill": "#e1e3c8", "stroke": "#6c7449", "sw": 1.0 },
-    "explained":          { "fill": "#e8e4c8", "stroke": "#8a8450", "sw": 1.0 },
-    "mechanism":          { "fill": "#fdf5e8", "stroke": "#a8492b", "sw": 1.0 },
-    "chapter":            { "fill": "#fbf7ee", "stroke": "#b5a98e", "sw": 1.0 },
-    "anchor":             { "fill": "#fbf7ee", "stroke": "#b5a98e", "sw": 1.0 },
-    "anchor-highlight":   { "fill": "#f1e3b9", "stroke": "#b78a2a", "sw": 1.2 },
+    "foundations":        { "fill": "#dde7f0", "stroke": "#5c7993", "sw": 1.0 },
+    "foundations-primary":{ "fill": "#c9d8e7", "stroke": "#4f6c87", "sw": 1.2 },
+
+    "sota":               { "fill": "#dde8d4", "stroke": "#6c8455", "sw": 1.0 },
+    "sota-gap":           { "fill": "#f3f6ee", "stroke": "#6c8455", "sw": 1.2 },
+
+    "thesis":             { "fill": "#b8d4a8", "stroke": "#4f7340", "sw": 1.5 },
+
+    "argument":           { "fill": "#f0d4c8", "stroke": "#a8492b", "sw": 1.0 },
+    "argument-hub":       { "fill": "#a8492b", "stroke": "#762f17", "sw": 1.5,
+                            "titleColor": "#fbf7ee", "subtitleColor": "#f1e3b9" },
+    "argument-mechanism": { "fill": "#f0d4c8", "stroke": "#a8492b", "sw": 1.0 },
+    "argument-explained": { "fill": "#f8e6dc", "stroke": "#a8492b", "sw": 1.0 },
+
+    "toc":                { "fill": "#fbf7ee", "stroke": "#b5a98e", "sw": 1.0 },
+
+    "anchor":             { "fill": "#eaeaea", "stroke": "#9a9a9a", "sw": 1.0 },
+
     "default":            { "fill": "#fbf7ee", "stroke": "#b5a98e", "sw": 1.0 }
   }
 }

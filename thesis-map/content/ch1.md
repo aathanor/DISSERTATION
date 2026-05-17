@@ -1,9 +1,9 @@
 ---
 title: "Chapter 1 — Introduction"
 kind: "Chapter (pp. 1–4)"
-related: [framing, thesis, whats-new, ch2]
+related: [thesis, whats-new, ch2]
 ---
-\
+
 **Objective.** Open with the framing observation, narrow to Kripke's case, and set up the dissertation's specific contribution.
 
 ## 1.1 The Problem: What Kripke Left Open

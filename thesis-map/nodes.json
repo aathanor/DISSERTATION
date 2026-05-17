@@ -1,7 +1,6 @@
 {
   "initial": "thesis",
   "files": [
-    "content/framing.md",
     "content/thesis.md",
     "content/russell.md",
     "content/kripke.md",
