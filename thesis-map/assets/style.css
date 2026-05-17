@@ -81,9 +81,18 @@ svg.argmap .node:hover { filter: brightness(0.96) drop-shadow(0 2px 4px rgba(0,0
    Note: related nodes (linked from the right panel "See also") are NOT specially highlighted on the
    map — that information is already visible as clickable links, and marking them here would create
    the appearance of multiple active nodes. */
-svg.argmap.has-active .node              { opacity: 0.28; }
-svg.argmap.has-active .node.active       { opacity: 1; }
-svg.argmap.has-active .node:hover        { opacity: 1; }
+svg.argmap.has-active .node:not(.active) {
+  opacity: 0.32;
+  filter: grayscale(0.2) saturate(0.8);
+}
+svg.argmap.has-active .node.active,
+svg.argmap.has-active .node:not(.active):hover {
+  opacity: 1;
+  filter: none;
+}
+svg.argmap.has-active .node:not(.active):hover {
+  filter: brightness(0.96) drop-shadow(0 2px 4px rgba(0,0,0,0.08));
+}
 
 svg.argmap .node.active rect,
 svg.argmap .node.active circle,

@@ -376,24 +376,34 @@ function loadContent(id) {
     });
   }
 
-  // Update map highlighting — only mark the one active node.
-  // Related nodes are visible in the right panel "See also" section; marking
-  // them here as well creates the appearance of multiple active selections.
-  const mapSvg = document.querySelector('svg.argmap');
-  mapSvg.classList.add('has-active');
-  document.querySelectorAll('svg.argmap .node').forEach(el => {
-    el.classList.remove('active');
-  });
-  const activeEl = document.querySelector(`svg.argmap .node[data-id="${id}"]`);
-  if (activeEl) {
-    activeEl.classList.add('active');
-    scrollMapToNode(activeEl);
-  }
+  setActiveNode(id);
 
   document.querySelector('.content-pane').scrollTop = 0;
 
   if (location.hash !== `#${id}`) {
     history.replaceState(null, '', `#${id}`);
+  }
+}
+
+/* Mark exactly one SVG node as selected. Other nodes stay faded until hovered. */
+function setActiveNode(id) {
+  const mapSvg = document.querySelector('svg.argmap');
+  if (!mapSvg) return;
+
+  let activeEl = null;
+  for (const el of mapSvg.querySelectorAll('.node')) {
+    const isActive = el.dataset.id === id;
+    el.classList.toggle('active', isActive);
+    el.setAttribute('aria-selected', isActive ? 'true' : 'false');
+    if (isActive) activeEl = el;
+  }
+
+  mapSvg.classList.toggle('has-active', Boolean(activeEl));
+
+  if (activeEl) {
+    // Keep the selected node visually above neighboring edges/nodes.
+    mapSvg.appendChild(activeEl);
+    scrollMapToNode(activeEl);
   }
 }
 
