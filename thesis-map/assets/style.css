@@ -119,6 +119,7 @@ svg.argmap .group-label-link {
   letter-spacing: 0.04em;
   text-transform: uppercase;
   cursor: pointer;
+  pointer-events: auto;
 }
 svg.argmap .group-label-link:hover {
   text-decoration: underline;

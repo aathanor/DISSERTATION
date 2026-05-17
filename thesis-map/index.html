@@ -229,6 +229,15 @@ function drawLabel(svg, n) {
     a.setAttribute('href', n.link.href);
     a.setAttribute('target', '_blank');
     a.setAttribute('download', n.link.download || '');
+    a.addEventListener('click', (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      const download = document.createElement('a');
+      download.href = n.link.href;
+      download.download = n.link.download || '';
+      download.target = '_blank';
+      download.click();
+    });
     const linkText = document.createElementNS(SVG_NS, 'text');
     linkText.setAttribute('x', n.x + approxLabelWidth);
     linkText.setAttribute('y', n.y + n.height - 2);
