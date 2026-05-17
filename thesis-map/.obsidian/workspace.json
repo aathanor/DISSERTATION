@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/xc.md",
+                "file": "content/russell.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "xc"
+              "title": "russell"
             }
           }
         ]
@@ -185,6 +185,7 @@
   },
   "active": "cc5a1d39f3417656",
   "lastOpenFiles": [
+    "content/xc.md",
     "content/R.md",
     "argmap.canvas",
     "content/xo-xc.md",
