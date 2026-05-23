@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.5.8)  22 MAY 2026 07:53
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.5.8)  23 MAY 2026 13:01
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -892,7 +892,7 @@ File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 File: l3backend-pdftex.def 2025-10-09 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count366
 )
-No file chapter_3_revised.aux.
+(./chapter_3_revised.aux)
 \openout1 = `chapter_3_revised.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 208.
@@ -930,6 +930,7 @@ Package microtype Info: Patching command `\showhyphens'.
 Package microtype Info: No adjustment of tracking.
 Package microtype Info: No adjustment of interword spacing.
 Package microtype Info: No adjustment of character kerning.
+
 (/usr/local/texlive/2026/texmf-dist/tex/latex/microtype/mt-ptm.cfg
 File: mt-ptm.cfg 2006/04/20 v1.7 microtype config. file: Times (RS)
 )
@@ -992,11 +993,13 @@ e
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 Package hyperref Info: Link coloring ON on input line 208.
+(./chapter_3_revised.out) (./chapter_3_revised.out)
 \@outlinefile=\write4
 \openout4 = `chapter_3_revised.out'.
 
 LaTeX Font Info:    Trying to load font information for OT1+phv on input line 2
 14.
+
 (/usr/local/texlive/2026/texmf-dist/tex/latex/psnfss/ot1phv.fd
 File: ot1phv.fd 2020/03/25 scalable font definitions for OT1/phv.
 )
@@ -1037,41 +1040,32 @@ Overfull \hbox (142.26378pt too wide) in paragraph at lines 212--224
 $[]$ 
  []
 
-LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 2
-32.
-(/usr/local/texlive/2026/texmf-dist/tex/latex/psnfss/ts1ptm.fd
-File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
-) [1
+[1
 
 {/usr/local/texlive/2026/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/usr/loc
-al/texlive/2026/texmf-dist/fonts/enc/dvips/base/8r.enc}] [2] [3] [4] [5] [6] [7
-]
-(./chapter_3_revised.aux)
+al/texlive/2026/texmf-dist/fonts/enc/dvips/base/8r.enc}]
+LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 2
+68.
+
+(/usr/local/texlive/2026/texmf-dist/tex/latex/psnfss/ts1ptm.fd
+File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
+) [2] [3]
+[4] [5] (./chapter_3_revised.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2026-01-19>
  ***********
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
-
-Package rerunfilecheck Warning: File `chapter_3_revised.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `chapter_3_revised.out':
-(rerunfilecheck)             Before: <no file>
-(rerunfilecheck)             After:  6DEA82F2310750D17E58326A9BCF0F73;2082.
+Package rerunfilecheck Info: File `chapter_3_revised.out' has not changed.
+(rerunfilecheck)             Checksum: 2F5DC06ACEB912B8C3378A07737DBFF7;2968.
  ) 
 Here is how much of TeX's memory you used:
- 31120 strings out of 467525
- 611991 string characters out of 5418983
- 1077997 words of memory out of 5000000
- 59154 multiletter control sequences out of 15000+600000
- 671721 words of font info for 301 fonts, out of 8000000 for 9000
+ 31005 strings out of 467525
+ 611081 string characters out of 5418983
+ 1076816 words of memory out of 5000000
+ 59140 multiletter control sequences out of 15000+600000
+ 659961 words of font info for 228 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 116i,8n,121p,1388b,461s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 116i,5n,121p,1206b,459s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb
 ></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb><
 /usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></u
@@ -1083,10 +1077,10 @@ xlive/2026/texmf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb></usr/local/texlive/
 2026/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2026/texmf
 -dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2026/texmf-dist/font
 s/type1/urw/times/utmri8a.pfb>
-Output written on chapter_3_revised.pdf (7 pages, 145921 bytes).
+Output written on chapter_3_revised.pdf (5 pages, 139022 bytes).
 PDF statistics:
- 202 PDF objects out of 1000 (max. 8388607)
- 145 compressed objects within 2 object streams
- 41 named destinations out of 1000 (max. 500000)
- 64669 words of extra memory for PDF output out of 74296 (max. 10000000)
+ 187 PDF objects out of 1000 (max. 8388607)
+ 132 compressed objects within 2 object streams
+ 24 named destinations out of 1000 (max. 500000)
+ 55045 words of extra memory for PDF output out of 61914 (max. 10000000)
 

@@ -2,8 +2,8 @@
 title: "Chapter 1 — Introduction"
 subtitle: "Draft incorporating consolidation note and ToC observations"
 author: Florin Cojocariu
-status: draft
-date: 2026-04-18
+status: draft_v6
+date: 2026-05-21
 ---
 
 # Chapter 1 — Introduction

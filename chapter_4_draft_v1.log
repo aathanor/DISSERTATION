@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.5.8)  23 MAY 2026 13:06
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.5.8)  23 MAY 2026 13:03
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**chapter_2_reframed.tex
-(./chapter_2_reframed.tex
+**chapter_4_draft_v1.tex
+(./chapter_4_draft_v1.tex
 LaTeX2e <2025-11-01>
 L3 programming layer <2026-01-19>
 (/usr/local/texlive/2026/texmf-dist/tex/latex/base/article.cls
@@ -892,8 +892,8 @@ File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 File: l3backend-pdftex.def 2025-10-09 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count366
 )
-(./chapter_2_reframed.aux)
-\openout1 = `chapter_2_reframed.aux'.
+(./chapter_4_draft_v1.aux)
+\openout1 = `chapter_4_draft_v1.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 208.
 LaTeX Font Info:    ... okay on input line 208.
@@ -993,9 +993,9 @@ e
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 Package hyperref Info: Link coloring ON on input line 208.
-(./chapter_2_reframed.out) (./chapter_2_reframed.out)
+(./chapter_4_draft_v1.out) (./chapter_4_draft_v1.out)
 \@outlinefile=\write4
-\openout4 = `chapter_2_reframed.out'.
+\openout4 = `chapter_4_draft_v1.out'.
 
 LaTeX Font Info:    Trying to load font information for OT1+phv on input line 2
 14.
@@ -1040,48 +1040,53 @@ Overfull \hbox (142.26378pt too wide) in paragraph at lines 212--224
 $[]$ 
  []
 
-LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 2
-36.
-(/usr/local/texlive/2026/texmf-dist/tex/latex/psnfss/ts1ptm.fd
-File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
-) [1
+[1
 
 {/usr/local/texlive/2026/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/usr/loc
-al/texlive/2026/texmf-dist/fonts/enc/dvips/base/8r.enc}] [2] [3] [4]
-(./chapter_2_reframed.aux)
+al/texlive/2026/texmf-dist/fonts/enc/dvips/base/8r.enc}] [2]
+LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 2
+66.
+
+(/usr/local/texlive/2026/texmf-dist/tex/latex/psnfss/ts1ptm.fd
+File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
+) [3] [4]
+[5] [6] [7] [8] (./chapter_4_draft_v1.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2026-01-19>
  ***********
-Package rerunfilecheck Info: File `chapter_2_reframed.out' has not changed.
-(rerunfilecheck)             Checksum: A8232219026584DF4821F6F8B9C9EA32;1159.
+Package rerunfilecheck Info: File `chapter_4_draft_v1.out' has not changed.
+(rerunfilecheck)             Checksum: BB3F8FBE7C0BCDD68B851313948ECFDA;1244.
  ) 
 Here is how much of TeX's memory you used:
- 31065 strings out of 467525
- 611422 string characters out of 5418983
- 1082755 words of memory out of 5000000
- 59143 multiletter control sequences out of 15000+600000
- 667431 words of font info for 272 fonts, out of 8000000 for 9000
+ 31113 strings out of 467525
+ 611971 string characters out of 5418983
+ 1079462 words of memory out of 5000000
+ 59157 multiletter control sequences out of 15000+600000
+ 671154 words of font info for 295 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 116i,8n,121p,1872b,459s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 116i,8n,121p,1796b,459s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb
-></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb><
-/usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></u
-sr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr
-/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/lo
-cal/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local
-/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/
-texlive/2026/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/lo
-cal/texlive/2026/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/local/tex
-live/2026/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/local/texlive/20
-26/texmf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb></usr/local/texlive/2026/tex
-mf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2026/texmf-dist/fo
-nts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/
-urw/times/utmri8a.pfb>
-Output written on chapter_2_reframed.pdf (4 pages, 155342 bytes).
+></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb>
+</usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></
+usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></us
+r/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/
+local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/lo
+cal/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local
+/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/te
+xlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texli
+ve/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texliv
+e/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/
+2026/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/local/texlive/2026/te
+xmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/local/texlive/2026/texmf-dis
+t/fonts/type1/urw/helvetic/uhvro8a.pfb></usr/local/texlive/2026/texmf-dist/font
+s/type1/urw/times/utmb8a.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/ur
+w/times/utmr8a.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/urw/times/ut
+mri8a.pfb>
+Output written on chapter_4_draft_v1.pdf (8 pages, 212592 bytes).
 PDF statistics:
- 192 PDF objects out of 1000 (max. 8388607)
- 132 compressed objects within 2 object streams
- 25 named destinations out of 1000 (max. 500000)
- 60101 words of extra memory for PDF output out of 61914 (max. 10000000)
+ 236 PDF objects out of 1000 (max. 8388607)
+ 166 compressed objects within 2 object streams
+ 34 named destinations out of 1000 (max. 500000)
+ 62661 words of extra memory for PDF output out of 74296 (max. 10000000)
 
