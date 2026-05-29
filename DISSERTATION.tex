@@ -1,0 +1,765 @@
+% =====================================================================
+% Disertație template — Universitatea din București, Facultatea de Filosofie
+% Conformant cu Ghidul de redactare, 31 iulie 2023.
+%
+% Pandoc usage (Zettlr / CLI):
+%   pandoc input.md -o out.pdf \
+%     --template=disertatie.tex --top-level-division=section \
+%     --pdf-engine=xelatex
+%
+% Required YAML frontmatter (example):
+%   ---
+%   title: "The Cognitive Foundation of Rigid Designation"
+%   subtitle: "How Pattern-Recognition Unity Grounds Kripkean Semantics"
+%   author: "Florin Cojocariu"
+%   program: "Master in Analytic Philosophy"
+%   advisor: "Mircea Dumitru"
+%   advisor-title: "Prof. Univ. Dr."
+%   work-type: "Lucrare de disertație"   # optional, this is the default
+%   date: "2026"
+%   abstract: |
+%     Two paragraphs at most.
+%   ---
+% =====================================================================
+
+\documentclass[12pt,a4paper]{article}
+
+% —— Core packages ——
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{textcomp}
+\usepackage{times}                       % Times New Roman per guide
+\usepackage{amsmath,amssymb}
+\usepackage{stmaryrd}
+\usepackage[a4paper,left=2.5cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+\usepackage{microtype}
+\emergencystretch=1em
+\usepackage{setspace}
+\onehalfspacing                          % 1.5 line spacing per guide
+\usepackage[most]{tcolorbox}
+\tcbuselibrary{theorems,skins,breakable}
+
+% Optional: Romanian hyphenation/quotes — uncomment if writing in Romanian
+% \usepackage[romanian]{babel}
+
+% —— Modal logic, Greek, set-theoretic symbols ——
+\DeclareUnicodeCharacter{03B9}{\ensuremath{\iota}}
+\DeclareUnicodeCharacter{25A1}{\ensuremath{\Box}}
+\DeclareUnicodeCharacter{25C7}{\ensuremath{\Diamond}}
+\DeclareUnicodeCharacter{03BB}{\ensuremath{\lambda}}
+\DeclareUnicodeCharacter{03C6}{\ensuremath{\varphi}}
+\DeclareUnicodeCharacter{00AC}{\ensuremath{\neg}}
+\DeclareUnicodeCharacter{22A2}{\ensuremath{\vdash}}
+\DeclareUnicodeCharacter{2203}{\ensuremath{\exists}}
+\DeclareUnicodeCharacter{2200}{\ensuremath{\forall}}
+\DeclareUnicodeCharacter{2227}{\ensuremath{\wedge}}
+\DeclareUnicodeCharacter{2228}{\ensuremath{\vee}}
+\DeclareUnicodeCharacter{2192}{\ensuremath{\rightarrow}}
+\DeclareUnicodeCharacter{2194}{\ensuremath{\leftrightarrow}}
+\DeclareUnicodeCharacter{2234}{\ensuremath{\therefore}}
+\DeclareUnicodeCharacter{2248}{\ensuremath{\approx}}
+\DeclareUnicodeCharacter{2208}{\ensuremath{\in}}
+\DeclareUnicodeCharacter{2260}{\ensuremath{\neq}}
+\DeclareUnicodeCharacter{2713}{\checkmark}
+\DeclareUnicodeCharacter{2212}{-}
+
+% —— Definition box ——
+\newenvironment{definitionbox}[1][]{%
+  \begin{center}
+  \begin{tcolorbox}[
+    enhanced, breakable, width=0.8\textwidth,
+    colback=gray!2, colframe=gray!60, coltitle=black,
+    fonttitle=\bfseries, title={Definition: #1},
+    boxed title style={colback=gray!3, colframe=black!60,
+      sharp corners, boxrule=0.5pt},
+    boxrule=0.5pt, sharp corners,
+    left=6pt, right=6pt, top=6pt, bottom=6pt,
+    before skip=12pt, after skip=12pt,
+  ]}%
+  {\end{tcolorbox}\end{center}}
+
+% —— Tables ——
+\usepackage{array}
+\usepackage{longtable}
+\usepackage{booktabs}
+\usepackage{calc}
+\newcolumntype{C}[1]{>{\raggedright\arraybackslash}p{\dimexpr#1\linewidth-4\tabcolsep\relax}}
+
+% —— Paragraph formatting per guide ——
+% First-line indent 1.27 cm on EVERY paragraph (including those that
+% follow a heading — indentfirst ensures that).
+\usepackage{indentfirst}
+\setlength{\parindent}{1.27cm}
+\setlength{\parskip}{0pt}
+\raggedbottom
+
+% —— Heading formatting per guide ——
+\usepackage{titlesec}
+\usepackage{needspace}
+\usepackage{etoolbox}
+
+\setcounter{secnumdepth}{3}
+
+% \section corresponds to a Chapter (Markdown H1 via --top-level-division=section).
+% Guide: bold, centered, each new chapter starts on a new page.
+\titleformat{\section}[block]
+  {\normalfont\Large\bfseries\filcenter}
+  {\thesection.}{0.5em}{}
+\titlespacing*{\section}{0pt}{0pt}{1.5em}
+\pretocmd{\section}{\clearpage}{}{}
+
+% \subsection corresponds to a Section (H2).
+% Guide: bold, indented 1.27 cm from left margin, NOT centered.
+\titleformat{\subsection}[hang]
+  {\normalfont\normalsize\bfseries}
+  {\thesubsection.}{0.5em}{}
+\titlespacing*{\subsection}{1.27cm}{1.4em}{0.6em}
+
+% \subsubsection corresponds to a Subsection (H3) — same convention.
+\titleformat{\subsubsection}[hang]
+  {\normalfont\normalsize\bfseries}
+  {\thesubsubsection.}{0.5em}{}
+\titlespacing*{\subsubsection}{1.27cm}{1em}{0.4em}
+
+% —— TOC formatting ——
+\usepackage{tocloft}
+\renewcommand{\cftsecfont}{\small}
+\renewcommand{\cftsubsecfont}{\small}
+\renewcommand{\cftsubsubsecfont}{\small}
+\renewcommand{\cftsecpagefont}{\small}
+\renewcommand{\cftsubsecpagefont}{\small}
+\renewcommand{\cftsubsubsecpagefont}{\small}
+\setlength{\cftbeforesecskip}{0.3em}
+\setlength{\cftbeforesubsecskip}{0.1em}
+\setlength{\cftbeforesubsubsecskip}{0.1em}
+
+% —— Lists ——
+\usepackage{enumitem}
+\setlist{nosep, leftmargin=2em, topsep=0.4em, partopsep=0pt,
+         parsep=0.2em, itemsep=0.2em}
+\setlist[itemize,1]{label=\textbullet}
+\setlist[itemize,2]{label=\textendash}
+
+% —— Figures ——
+\usepackage{graphicx}
+\usepackage{float}
+\setkeys{Gin}{keepaspectratio,width=0.7\linewidth}
+\makeatletter
+\def\fps@figure{H}
+\makeatother
+\graphicspath{{figures/}}
+
+% —— URLs / DOIs ——
+\usepackage{xurl}
+
+% —— CSL bibliography ——
+\newlength{\cslhangindent}
+\setlength{\cslhangindent}{1.5em}
+\newenvironment{CSLReferences}[2]%
+  {\begin{enumerate}[label={[\arabic*]},leftmargin=\cslhangindent,itemsep=0pt]%
+   \raggedright\sloppy
+   \renewcommand{\bibitem}[2][]{\item}}%
+  {\end{enumerate}}
+\providecommand{\CSLLeftMargin}[1]{\item[#1]}
+\providecommand{\CSLRightInline}[1]{#1}
+
+% —— Hyperref (near last) ——
+\usepackage[colorlinks=true, linkcolor=black, urlcolor=blue, citecolor=blue]{hyperref}
+\urlstyle{same}
+
+% —— Pandoc / longtable compatibility ——
+\makeatletter
+\@ifundefined{c@none}{\newcounter{none}}{}
+\makeatother
+\renewcommand{\thenone}{}
+\providecommand*{\theHnone}{\arabic{none}}
+\providecommand{\tightlist}{}
+\providecommand{\pandocbounded}[1]{#1}
+
+% —— Citeproc compatibility ——
+\makeatletter
+\providecommand{\citeproctext}{}
+\let\@oldprotect\protect
+\def\@citeprocprotection{\let\protect\@oldprotect}
+\newcommand{\citeproc}[2]{#2}
+\protected\def\citeprocfootnote#1{\footnote{#1}}
+\makeatother
+
+% —— Block quotes ——
+\renewenvironment{quote}{%
+  \par\vskip 0.5em
+  \leftskip=2em\rightskip=2em\small
+  \noindent\ignorespaces
+}{\par\vskip 0.5em}
+
+% —— Custom notation (PRU) ——
+\newcommand{\llangle}{\langle\!\langle}
+\newcommand{\rrangle}{\rangle\!\rangle}
+\DeclareUnicodeCharacter{27EA}{\ensuremath{\llangle}}
+\DeclareUnicodeCharacter{27EB}{\ensuremath{\rrangle}}
+\newcommand{\Rfr}[2]{\ensuremath{\mathcal{R}(#1, #2)}}
+\newcommand{\LPC}[1]{\ensuremath{\llangle#1\rrangle}}
+
+% —— Document metadata ——
+\title{DISSERTATION}
+\author{Florin Cojocariu}
+\date{2026-05-22}
+
+\begin{document}
+
+% Continuous arabic numbering starting at the cover; display is suppressed
+% on front matter pages and resumes at the body (the Introduction).
+\pagenumbering{arabic}
+\pagestyle{empty}
+
+% =====================================================================
+% COVER PAGE (page 1, number hidden) — Anexa II expanded per III.2.a
+% =====================================================================
+\begin{center}
+\vspace*{0.5cm}
+{\large UNIVERSITATEA DIN BUCUREȘTI}\\[0.3em]
+{\large FACULTATEA DE FILOSOFIE}
+
+
+\vfill
+
+{\large\bfseries Lucrare de disertație}
+
+\vspace{2em}
+
+{\LARGE\bfseries DISSERTATION}
+\\[1em]
+{\Large PRU's Cognitive Vocabulary for Rigid Designation}
+
+
+\vfill
+\end{center}
+
+\noindent
+\begin{minipage}[t]{0.45\textwidth}
+\raggedright
+\textbf{Coordonator științific:}\\
+
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{0.45\textwidth}
+\raggedleft
+\textbf{Absolvent:}\\
+Florin Cojocariu
+\end{minipage}
+
+\vspace{1.5cm}
+
+\begin{center}
+{\large București}\\[0.3em]
+{\large 2026-05-22}
+\end{center}
+
+\clearpage
+
+% =====================================================================
+% ABSTRACT (page hidden)
+% =====================================================================
+
+% =====================================================================
+% TABLE OF CONTENTS (pages hidden)
+% =====================================================================
+\setcounter{tocdepth}{3}
+\tableofcontents
+% tocloft forces \thispagestyle{plain} on the first TOC page; override it.
+% (If the TOC ever spans more than one page, also wrap with \pagestyle{empty}
+% on each page — handled here because outer \pagestyle{empty} is still active.)
+\thispagestyle{empty}
+\clearpage
+
+% =====================================================================
+% BODY — page numbers become visible from here
+% =====================================================================
+\pagestyle{plain}
+
+\section{Chapter 1 --- Introduction}\label{chapter-1-introduction}
+
+\subsection{The Problem Kripke Left Open}\label{the-problem-kripke-left-open}
+
+Saul Kripke's modal, epistemic, and semantic arguments in \emph{Naming and Necessity} and ``Identity and Necessity'' establish that proper names are rigid designators: a name picks out the same individual in every possible world in which that individual exists. The arguments are compelling, and the conclusion is by now a standard starting point in the philosophy of language. What the arguments establish is what rigid designators \emph{do}. What they do not establish, and what Kripke himself does not undertake to establish, is what cognitive operation makes the doing possible.
+
+The gap is specifically metasemantic. A formal apparatus can stipulate that a term holds its referent fixed across worlds. The stipulation can be written down and its logical consequences can be worked out. But stipulation is not explanation. When Kripke writes that reference is fixed by an ``initial baptism'' and transmitted through a ``chain of communication,'' he describes the practice in which rigidity lives without describing the cognitive operation that makes the practice possible. A baptismal act coordinates a word with an individual; a chain of communication preserves the coordination. Neither is a logical relation. Both are things that cognitive systems do.
+
+The gap is not an accident of Kripke's exposition. It reflects a pattern running through modern analytic philosophy of language: a tendency to take formal operations --- assignment functions, descriptive satisfaction, model-theoretic interpretation --- as if they could do the full work of tying words to things in the world. Russell restricted genuine naming to acquaintance with immediate sense data because anything more, on his picture, would have to operate through descriptions. Quine declared existence to be the value of a bound variable, absorbing the question of what bound variables refer to into the formal apparatus itself. Lewis built a modal metaphysics in which every possible world is a fully specified totality, with actuality as a merely indexical feature of the world we happen to occupy. These positions differ widely, but they share a structural commitment: formal operations internal to the linguistic system are taken to be sufficient for what we ordinarily think of as reference. Kripke's own account is the counterweight to this pattern --- his appeal to baptism and causal chains is precisely the recognition that reference to a particular cannot be secured by formal operations alone. What Kripke leaves unanalyzed is the cognitive operation that baptism performs and the mechanism by which its result is preserved once the baptismal community is gone. The dissertation takes up this analysis.
+
+This matters because reference to a particular is not generated by linguistic machinery operating on itself. No tightening of the network of words produces grip on an individual. Descriptions can locate an object of which one has no independent grip, but only by specifying conditions that something in the world happens to satisfy --- and what they locate is whoever satisfies the conditions, not the individual as such. Grip on an individual comes from a different direction: from coordination with experience, from using a word at the point where it meets an encounter. Kripke's semantics inherits whatever this coordination accomplishes. The dissertation's question is what the coordination consists in and how the semantics depends on it.
+
+\subsection{Two Operations of Fixing}\label{two-operations-of-fixing}
+
+The dissertation distinguishes, from the outset, two operations by which a linguistic element can be tied to a value. They are different operations that do different work, and the distinction between them is the backbone of the positive account developed in Chapters 4 and 5.
+
+The first operation is value-fixing through structures internal to the linguistic system. A variable under assignment is tied to a domain element by the assignment function. A definite description picks out whoever satisfies its conditions. A logical specification singles out what meets its constraints. A mathematical construction yields a specific object through the structural relations that define it. In each case, the tying is completed within the linguistic network --- through descriptive content, through the formal apparatus of quantification, through structural specification. The dissertation will call this \emph{A-grounding}, following the analogy with assignment in model theory, though the operation is broader than assignment in the strict sense. A-grounding is the operation that does not reach outside the linguistic system.
+
+The second operation is value-fixing through coordination with something outside the linguistic system. When a speaker looks at a chair and uses the word ``chair'' to pick out that particular chair, the tying is not achieved through descriptive content or formal specification. It is achieved through a cognitive coordination: the word meets the present object through perceptual engagement, and the meeting itself constitutes the tying. The dissertation will call this \emph{R-grounding}, where the R indicates referential, in the sense of reaching out to something. R-grounding requires the presence or perceptual availability of what is being referred to. It is the operation that reaches outside.
+
+The two operations are not rivals. Each does work the other cannot do. A-grounding is indispensable for formal reasoning, for mathematics, for descriptions when they function descriptively, for talk that does not pretend to reach any particular. R-grounding is indispensable for reference to individuals in the world. The tradition often treats A-grounding as sufficient for both jobs; Kripke is the signal exception, having seen that reference to particulars requires something formal operations cannot supply. What Kripke did not do, and what the dissertation undertakes, is to describe the non-formal operation at the cognitive level and to follow its consequences through the transition from live encounter to later absence.
+
+The operations will be developed formally in Chapter 4, where the analytical core of the dissertation introduces the PRU distinction between object-mode and concept-mode and defines the grounding operations in its terms. For Chapter 1, what matters is that the dissertation distinguishes these two operations and treats them as non-interchangeable.
+
+\subsection{The Thesis}\label{the-thesis}
+
+The dissertation advances a single thesis. Rigid designation in the Kripkean sense is the social stabilization of a more primitive phenomenon --- \emph{local rigidity} --- present whenever a word coordinates with an experienced instance through R-grounding. When I track an object with my senses and use a word to pick it out, the coordination is rigid: the word picks out that individual without descriptive mediation, and modal claims about it carry no scope ambiguity. There is nothing for scope to interact with; the word just points, and what it points at is what the modal claim is about. Names inherit this character through an act of baptism that takes the coordination achieved in demonstrative encounter and vests it in a new linguistic device --- a proper name --- whose standing function is to carry the coordination into absence.
+
+The thesis has two parts. The first concerns the origin of rigidity: local rigidity is the primitive phenomenon, produced by live R-grounding in demonstrative encounter. The second concerns how rigidity persists once the original encounter is over. Here the account has to handle a fact that has been underdescribed in the literature: R-grounding requires active coordination with a present particular, and after the particular is gone --- after the chair leaves, after Aristotle dies --- R is no longer available. Contemporary speakers who use the name ``Aristotle'' cannot be performing R-grounding with Aristotle; they have no access to him. Some other operation must be at work.
+
+The dissertation argues that contemporary name use proceeds through A-grounding, where the descriptive and testimonial material accumulated around a name serves as the speaker's cognitive handle. This does not make the account descriptivist. The descriptive material does not define the referent --- the referent was fixed at baptism, through a real R-grounding with a real individual --- but it does play a specific role in how contemporary speakers anchor their use of the name. Proper names, as a category of linguistic item, are treated by competent speakers as tracking unique individuals who actually existed and were originally baptized; this categorial feature of names is what allows reference to persist after R is no longer available, and it is what distinguishes names from both descriptions and generic terms. Local rigidity is ``encapsulated'' into the name , and made ``portable'' in the absence of the actual individual.
+
+The full development of this picture belongs to Chapter 5. For now, the compressed statement is: rigid designation is the social stabilization of primitive local rigidity, and the dissertation's account explains both how the stabilization is achieved at baptism and how contemporary speakers continue to use the resulting names without direct access to the original coordination.
+
+\subsection{The Six Lines of Support}\label{the-six-lines-of-support}
+
+The thesis is supported by six independent lines of argument. Each makes visible the same presupposed mechanism from a different angle, and no single line is load-bearing --- the thesis stands on their convergence.
+
+The first line reads Kripke's own necessity-of-identity formula and finds local rigidity built into its extensional evaluation. Variables under assignment are rigid by construction; the formula is valid because its variables function exactly as local rigidity describes, and the natural-language gloss silently transfers this rigidity to names.
+
+The second line extracts Russell's identification of the mechanism. ``Names which really just name an object without describing it'' is Russell's description of what this dissertation calls R-grounding. Russell saw the mechanism clearly and retreated, because he required Cartesian certainty and demonstrative contact seemed to him available only for immediate sense data. He identified demostratives as the only proper names because he failed to see that demonstratives indigate R-grounding.
+
+The third line shows that descriptions fail in modal contexts because they lack what demonstratives have. Descriptions are constitutively world-relative; rigidity, when it appears in description-involving contexts, is imposed from outside --- through scope manipulation or through devices like Kaplan's \emph{dthat} that are explicitly designed to convert a description into a directly referring term.
+
+The fourth line shows that de re predication requires isolating a particular before modal evaluation. The fixing step is R-grounding; modal evaluation then proceeds with the particular held fixed. Wherever de re modality operates, local rigidity has already done its work.
+
+The fifth line resolves the necessary a posteriori. An identity statement can be necessary and a posteriori because the same statement operates at two levels: necessary at the level of the particular fixed, a posteriori at the level of the two intensional profiles discovered to converge. No special metaphysical category is needed.
+
+The sixth line examines an ordinary baptismal exchange --- someone asks the name of a person standing in front of him, receives it, and begins to use it --- and shows that the name attaches to an already-active demonstrative coordination rather than producing rigidity ex nihilo. Baptism in ordinary life exhibits what Kripke's abstract account describes.
+
+The lines are independent in the sense that rejecting any one leaves the others standing. They converge because they are symptoms of the same structure: something has to hold a particular fixed, and in each case that something turns out to be demonstrative contact rather than the formal apparatus, the descriptive content, or the name's semantic profile.
+
+\subsection{Methodology and Scope}\label{methodology-and-scope}
+
+The dissertation is a work in the metasemantics of singular reference. It proceeds by close reading of Kripke's ``Identity and Necessity'' and \emph{Naming and Necessity} in connection with the relevant passages in Russell, Wittgenstein, and Kaplan. The PRU framework (Cojocariu 2026) is used as an analytical tool; its full specification lives in a separate manuscript and is not defended here. What the dissertation uses of PRU is the distinction between object-mode (\(x^o\)) and concept-mode (\(x^c\)) of a word, the grounding operations described above, and the picture of baptism as the introduction of a new concept-word that inherits a live coordination. These pieces are introduced as they become needed rather than surveyed in advance.
+
+The scope is singular reference. General-term rigidity --- the question of whether and how ``water'' or ``gold'' are rigid --- is a connected issue, and the object-mode / concept-mode distinction suggests a way of asking it, but the question is not pursued here. Fictional names, mathematical reference, and the broader modality spectrum are flagged in the conclusion as open questions rather than treated in the body. The diagnostic application of the A-/R-grounding distinction to Russell, Quine, and Lewis is suggested in this introduction and touched on in the positive account, but the full historical treatment is reserved for a separate paper. The point is not to offer a total theory of reference but to close one specific gap --- the gap between Kripke's semantic account of rigidity and the cognitive operation it presupposes.
+
+\subsection{Roadmap}\label{roadmap}
+
+Chapter 2 develops the first line of support in depth. It reads Kripke's necessity-of-identity formula and its natural-language gloss, identifies two unacknowledged slides in the Benjamin Franklin passage, connects the argument to Wittgenstein's treatment of identity in the \emph{Tractatus}, and shows that the formula is extensionally valid but intensionally silent. What the formula presupposes, when applied to names, is exactly what local rigidity describes.
+
+Chapter 3 develops the second and third lines. It traces the Russell--Kripke dialectic, shows why descriptions cannot provide rigidity from within, and treats Kaplan's \emph{dthat} as the clearest single piece of evidence that rigidity is prior to descriptions and not produced by them. The chapter closes by stating the explanatory gap that the remainder of the dissertation addresses.
+
+Chapter 4 introduces the analytical core: the object-mode / concept-mode distinction and the formal development of A-grounding and R-grounding as operations of value-fixing within and beyond the linguistic system. It uses this machinery to develop three further lines of support --- the necessary a posteriori, de re modality, and the phenomenology of counterfactual reasoning --- and to treat an ordinary baptismal exchange as the observable form of what Kripke describes abstractly.
+
+Chapter 5 gives the PRU account of rigid designation. It states formally what baptism does: the transition from a live demonstrative coordination to a coordination carried by a freshly introduced proper name. It distinguishes this transition from what happens after the baptismal community is gone, when later users operate through A-grounding with descriptive and testimonial material. It discusses the role of causal chains in transmitting this material, and closes with a brief coda placing the account in relation to the Kripke--Lewis disagreement about possible worlds.
+
+Chapter 6 treats objections, including the objections that the A-/R-grounding distinction is a restatement rather than an advance, that the account collapses into sophisticated descriptivism, and that it relies on an unargued categorial feature of proper names. Chapter 7 concludes and marks open questions.
+
+The dissertation's single-sentence form: rigid designation is the social stabilization of primitive local rigidity; Chapter 2 shows the formal apparatus presupposes it, Chapter 3 shows descriptions cannot supply it, Chapter 4 names and analyzes it, and Chapter 5 gives its PRU mechanism together with the account of how rigidity is preserved across the transition from live coordination to absence.
+
+\section{Chapter 2 --- Identity, Objects, and Designators}\label{chapter-2-identity-objects-and-designators}
+
+Kripke's necessity-of-identity argument is widely taught in a single line: if two designators are rigid and co-refer, then necessarily they co-refer. The formula \(\forall x \forall y (x=y \to \Box(x=y))\) delivers the modal consequence; rigid designation is the substantive premise that makes the consequence reach ordinary names. This chapter takes that reading as its starting point rather than its conclusion. The chapter's task is not to argue that rigidity is presupposed --- that is consensus --- but to specify what kind of presupposition it is, what the formula does and does not do once rigidity is granted, and what would be required to discharge the presupposition rather than merely posit it. The last question is what the rest of the dissertation answers.
+
+\subsection{The Formula and the Standard Reading}\label{the-formula-and-the-standard-reading}
+
+The necessity-of-identity formula was first derived by Ruth Barcan Marcus in 1947 and presented in simplified form by Quine in 1953. Kripke's ``Identity and Necessity'' (1971) and \emph{Naming and Necessity} (1980) gave it the philosophical framing under which it is now standardly read. In \emph{Naming and Necessity}, Kripke is explicit that the principle, applied to ordinary identity claims, derives directly once rigid designation is assumed: if `a' and `b' are rigid designators, and `a = b' is true, then `a = b' is necessarily true.\footnote{Recanati, \emph{Mental Files} (2012), ch.~3.} The argument has two parts: a formal core (the modal logic of identity under fixed assignment) and a metasemantic premise (that ordinary proper names function as rigid designators). The formal core delivers the modal consequence cleanly; the metasemantic premise carries the philosophical weight.
+
+The standard reading separates these two parts. Speaks's lecture notes present the argument as a numbered derivation in which rigidity appears as an explicit premise; if either of the two terms fails to be a rigid designator, the derivation does not go through.\footnote{Recanati, \emph{Mental Files} (2012), chs.~3--4 on the typology of files; ch.~7 on encyclopedia entries. The view that even encyclopedia entries are grounded in ER relations is the ``actualist'' commitment criticized by Hansen and Rey in F. Salis (ed.), \emph{Disputatio} V (36), 2013.} The Stanford Encyclopedia entry on rigid designators treats the rigidity of names as Kripke's substantive thesis and the modal consequence as following from it together with the assumption that the identity is true.\footnote{Recanati, \emph{Mental Files} (2012), p.~34: ``A non-descriptive mode of presentation, I claim, is nothing but a mental-file.'' The vehicle/content framing is explicit at pp.~31--34.} The Wikipedia entry on the necessity of identity, summarizing the consensus, presents Kripke's later strategy as deriving the principle ``directly, assuming what he called rigid designation.''\footnote{Goodman, ``Against the Mental Files Conception of Singular Thought,'' \emph{Review of Philosophy and Psychology} 7 (2016): 437--61, presses a related point from a different angle: that some file-based thought is descriptive rather than singular, so the identification of file-based thought with singular thought breaks down.} Burgess's careful technical reconstruction of the derivation in \emph{Synthese} makes the conditional structure explicit, distinguishing the source, status, and significance of the formal result from the substantive metasemantic claims it is used to support.\footnote{\(\mathcal{R}\) is specified in the framework document at greater technical length, including its developmental account in the learning of \(\{X\}\) and its role in the integrated \(\{X, x^o\}\) constellation produced by the coordination of experiential event and word; see PRU Meta-Language, version 6.}
+
+So the chapter's headline observation --- that the formula does not by itself establish rigidity for names --- is not a discovery. It is the standard reading, and Kripke himself frames the argument in these terms. The substantive case for the rigidity of names is made elsewhere, on intuitive grounds: the counterfactual cases of \emph{Naming and Necessity} (Nixon could have lost the 1968 election; Aristotle could have died in infancy and never taught Alexander), and the Gödel/Schmidt thought experiment (the name ``Gödel'' would still refer to Gödel even if everything we attribute to him had in fact been done by someone else).\footnote{Kripke, \emph{Naming and Necessity}, pp.~74--78 (Nixon), pp.~60--62 and 75--76 (Aristotle), pp.~83--87 (Gödel/Schmidt). The cases function together as the modal-intuition battery against descriptivism.} These are where the rigid-designation thesis lives. The formula provides the modal closure once the thesis is granted.
+
+What this chapter does is sit at the joint between the formal core and the metasemantic premise, and ask a more specific question: what does the metasemantic premise commit us to, and what would discharging it cognitively require? The dissertation's contribution begins where the standard reading leaves off --- not in disputing the conditional, but in supplying the mechanism by which the antecedent of the conditional gets satisfied for actual speakers using actual names.
+
+\subsection{What the Formula Actually Does}\label{what-the-formula-actually-does}
+
+The formal core of the argument is uncontroversial. Under any assignment function \(g\) in a Kripke model, if \(g(x) = g(y)\), then in every world the model constructs, \(g(x) = g(y)\). The assignment function does not vary across worlds in the standard semantics; once an assignment is fixed, the variables continue to pick out their assigned values across every world the operator \(\Box\) quantifies over. The formula is valid by construction.\footnote{Sellars, ``Some Reflections on Language Games,'' \emph{Philosophy of Science} 21 (1954): 204--28; reprinted in \emph{Science, Perception and Reality} (1963), pp.~321--58. The three-fold scheme of entry, intra-linguistic, and exit transitions is developed in §§II--III of that essay.}
+
+Three observations follow. They are unremarkable in themselves; together they specify what work the formula can and cannot do for the philosophical project.
+
+The formula's validity rests on the rigidity of variables under assignment, which is a feature of the formal apparatus, not a feature of natural-language names. When Kripke applies the formula to names, he is applying a formal result whose validity holds for one kind of designator (variables under assignment) to another kind of designator (proper names). The application requires the assumption that names exhibit the same world-invariance variables have by construction. This is the rigid-designation thesis itself, not a consequence of it.
+
+The formula has no resources for the intensional dimension of the cases that motivate Kripke's project. Hesperus/Phosphorus, Benjamin Franklin and the inventor of bifocals, water and H\(_2\)O --- these are cases where identity is empirically discovered and then recognized as necessary. The formula regiments the modal status once rigidity is granted; the epistemic route by which speakers reach the identity, and the cognitive capacities involved in using a name as rigid in the first place, lie outside what the formula can address.\footnote{Brandom, \emph{Making It Explicit} (1994), esp.~chs.~3--4; \emph{Articulating Reasons} (2000), ch.~1. For critique of Brandom's account of singular terms specifically --- relevant since singular reference is the topic of the present chapter --- see McCullagh, ``Inferentialism and Singular Reference,'' \emph{Canadian Journal of Philosophy} 35 (2005): 183--220.}
+
+The formula does not adjudicate between competing accounts of how names achieve the world-invariance it presupposes. Kripke's own account, developed in \emph{Naming and Necessity}, runs through baptism and causal-historical transmission. Other accounts --- descriptivist, hybrid causal-descriptivist, Mental Files --- give different stories about what makes names function as rigid designators. The formula is silent on the choice. It tells us what follows if names are rigid; the substantive metasemantic question is what makes them so. Kripke himself distinguishes the rigidity of names --- \emph{de jure} rigidity, built into the kind of designator a name is --- from \emph{de facto} rigidity, which attaches to descriptions whose satisfiers happen to be necessarily fixed (such as ``the least prime'').\footnote{Kripke, \emph{Naming and Necessity}, p.~21, fn. 21. The \emph{de jure} / \emph{de facto} distinction matters here because the formula's presupposition is \emph{de jure} rigidity --- rigidity by how the designator functions, not by metaphysical accident.} He is also explicit that the wide-scope behavior of descriptions in modal contexts is not what the rigid-designation thesis is asserting: the thesis is about the kind of designator names are, not about scope manipulation.\footnote{Kripke, \emph{Naming and Necessity}, p.~12, fn. 15. Kripke notes that taking a description outside the scope of a modal operator can produce something that behaves like rigidity, and is explicit that this is not what the rigid-designation thesis is asserting. The point is later developed by Kaplan's \emph{dthat} operator, examined in Chapter 3.}
+
+\subsection{Three Levels of ``Object''}\label{three-levels-of-object}
+
+The standard reading distinguishes the formal core from the metasemantic premise. The chapter adds a finer distinction within the metasemantic premise itself. When the formula is applied to ordinary identity claims, the word ``object'' --- used in Kripke's own gloss and throughout the secondary literature --- covers three distinct things, and the philosophical work happens at a different level than the formal validity does.
+
+\emph{Domain elements} are mathematical objects: points in a set, self-identical by set-theoretic construction, their identity invariant across any world the model constructs. The formula's validity operates at this level. Variables are assigned to domain elements; the assignment function is the device through which formal rigidity is achieved.
+
+\emph{Encountered particulars} are individuals as they figure in perception and re-identification: this dog here, that star there, the man one might have met. They are individuated through encounter; their identity across encounters is an epistemic achievement, with room for error. The early astronomer saw Hesperus in the evening sky and Phosphorus in the morning sky; the identity of the two had to be established, not given with the encounters. Encountered particulars are the bridge between the formal apparatus and the philosophical applications, because they have the concreteness that descriptions can apply to (so the cases Kripke discusses are intelligible at all) while also being the sort of thing that can bear a name.
+
+\emph{Named individuals} are bearers of proper names: Aristotle, Venus, Hesperus, Benjamin Franklin. They are individuated through baptism and tracked across absence through testimonial networks. Their identity across different names is discoverable --- the Hesperus/Phosphorus case is the paradigm. The philosophical thesis of rigid designation operates at this level: names hold their referents fixed across counterfactual variation, where descriptions could track different individuals in different worlds.
+
+The Benjamin Franklin passage, which Kripke uses to illustrate the formula immediately after presenting it, exhibits the level-shift in compressed form. The passage begins with the formal apparatus (``there is an object x such that x invented bifocals''), passes through descriptive identification (``the inventor of bifocals,'' ``the first Postmaster General''), and arrives at a name (``x and y are both Benjamin Franklin''). Read at the level of variables, the descriptions do not apply; mathematical objects do not invent bifocals. Read at the level of encountered particulars, the descriptions apply but the identity claim becomes awkward in the way Wittgenstein's constraint anticipates --- identity between two encountered particulars is either nonsense or self-identity. Read at the level of names, the necessity follows from the rigidity of ``Benjamin Franklin'' --- but only because rigidity has been imported, not because the formula has delivered it.
+
+What the passage does is move smoothly between these levels in English. The smoothness is rhetorical, not logical. Each level handles part of the argument; no single level handles the whole. The metasemantic premise --- that ordinary names exhibit the world-invariance variables have by construction --- is what makes the move from the first level to the third coherent. The premise is supplied by the rigid-designation thesis, which Kripke argues for separately on intuitive grounds (the modal-intuition tests of \emph{Naming and Necessity}, the counterfactual cases about Nixon and Aristotle).\footnote{Kripke, \emph{Naming and Necessity}, p.~48. The test was developed in Chapter 3 §3.1.}
+
+The three-level distinction is useful for the rest of the dissertation. The cognitive question --- what enables speakers to use names as rigid designators --- is a question about how the metasemantic premise gets satisfied at the level of named individuals. Local rigidity, developed in Chapters 4 and 5, is the proposed mechanism. It operates between encountered particulars and named individuals: it explains how reference to an encountered particular can be lifted, through baptism, into a name that tracks the referent across absence. The formal apparatus does not need a cognitive story; the philosophical application does.
+
+\subsection{The Cognitive-Mechanism Gap}\label{the-cognitive-mechanism-gap}
+
+What the standard reading leaves open is the cognitive question. Kripke argues that names are rigid; he does not argue that they are rigid because of any particular cognitive mechanism. The causal-historical sketch in \emph{Naming and Necessity} --- baptism fixes the reference, the name propagates through chains of communication --- is offered explicitly as a ``better picture'' rather than as a theory.\footnote{The ``better picture'' framing is widely cited in the secondary literature; see, e.g., S. Marc Cohen's lecture notes (University of Washington) and Funkhouser (PHIL 4233 lecture notes), both of which foreground Kripke's self-description as a picture rather than a theory.} Kripke is unusually direct about this self-positioning: he is not, he says, ``trying to give any sort of necessary and sufficient conditions for reference\ldots{} in any rigorous sense''; he is ``painting a general picture.''\footnote{Kripke, \emph{Naming and Necessity}, pp.~93--94. The full passage: ``I'm not, in fact, trying to give any sort of necessary and sufficient conditions for reference\ldots{} in any rigorous sense'' (p.~94); ``I think it is a much better picture than the picture presented by a description'' (p.~93).} The picture describes the output of the relation between names and their referents; the cognitive mechanism that produces and sustains the output is not analyzed.
+
+That a cognitive mechanism is needed at all, and that the available candidates may be too narrow, is something Kripke himself notices in passing. In ``Identity and Necessity,'' he quotes Russell at length on demonstratives as the only true names --- terms that ``really just name an object without describing it'' --- and on acquaintance as the only ground secure enough for identity claims to be ``exempt from all imaginable doubt.'' Kripke's gloss is that on Russell's view, only names of immediate sense data, expressed by demonstratives like ``this'' and ``that,'' qualify as genuine names.\footnote{Kripke, ``Identity and Necessity'' (1971), p.~144. The Russell passage Kripke quotes is from \emph{The Philosophy of Logical Atomism} (1918) and runs: ``if we want to reserve the term `name' for things which really just name an object without describing it, the only real proper names we can have are names of our own immediate sense data, objects of our own immediate acquaintance. The only such names which occur in language are demonstratives like `this' and `that.'\,''} The passage is not used by Kripke to endorse Russell's account; it is used to motivate the contrast with ordinary proper names, which are rigid in Kripke's sense but do not meet Russell's Cartesian standard. What the passage acknowledges, without developing, is that there is a candidate cognitive mechanism for rigidity --- demonstrative grounding under acquaintance --- and that Russell himself made it too narrow to cover the cases Kripke wants to cover. The mechanism Russell identified is the right kind of thing; the scope at which Russell allowed it is too restricted. Closing this gap --- preserving Russell's mechanism while extending its scope --- is the dialectical move that Chapters 4 and 5 will make explicit.
+
+This is acknowledged in the secondary literature. The Stanford Encyclopedia's discussion of rigid designation notes that Kripke's appeal to stipulation in the treatment of \emph{de jure} rigidity is ``more like a promissory note than the satisfaction of an explanatory obligation.''\footnote{The notation \(\sigma\) for surrogate objects --- manuscripts, portraits, citations --- is from the PRU framework document. The surrogate-based reading of names without direct experiential contact is developed in Chapter 5.} The promissory note is for an account of the mechanism by which names achieve, in actual linguistic practice, what variables achieve by construction. The literature has attempted to discharge the promissory note in several ways. Evans (1982) defends a ``discriminating conception'' requirement on reference. Recanati (2012) develops the account into the Mental Files architecture. Devitt (1981) offers a causal-descriptivist hybrid that supplements the causal chain with a descriptive component. Each addresses part of what is needed; Chapter 3 examines them in detail.
+
+The dissertation's contribution begins here. Chapter 3 surveys the existing cognitive accounts and argues that each identifies the right desideratum but stops short of supplying the mechanism. Chapter 4 introduces the analytical vocabulary --- the \(x^o\)/\(x^c\) mode distinction --- that makes the missing mechanism visible. Chapter 5 develops the positive account: local rigidity as the cognitive primitive, baptism as the lifting of local rigidity into a socially portable name, the causal chain as the testimonial network that sustains the lifting across absence. The metasemantic premise that the standard reading correctly identifies as substantive --- that ordinary names function as rigid designators --- gets, on the proposed account, a cognitive grounding it has not had.
+
+What this chapter has done, then, is set the stage. The headline observation is consensus, sourced to Kripke and the standard literature. The three-level distinction adds a finer specification of where the cognitive question arises. The cognitive-mechanism gap is identified as the place where the dissertation makes its substantive contribution. The chapters that follow take up the gap and propose a way to close it.
+
+\section{From Russell to Kripke: The Argument for Rigid Designation}\label{from-russell-to-kripke-the-argument-for-rigid-designation}
+
+\subsection{Overview}\label{overview}
+
+Chapter 2 closed at the point where the necessity-of-identity formula, applied to names, presupposed that names exhibit the same reference-invariance across worlds that variables have under assignment. That presupposition is a substantive metasemantic claim; the formula does not establish it.
+
+This chapter presents the independent arguments Kripke makes for the rigidity of names, lays out the received view on why descriptions cannot supply this rigidity, and reconstructs a dialectical path on which Bertrand Russell first identified the correct cognitive mechanism and then declined to generalize it.
+
+Finally, the chapter evaluates the leading cognitive implementations of direct reference---Evans, Recanati, and Devitt. It argues that while each identifies a genuine desideratum, they all share a representational ``template'' architecture that treats reference as a form of algorithmic pattern-matching.
+
+The gap this critique identifies is the one Chapters 4 and 5 close by modeling reference as attractor-basin resonance under the Pattern-Recognition Unity (PRU) framework.
+
+\subsection{Rigid Designation: Kripke's Independent Argument}\label{rigid-designation-kripkes-independent-argument}
+
+Kripke's thesis is that proper names are rigid designators: a proper name designates the same individual in every possible world in which that individual exists. The thesis is defended in \emph{Naming and Necessity} by three converging arguments, none of which depends on the necessity-of-identity formula. The formula regiments the modal consequence once rigidity is granted; the case for rigidity runs separately.
+
+The modal argument turns on counterfactual intuition. Aristotle could have died in infancy, never taught Alexander, and never written the \emph{Nicomachean Ethics}. In that counterfactual scenario, it is Aristotle who failed to do these things, not someone else. The name ``Aristotle'' tracks the individual across counterfactual variation, even when every description we associate with him fails. If ``Aristotle'' abbreviated ``the teacher of Alexander who wrote the \emph{Nicomachean Ethics},'' then in a world where no one satisfied that description the name would refer to no one. If it referred to whoever did satisfy it, the counterfactual claim would be about someone else. Both readings clash with the intuition that the counterfactual is about the man Aristotle himself.
+
+The epistemic argument turns on ignorance and error. A competent user of the name ``Feynman'' may know only that Feynman was a physicist, or may believe things about him that are factually wrong. On a descriptivist theory, such a user either fails to refer or refers to whoever fits her associated description---which, in cases of error, will be someone other than Feynman. Yet speakers manage to refer to Feynman regardless.
+
+The sharpest version of this is the Gödel/Schmidt thought experiment: suppose, counterfactually, that the incompleteness proof we attribute to Gödel was actually discovered by a man named Schmidt, and Gödel merely stole it. On a descriptivist theory built around ``the prover of the incompleteness of arithmetic,'' ``Gödel'' would refer to Schmidt. Our intuition is that ``Gödel'' still refers to Gödel. Reference runs through the name, not through the descriptions attached to it.
+
+The semantic argument targets substitutivity in modal contexts. ``Necessarily, Benjamin Franklin is Benjamin Franklin'' is true; ``Necessarily, the inventor of bifocals is the inventor of bifocals'' is also true; but ``Necessarily, Benjamin Franklin is the inventor of bifocals'' is false---he might never have invented them. The name and the description share an actual-world referent but differ in modal profile. They cannot be synonyms.
+
+These three arguments motivate the distinction between \emph{de jure} rigidity (characteristic of proper names, rigid by grammatical stipulation) and \emph{de facto} rigidity (attaching to descriptions whose satisfiers are necessarily the same across worlds, such as ``the least prime''). Names are rigid by how they function as designators, not by what they happen to pick out.
+
+\subsection{Why Descriptions Cannot Supply Rigidity}\label{why-descriptions-cannot-supply-rigidity}
+
+Descriptions pick out satisfiers world by world. ``The inventor of bifocals'' picks out whoever, in any given world, invented bifocals. Different worlds can have different inventors; the description tracks whichever individual happens to satisfy it.
+
+This world-relative behavior is constitutive of descriptions: they specify a condition, and the reference is wherever the condition is met. No accumulation of conditions changes this. ``The stout inventor of bifocals who was a Postmaster General'' still picks out a satisfier world by world; adding conditions narrows the range of worlds where the description is satisfied but does not make the reference invariant across them.
+
+The formal expression of this is the scope problem. In a sentence like \(\Box \, F(\iota x\, G x)\), the description \(\iota x\, G x\) can take scope inside or outside the modal operator. \_ Read with narrow scope (primary occurrence), ``necessarily, \(F\) of whoever is \(G\)'' requires that in every world the satisfier of \(G\) in that world is also \(F\). \_ Read with wide scope (secondary occurrence), ``of whoever is actually \(G\), necessarily \(F\)'' requires that the actual-world satisfier of \(G\) is \(F\) in every world.
+
+The wide-scope reading behaves modally as if the description were rigid: the referent is fixed in the actual world and held constant. But the rigidity is positional, not constitutive---it is achieved by choice of scope, not by anything intrinsic to the description. A description with wide scope and a rigid designator share modal profiles in simple cases but come apart on more complex constructions.
+
+The same point applies to David Kaplan's \(\text{dthat}\) operator. \(\text{dthat}(\iota x\, F x)\) takes a description and converts it into a directly referring term whose reference is fixed in the actual world and held constant across worlds. \(\text{dthat}\) does the same logical work as wide-scope \(\iota x\, F x\), but it does the work through rigidification rather than scope manipulation---and it makes the rigidification intrinsic to the designator rather than dependent on how the designator is positioned relative to a modal operator.
+
+Names differ from rigidified descriptions in a further respect: for names, wide scope is the only reading, because the name has no descriptive structure that could generate a narrow-scope reading in the first place. ``Aristotle'' does not pick out whoever happens to be Aristotle in each world, because ``being Aristotle'' is not a condition the name imposes.
+
+The core reason descriptions cannot generate rigidity is architectural. In the vocabulary of the PRU framework, descriptions operate through \textbf{pattern-matching} (PRU §4.2). They function as templates: the cognitive system compares an input against a stored set of properties and evaluates the fit. Because this process is algorithmic and comparative, it must run anew in every counterfactual world, yielding different satisfiers in different environments. Rigidity requires an entirely different cognitive operation.
+
+\subsection{Russell's Mechanism and His Retreat}\label{russells-mechanism-and-his-retreat}
+
+If descriptions cannot supply rigidity, we must look for a non-descriptive cognitive operation that can. In a passage from \emph{The Philosophy of Logical Atomism} quoted by Kripke, Bertrand Russell identifies this primitive operation but declines to generalize it:
+
+\begin{quote}
+``If we want to reserve the term `name' for things which really just name an object without describing it, the only real proper names we can have are names of our own immediate sense data, objects of our own immediate acquaintance. The only such names which occur in language are demonstratives like `this' and `that.'\,''
+\end{quote}
+
+Two distinct claims are joined in this passage. They must be separated.
+
+The first is the identification of a \textbf{mechanism}. Russell isolates a specific kind of designator---the demonstrative---and characterizes it by what it does not do: it does not describe. The demonstrative ``just names an object,'' without descriptive intermediary. The reference is established by the demonstrative act itself, not by a description the speaker has in mind.
+
+In the vocabulary developed in Chapter 4, this is \textbf{local rigidity}: direct, non-descriptive coordination with an experienced particular. Russell is naming the cognitive operation that the rigid-designation thesis presupposes but does not itself describe.
+
+The second is the \textbf{retreat}. Having identified the mechanism, Russell restricts it to ``immediate sense data''---the subset of cases in which the reference is exempt from Cartesian doubt. The restriction is epistemological, driven by a foundationalist demand for certainty. Under Russell's standard, even ``this chair'' is not a genuine name, because one could be hallucinating the chair.
+
+The dialectical position this dissertation exploits begins here. Russell's mechanism---demonstrative grounding---is the exact mechanism the rigid-designation literature needs to explain how a term can hold its referent fixed without descriptive mediation. But by restricting it to incorrigible cases, Russell makes the mechanism unavailable for ordinary, public proper names.
+
+This restriction is unnecessary. Russell collapsed a crucial distinction: the distinction between \textbf{directness} and \textbf{infallibility}. He assumed that if a cognitive operation is fallible, it must be mediated by descriptions, and therefore cannot be direct.
+
+Neural attractor dynamics show that directness and infallibility are distinct (PRU §3.2). \_ A Pattern-Constellation \(\\{X\\}\) is an attractor basin in neural space. \_ Falling into an attractor basin is mathematically and cognitively direct: it is a resonance event (pattern-recognition), not an algorithmic comparison (pattern-matching) (PRU §4.2). \_ Yet the process is fallible: sensory noise, contextual shifts, or neurological changes can cause the system to misfire, fall into the wrong basin, or gradually resculpt the basin's boundaries (PRU §3.2).
+
+Directness does not require infallibility. It requires \textbf{stability}. Demonstrative tracking is direct because it is a resonance event, but it remains fallible because the attractor landscape is dynamic.
+
+By dropping Russell's Cartesian requirement of infallibility while keeping his demonstrative mechanism, we can generalize local rigidity beyond momentary sense data to physical objects.
+
+\subsection{Baptism and the Causal Chain}\label{baptism-and-the-causal-chain}
+
+Kripke's positive picture of how ordinary names attach to their referents runs through baptism and causal-historical transmission.
+
+At some initial act---the baptism---a name is attached to its bearer, either by ostension (``let us call this child `Feynman'\,'') or by a reference-fixing description (``let `Jack the Ripper' denote whoever committed these murders''). From this origin, the name propagates through a chain of communication: each speaker acquires the name from an earlier speaker, intending to use it with the same reference. The speaker at the end of the chain refers to the original bearer even if she knows nothing about him beyond the name.
+
+Kripke is explicit that this is a ``better picture'' rather than a systematic theory:
+
+\begin{quote}
+``I'm not, in fact, trying to give any sort of necessary and sufficient conditions for reference\ldots{} in any rigorous sense.''
+\end{quote}
+
+The picture describes the external, social constraints of reference. It tells us what reference looks like from the outside, but it does not describe the cognitive operations that realize this picture in actual speakers.
+
+The picture has two parts. The baptism fixes the reference. The causal chain preserves it across uses, speakers, and time.
+
+Kripke distinguishes reference-fixing from meaning-giving. A description used in a baptism---``let `Jack the Ripper' denote the perpetrator of these crimes''---fixes the reference of the name but does not become its meaning. The name, once fixed, is rigid; the description is not. What is inherited down the chain is the designator and its rigidity, not the descriptive route by which the reference was originally established.
+
+This picture successfully accounts for speaker ignorance and error. A child can learn ``Aristotle'' from a parent and refer to Aristotle with no descriptive content beyond the name.
+
+What the picture leaves open is the cognitive level. It asserts that baptism fixes reference and the chain transmits it, but it does not explain how a brain performs these operations.
+
+\subsection{The Explanatory Gap}\label{the-explanatory-gap}
+
+The post-Kripkean literature widely acknowledges what Joseph LaPorte characterizes as the ``promissory note'' structure of the causal-historical picture: it gestures at cognitive and psychological mechanisms it does not supply. This explanatory gap consists of three connected omissions.
+
+First, \textbf{the tracking gap}: no account is given of what constitutes rigid tracking at the cognitive level. Names are said to be rigid; the rigidity is explained semantically as designation of the same individual across worlds; but the cognitive capacity that allows a speaker to use a name as rigid---to deploy it in modal contexts where descriptions fail---is not characterized.
+
+Second, \textbf{the baptism gap}: no account is given of the cognitive mechanism of baptism. Baptism is described as reference-fixing, but what a speaker actually does when she baptizes---especially in the ostensive case---is left unanalyzed. Pointing at an object and saying ``let us call this `X'\,'' presupposes a prior cognitive capacity to segment the perceptual field and hold \emph{this} particular fixed, a capacity that semantic theory takes for granted.
+
+Third, \textbf{the transmission gap}: no account is given of how the causal chain is psychologically realized. A causal chain of uses requires, at each link, that a speaker take up the name from an earlier speaker in a way that preserves reference. What the speaker acquires cognitively when she learns the name---and how that acquisition preserves the reference without relying on a shared set of descriptions---is left unspecified.
+
+These three gaps are three symptoms of a single missing element: the primitive tracking capacity that lets a speaker single out a particular and continue to track that same particular over time, through change, and under counterfactual variation.
+
+Rigid tracking is this capacity exercised at the modal level; baptism is this capacity exercised in attaching a name to a particular; the causal chain is this capacity exercised in taking up a name from another speaker and continuing to apply it to that particular.
+
+\subsection{Existing Cognitive Implementations}\label{existing-cognitive-implementations}
+
+Several philosophers have attempted to fill this explanatory gap. Three leading implementations illustrate the state of the art: Gareth Evans's discriminating-conception account, François Recanati's mental-files account, and Michael Devitt's causal-descriptive account.
+
+While each identifies a genuine cognitive desideratum, all three share a structural limitation: they retain a representational ``template'' architecture that treats reference as a form of algorithmic pattern-matching.
+
+\subsubsection{Evans: The Discriminating Conception}\label{evans-the-discriminating-conception}
+
+Evans defended a Russellian constraint: singular thought about an object requires that the thinker possess a ``discriminating conception'' of that object---a way of singling it out that distinguishes it from all other things.
+
+While Evans is careful to distinguish this from descriptivism, his account remains propositional: to have a discriminating conception of \(a\) is to be able to think, of \(a\), that it is the unique satisfier of some condition the thinker grasps. The limit of this account is its propositional framing: the discriminating conception is modeled as a set of thoughts a thinker can have, rather than as a sensory-motor tracking capacity that supports those thoughts.
+
+\subsubsection{Recanati: Mental Files}\label{recanati-mental-files}
+
+Recanati models the grasp of a singular term as a ``mental file''---a cognitive container that collects information about a referent, supports updating, and underwrites the capacity to think about the referent in its absence.
+
+While files are not propositional in Evans's sense, the container metaphor retains a representational template. The file is an internal representation the speaker has; the referent is what the file is about. The act of opening a file presupposes a capacity to single out a particular and start a file on it. That capacity is the precondition for the file, not something the file architecture itself explains.
+
+\subsubsection{Devitt: Causal-Descriptivism}\label{devitt-causal-descriptivism}
+
+Devitt offers a causal-descriptivist hybrid, supplementing Kripke's causal chain with a descriptive component to handle cases of reference-shift.
+
+The architecture remains representationalist: reference is a relation between an internal representational state (the speaker's causal-descriptive complex) and a referent. The descriptive component continues to do the sorting and matching work, leaving the account vulnerable to Kripke's original anti-descriptivist objections.
+
+\subsubsection{The Shared Limitation: Pattern-Matching}\label{the-shared-limitation-pattern-matching}
+
+These three proposals treat reference as a relation between an internal representational state (a conception, a file, or a causal-descriptive state) and a referent. Each account attempts to loosen the descriptive requirement, but they all preserve the template architecture: reference is something the speaker \emph{has} (a representation); the referent is what that representation is \emph{about}.
+
+This architecture forces them to model reference-evaluation as \textbf{pattern-matching} (PRU §4.2). The cognitive system must take the stored representation (the file or conception) and match it against the world to determine reference.
+
+This generates the \textbf{historical reference paradox}: \_ If the contemporary speaker's connection to an absent object (like Aristotle) is mediated by descriptions and files, and these files are evaluated via pattern-matching, then the contemporary speaker's reference should suffer from the same world-relative modal failures as standard descriptions. \_ If we try to avoid this by asserting that the file is rigid by ``categorial stipulation,'' we have returned to semantic fiat, bypassing the cognitive mechanism.
+
+The PRU framework resolves this paradox in Chapters 4 and 5 by splitting the cognitive architecture into two non-interchangeable operations (PRU §8.4):
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \textbf{R-Grounding (\(\mathcal{R}(\{X\}, \langle x \rangle)\)):} Direct, sensory-motor pattern-recognition. This is local rigidity, where the word-sound is integrated directly into an active, experienced attractor basin.
+\item
+  \textbf{A-Grounding (\(\mathcal{A}(\mathcal{D}, N^c)\)):} Value-fixing through structures internal to the linguistic system.
+\end{enumerate}
+
+When a contemporary speaker refers to Aristotle, they do not perform \(R\)-grounding; they have no sensory access to him. They operate through \(A\)-grounding.
+
+Crucially, the descriptions (\(\mathcal{D}\)) they possess do not function as satisfaction templates to match candidates in counterfactual worlds. Instead, \(\mathcal{D}\) acts as a historical coordinate within the collective linguistic pattern-constellation \(\langle \text{Aristotle} \rangle\).
+
+The purpose of the descriptions is to retrieve and activate the name-concept \(N^c\). Because \(N^c\) is a tracking device that inherits its scope-ambiguity-free character from the original baptismal \(\mathcal{R}(h^o, N^c)\), the modal evaluation runs on the retrieved historical channel (\(N^c\)), not on the descriptions (\(\mathcal{D}\)).
+
+The contemporary speaker refers rigidly not because they possess a direct tracking relation to Aristotle, but because their \(A\)-grounding` uses descriptions to \emph{trace} a historical tracking channel, rather than to \emph{match} a counterfactual satisfier.
+
+\subsection{Summary and Transition}\label{summary-and-transition}
+
+This chapter has established three points:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Kripke's independent arguments establish that names are rigid, but define a semantic property rather than explaining the cognitive operation that produces it.
+\item
+  Descriptions cannot generate rigidity because they are structurally bound to a pattern-matching architecture that evaluates satisfiers world-by-world.
+\item
+  Russell identified the correct cognitive primitive---direct demonstrative tracking---but mistakenly restricted it to momentary sense data because he demanded Cartesian infallibility.
+\end{enumerate}
+
+By separating directness from infallibility through neural attractor dynamics, we can reclaim Russell's demonstrative mechanism for physical objects.
+
+This primitive tracking capacity is \textbf{local rigidity}. Baptism and the causal chain are best understood as the social stabilization of local rigidity across absence.
+
+Chapter 4 introduces the formal analytical vocabulary of this positive thesis: the object-mode/concept-mode distinction (\(x^o/x^c\)), the formal development of \(\mathcal{R}\) -grounding and \(\mathcal{A}\) -grounding, and the proof of how this distinction resolves the puzzle of the necessary \emph{a posteriori} and \emph{de re} modality.
+
+\section{The Functional-Mode Distinction}\label{the-functional-mode-distinction}
+
+Chapter 3 closed at the point where a specific cognitive gap had been identified. Kripke's semantic account of rigid designation is well-motivated but leaves three connected aspects unspecified at the cognitive level: how rigid tracking is sustained by the speaker, what cognitive event constitutes a baptism, and how the causal chain is psychologically realized. The leading existing implementations --- Evans's discriminating conception, Recanati's mental files, Devitt's causal-descriptive hybrid --- each address part of the gap but share a representational template that, on the reading developed there, stops short of the primitive tracking capacity the thesis requires.
+
+The present chapter introduces the analytical vocabulary in terms of which the rest of the dissertation closes the gap. The framework's basic primitives --- the experiential pattern \(\{X\}\), the linguistic pattern \(\langle x \rangle\), and the coordination operator \(\mathcal{R}\) --- are set out in detail in the PRU framework document and are not duplicated here. The chapter takes them as given and develops what they support: a functional-mode distinction between \(x^o\) and \(x^c\), a treatment of predication as coordination rather than function-application, the notion of local rigidity, and re-readings of two classical modal puzzles. The next section develops the \(x^o/x^c\) distinction, the chapter's central analytical move. The section after that treats \(\mathcal{R}\) as a coordination operator that unifies what would otherwise be several distinct predicative and referential relations. The third section introduces local rigidity, the cognitive ground of rigid designation as the thesis here understands it. The fourth and fifth sections apply the resulting apparatus to the de re / de dicto distinction and to the necessary a posteriori. Chapter 5 develops the positive account of baptism and the causal chain in the same vocabulary.
+
+\subsection{\texorpdfstring{The \(x^o/x^c\) Functional-Mode Distinction}{The x\^{}o/x\^{}c Functional-Mode Distinction}}\label{the-xoxc-functional-mode-distinction}
+
+A word, on the account developed here, has two functional modes. As \(x^o\), it coordinates with a particular instance of an experiential pattern \(\{X\}\). As \(x^c\), it operates within the linguistic pattern \(\langle x \rangle\) --- the network of utterances, frames, and inferential relations in which the word figures. The distinction is functional rather than lexical: the same word-form, ``bird,'' can play either role, and which role it plays in a given utterance depends on what work the word is being asked to do.
+
+Two examples isolate the modes. In ``that bird is injured,'' ``bird'' functions as \(bird^o\). It coordinates with one bird in the speaker's perceptual field. The utterance is about that bird; substitute another bird and the truth-value can change. In ``birds fly,'' the word functions as \(bird^c\). It operates within the inferential and generic relations the word maintains in \(\langle bird \rangle\) --- what is said about birds in the community, how the term combines with predicates, what counts as a counterexample. No particular bird is in view. The utterance is about how the word ``bird'' connects to ``fly'' within the linguistic pattern, with whatever generic force the form carries.
+
+The two modes can be told apart by what speakers can and cannot do with them. A child who has acquired \(bird^o\) can point at a bird and say ``bird''; she can re-identify the same bird across short stretches of time. She cannot yet answer ``what is a bird?'' except by ostension. A child who has acquired \(bird^c\) can answer in words: ``a bird is an animal that flies.'' The difference is not in the word's reference but in the kind of work the word does --- coordinating with a particular versus moving through a network of other words. Both are linguistic capacities. Neither reduces to the other.
+
+This last point bears emphasis because it is where the framework most often gets misread. The object-mode \(x^o\) is \emph{still language}. It is not a perception, not a piece of experience. Experience belongs to \(E\{X\}\) --- the activation, in a given encounter, of the perceptual-motor-affective constellation \(\{X\}\). The word \(bird^o\) does not \emph{consist of} the experience of the bird; it coordinates with it. The two-side structure --- \(\langle x \rangle\) on the linguistic side, \(\{X\}\) on the experiential side, \(\mathcal{R}\) as the coordination between them --- keeps \(x^o\) from collapsing into either pure linguistic relation or pure perceptual content. A speaker using a word in \(x^o\)-mode is doing something linguistic, but doing it in a way that requires coordination with what is encountered.
+
+The rest of the chapter depends on this distinction in specific ways. The treatment of predication in the following section turns on whether the subject of a predication is in \(x^o\) or \(x^c\) mode. The argument for local rigidity in the section after that locates the cognitive ground of Kripkean rigidity in \(x^o\) rather than in \(x^c\). The re-readings of de re/de dicto and of the necessary a posteriori turn on what gets evaluated at each level. The distinction is not introduced as a curiosity; it is the analytical apparatus the rest of Chapter 4 uses.
+
+The closest neighbor in the existing literature is Recanati's mental-files architecture. Recanati holds that singular thought is carried by mental files --- vehicles of reference in a language-of-thought architecture, typed by the kind of relation that grounds them.\footnote{Recanati, \emph{Mental Files} (2012), ch.~3.} A demonstrative file is opened in a perceptual encounter and stores information from that encounter; a memory-demonstrative file is what the demonstrative file becomes once perceptual contact ends; a recognitional file collects information about an individual recognized across encounters; an ``encyclopedia entry'' is a conceptual file, grounded in a higher-order relation rather than in direct acquaintance, but still --- on Recanati's view --- based on an \emph{epistemically rewarding} (ER) relation to its referent.\footnote{Recanati, \emph{Mental Files} (2012), chs.~3--4 on the typology of files; ch.~7 on encyclopedia entries. The view that even encyclopedia entries are grounded in ER relations is the ``actualist'' commitment criticized by Hansen and Rey in F. Salis (ed.), \emph{Disputatio} V (36), 2013.} The demonstrative file is the basic case; the others are derivative. The architecture handles a great deal of what the account here also wants to handle: the difference between a thought tied to a present particular and a thought about an absent or recognized one, the way information accumulates around a referent, the conditions under which two singular thoughts converge on a single object.
+
+Three differences between Recanati's distinction and the one drawn here are worth stating clearly. They are not arguments against Recanati; they mark the points at which the account here does different work.
+
+The first concerns the unit of analysis. For Recanati, the unit is the file --- a mental representation, ``the mental counterpart'' of a singular term, operating in a language-of-thought architecture.\footnote{Recanati, \emph{Mental Files} (2012), p.~34: ``A non-descriptive mode of presentation, I claim, is nothing but a mental-file.'' The vehicle/content framing is explicit at pp.~31--34.} On the account here, the unit is the word, used in one or the other functional mode. The framing is not that the mind has a file \emph{Aristotle} with an ER-grounded slot, but that the public word ``Aristotle'' functions in two modes which a speaker exercises in conversation, instruction, baptism, dispute. The dissertation is about how the public language refers, not about which cognitive vehicle carries the speaker's singular thought. The two questions can be asked independently, and giving an answer to one does not commit to a particular answer to the other.
+
+The second concerns the topology of the interface. Recanati's files are mental items related to objects in the world through ER relations; the interface is mind-to-world. PRU has a different topology: \(\langle x \rangle\) on one side, \(\{X\}\) on the other, and \(\mathcal{R}\) as the coordination between them. Both \(x^o\) and \(x^c\) are word-modes living on the linguistic side, but \(x^o\) is the mode in which the word coordinates, through \(\mathcal{R}\), with a particular activation \(E\{X\}\) on the experiential side. The linguistic pattern \(\langle x \rangle\) --- the publicly maintained pattern of word-use in the community --- has no clear counterpart in the file architecture; Recanati's files are private mental items, even when they happen to converge across speakers. The PRU topology takes the social-linguistic dimension of \(x^c\) as primitive rather than emergent, which matters when Chapter 5 treats baptism and the causal chain as operations on \(\langle N \rangle\) rather than as transfers of files.
+
+The third concerns the treatment of common nouns. Recanati's taxonomy is built for singular reference. Encyclopedia entries are normatively ``one per object of interest''; demonstrative and memory files are tied to particular objects through ER relations. Common kind-terms --- ``bird,'' ``water,'' ``chair'' --- do not fit the file architecture without strain, and the difficulty has been noticed from within the file-theoretic literature.\footnote{Goodman, ``Against the Mental Files Conception of Singular Thought,'' \emph{Review of Philosophy and Psychology} 7 (2016): 437--61, presses a related point from a different angle: that some file-based thought is descriptive rather than singular, so the identification of file-based thought with singular thought breaks down.} The account here applies the \(x^o/x^c\) distinction symmetrically to common nouns and to names: a kind-term used to coordinate with a particular (``that bird'') is in object-mode; the same kind-term used in inferential and generic relations (``birds fly'') is in concept-mode. Names, treated in Chapter 5, emerge through a baptismal lifting of \(h^o\) into a stabilized \(N^c\), but the underlying machinery --- the \(x^o/x^c\) functional distinction --- is the same one already at work for common nouns. The symmetry matters for the argument that names scale up demonstrative rigidity, because that argument needs demonstrative coordination already to be present at the level of common nouns rather than emerging only with the use of proper names.
+
+What the distinction earns. The originality of the move is not in noticing that some uses are tied to particulars while others are not; that observation is at least as old as Russell's distinction between knowledge by acquaintance and knowledge by description and runs through Strawson, Evans, and Recanati. The move is in locating the distinction at the level of word-modes, with \(\mathcal{R}\) as the coordination between the linguistic side and the experiential side, and with the same machinery applying to common nouns and to names. This locates the cognitive ground of rigid designation in something already at work in ordinary demonstrative speech, without requiring a separate vehicle-theoretic apparatus and without restricting the analysis to singular thought narrowly construed. The remaining sections of Chapter 4 put the distinction to work; Chapter 5 uses it to give the positive account of baptism, the causal chain, and the metasemantic role of \(\mathcal{R}\).
+
+\subsection{\texorpdfstring{\(\mathcal{R}\) as Coordination}{\textbackslash mathcal\{R\} as Coordination}}\label{mathcalr-as-coordination}
+
+The relation \(\mathcal{R}\) is the framework's coordination operator. It describes how the items of the two-side topology --- words in \(\langle x \rangle\) and patterns in \(\{X\}\) --- stand in relation to one another. The relation can be of several kinds, depending on what is being coordinated. A word in object-mode can coordinate with an experiential activation: \(\mathcal{R}(bird^o, E\{BIRD\})\) describes the binding by which ``bird'' used demonstratively coordinates with a particular bird in view. A word in object-mode can coordinate with a word in concept-mode: \(\mathcal{R}(bird^o, white^c)\) describes the predicative coordination by which ``that bird is white'' attaches the concept-mode predicate to the object-mode subject. A word in concept-mode can coordinate with another word in concept-mode: \(\mathcal{R}(bird^c, fly^c)\) describes the generic coordination by which ``birds fly'' connects the two concept-mode items within the linguistic pattern.\footnote{\(\mathcal{R}\) is specified in the framework document at greater technical length, including its developmental account in the learning of \(\{X\}\) and its role in the integrated \(\{X, x^o\}\) constellation produced by the coordination of experiential event and word; see PRU Meta-Language, version 6.}
+
+In each case the operator names the same kind of phenomenon --- two items standing in coordination --- and the argument types determine the specific kind. The claim of the framework is that what looks like four different things in standard semantics --- reference, predication of a particular, generic predication, and (in Chapter 5) baptism --- are four applications of one relation. Whether this is borne out depends on whether the unified treatment handles the cases naturally and produces the right consequences for the dissertation's downstream arguments. The remaining sections of Chapter 4 and the whole of Chapter 5 are the test.
+
+The word ``coordination'' carries the substantive load here. The standard alternative is Fregean function-application: a predicate is a function that takes an object as argument and yields a truth-value. Set-theoretic semantics produces a parallel architecture: a predicate is a set, predication is membership. Both pictures are asymmetric and arity-fixed: the predicate is the active item, the object the passive one, and the predication relation is the application of one to the other. The coordination picture differs at exactly this point. The two items in \(\mathcal{R}(x, y)\) stand in a structural relation that the practice sustains, not in a function-argument pairing the speaker computes. The asymmetry between ``subject'' and ``predicate'' in surface grammar is real but not constitutive: in \(\mathcal{R}(bird^c, fly^c)\) neither item is more ``argument'' than the other, and the same operator covers the case where one item is in object-mode and the other in concept-mode. The unification is what the coordination framing buys.
+
+This is not a computational picture. \(\mathcal{R}\) is not an operation a speaker \emph{performs} on linguistic items, in the way a function gets applied to an argument or a set-membership relation gets checked. It is a relation that holds in virtue of how the speaker is embedded in a practice. To say that \(\mathcal{R}(bird^o, white^c)\) holds is to say that the speaker's use of ``white'' of this bird is sustained by ongoing engagement with both the bird (perceptually) and the predicate (within \(\langle white \rangle\), where the term has its application conditions, inferential roles, and contrast cases). The coordination is constituted developmentally --- through the speaker's acquisition of the relevant patterns --- and is sustained by continued participation in the linguistic community and continued contact with the world. The register is closer to Wittgenstein than to cognitive engineering: \(\mathcal{R}\) describes a feature of how language is lived, not a procedure executed in real time.
+
+The closest neighbors in the existing literature are Sellars's account of language-entry and language-exit transitions, together with Brandom's inferentialism. Sellars proposed that the use of a word is governed by three kinds of normative connection: language-entry rules (linking words to perceptual circumstances), language-language rules (linking words to other words through material inference), and language-exit rules (linking words to action).\footnote{Sellars, ``Some Reflections on Language Games,'' \emph{Philosophy of Science} 21 (1954): 204--28; reprinted in \emph{Science, Perception and Reality} (1963), pp.~321--58. The three-fold scheme of entry, intra-linguistic, and exit transitions is developed in §§II--III of that essay.} Brandom developed the language-language side into a thoroughgoing inferentialism: the content of a concept is constituted by its inferential role in the network of material commitments and entitlements that a competent speaker can give and ask for.\footnote{Brandom, \emph{Making It Explicit} (1994), esp.~chs.~3--4; \emph{Articulating Reasons} (2000), ch.~1. For critique of Brandom's account of singular terms specifically --- relevant since singular reference is the topic of the present chapter --- see McCullagh, ``Inferentialism and Singular Reference,'' \emph{Canadian Journal of Philosophy} 35 (2005): 183--220.} On the resulting picture, the use of ``red'' of an apple is jointly governed by language-entry rules (you can call it ``red'' because of how it looks) and inferential roles (calling something ``red'' commits you to its not being green, to its being colored, and so on).
+
+The relation between this picture and \(\mathcal{R}\) is close enough to require comment, and the points of departure are specific. Sellars and Brandom maintain a two-part architecture: entry and exit transitions on one side, inferential roles on the other. The world-language coupling and the word-word inferential coupling are distinct kinds of normative connection, governed by different sorts of rules. The proposal here unifies them. The same operator \(\mathcal{R}\) handles \(\mathcal{R}(bird^o, E\{BIRD\})\) (the language-entry side, in Sellars's terms) and \(\mathcal{R}(bird^c, fly^c)\) (the inferential side). The unification claim is that these are one kind of relation applied to different argument types, not two kinds of relation that happen to operate at the same level. Whether one finds this convincing depends on whether one finds the cases genuinely structurally similar; the dissertation's argument is that they are, and that the rigid-designation phenomena worked out in the next section and in Chapter 5 are best handled by an apparatus that treats them as such.
+
+Two further points of departure are worth flagging. Brandom's inferentialism takes inferential role as constitutive of conceptual content; \(\mathcal{R}\) is neutral on this question. The coordination relation can hold whether content is constituted by inference, by truth-conditions, by use, or by some other structure. The framework here does not need to settle the Brandom-versus-truth-conditional debate to do its work. Second, Sellars and Brandom both give privileged status to assertion as the unit of inferential commitment. \(\mathcal{R}\) takes word-modes as its arguments, and these are smaller-than-assertion units. The chapter's downstream applications --- to rigid designation, de re/de dicto, the necessary a posteriori --- turn on relations between sub-assertoric word-uses rather than between assertions, which is one reason the assertion-centric framings do not quite fit the work the dissertation needs done.
+
+With \(\mathcal{R}\) in place, the chapter can handle predication, reference, and conceptual coordination with one piece of machinery, and Chapter 5 can extend the same machinery to baptism and the causal chain without new primitives. The next section uses the apparatus to argue that the cognitive ground of rigid designation appears already at the level of \(\mathcal{R}(x^o, \cdot)\) --- coordination of an object-mode word with anything else --- and that the rigidity of names is the same coordination stabilized for use across absence. The sections after that re-read de re/de dicto and the necessary a posteriori in the same terms.
+
+\subsection{\texorpdfstring{Local Rigidity at \(x^o\)}{Local Rigidity at x\^{}o}}\label{local-rigidity-at-xo}
+
+Consider the utterance ``that bird could have been larger.'' A speaker pointing at a bird in front of her makes the counterfactual claim. The bird in question is held fixed across the modal variation: the speaker is not imagining a different bird that is larger; she is imagining \emph{that very bird} having been larger. The word ``bird'' in \(x^o\) mode coordinates with the same particular across the modal scope of ``could have been.'' Whatever properties of the bird are varied --- size, color, vigor, age --- the bird stays the same, by virtue of the demonstrative coordination already in place.
+
+The modal test for rigid designation is whether a designator picks out the same individual across the worlds the modal context quantifies over.\footnote{Kripke, \emph{Naming and Necessity}, p.~48. The test was developed in Chapter 3 §3.1.} The test, applied here, passes. In every counterfactual scenario where ``that bird could have been larger'' is evaluated, ``that bird'' picks out the same bird that is in front of the speaker in the actual context. The variation occurs in what is predicated of the bird, not in which bird is being talked about. This is what rigid designation looks like at the level of demonstrative coordination.
+
+Call this \emph{local rigidity}: rigidity that obtains within a perceptual or conversational episode by virtue of the demonstrative coordination \(\mathcal{R}(x^o, \cdot)\) being in place. Local rigidity is not yet Kripkean rigidity proper. Kripkean rigidity attaches to a name and holds across the entire range of counterfactual scenarios in which the bearer exists; local rigidity holds within the episode and lapses when the coordination does --- when the speaker stops attending to the bird, or when the conversational context shifts. The two differ in scope, not in structural kind. What is varied is the durability of the coordination, not the cognitive operation that constitutes the coordination.
+
+This last point bears emphasis, because the structural claim of the chapter depends on it. The claim is that rigidity is not a stiff property of the designator. It is a preserved link between the speaker's use of the term and the particular that anchors the use. The preservation is constituted by the practice --- perceptual attention, in the demonstrative case; social-linguistic stabilization, in the case of names. To call a term rigid is to say that this link is being preserved across whatever variation the modal context introduces. The variation is in the properties imagined, not in the link itself.
+
+It is worth setting this picture against the natural alternative. A different way of conceiving rigidity treats the designator as something with rigidity built in --- a kind of stiff attachment to its bearer that, once established, holds across modal variation by virtue of what the designator is. On that picture, what makes the modal evaluation come out right is the rigidity of the attachment itself, a feature the designator possesses. The picture is a natural one and is encouraged by some of Kripke's own formulations, but it misdescribes what is happening. Names do not have rigidity built in. Names rigidly designate because the linguistic community has a practice of using them rigidly --- of correcting failures of reference, of holding the term to its bearer across descriptive revision, of teaching the term so that successive speakers continue to use it in the same way.\footnote{Kripke's own metaphors are not in fact uniformly committed to a built-in-property reading. His description of the baptismal act and the causal chain (NN pp.~91--97) treats reference as something speakers do and sustain, which is closer to the preserved-link framing. The built-in-property reading is a tendency of the formal regimentation rather than of Kripke's positive picture; see Kripke's own characterization of his account as ``a better picture'' rather than a theory at NN p.~94, treated in Chapter 3 §3.4.} The preserved-link framing captures what this practice accomplishes; the built-in-property framing obscures it.
+
+The consequence for what names are. Names, on the account developed here, are devices for sustaining the preserved link across the conditions that make demonstrative re-anchoring impossible: the bearer is not perceptually present, the speaker is not the baptizer, the chain of transmission is many speakers and centuries long. The cognitive coordination that operates in \(\mathcal{R}(bird^o, \cdot)\) at the level of demonstrative use is the same coordination that operates in \(\mathcal{R}(\sigma, Aristotle^c)\) at the level of a surrogate-based reading of Aristotle two millennia after his death.\footnote{The notation \(\sigma\) for surrogate objects --- manuscripts, portraits, citations --- is from the PRU framework document. The surrogate-based reading of names without direct experiential contact is developed in Chapter 5.} What differs is the scaffolding that sustains the coordination: perceptual contact in the first case, testimonial networks and surrogate objects (manuscripts, portraits, citations) in the second. The cognitive operation is the same; the practice that preserves the link is different. Chapter 5 develops this in detail, treating baptism as the operation that lifts the local coordination \(\mathcal{R}(h^o, N^c)\) into a socially portable form and the causal chain as the testimonial infrastructure that maintains the lift.
+
+The closest neighbor in the existing literature is the indexicalist tradition on proper names. Russell's late view in \emph{Inquiries into Meaning and Truth} already treated names as a class of indexicals; Recanati's \emph{Direct Reference} developed the picture systematically; Pelczar and Rainsbury treated names as pure indexicals with a Kaplanian ``character'' assigning dubbings to contexts; Rami developed a use-conditional indexical conception; Künne and Textor proposed names as hybrid expressions composed of an utterance and its referent; Tarnowski argues that proper names are simple demonstratives whose referents are determined by speaker's referential intention.\footnote{Russell, \emph{Inquiries into Meaning and Truth} (1940); Recanati, \emph{Direct Reference: From Language to Thought} (1993); Pelczar and Rainsbury, ``The Indexical Character of Names,'' \emph{Synthese} 114 (1998): 293--317; Rami, ``The Use-Conditional Indexical Conception of Proper Names,'' \emph{Philosophical Studies} 168 (2014): 119--50; Künne, ``Hybrid Proper Names,'' \emph{Mind} 101 (1992): 721--31; Textor, ``Frege's Theory of Hybrid Proper Names Extended,'' \emph{Mind} 124 (2015): 823--47; Tarnowski, ``Proper Names as Demonstratives,'' in C. Penco and A. Negro (eds.), \emph{Proceedings of the 2021 Workshop on Context}. For a survey of the broader field, see García-Carpintero, ``The Mill-Frege Theory of Proper Names,'' \emph{Mind} 127 (2018): 1107--68.} On these views, names belong to the semantic category of indexicals or demonstratives --- they have a character function from contexts to contents, and their reference is determined by features of the context of use rather than by descriptions associated with the term.
+
+The position taken here is not a position in this debate. The indexicalist tradition is doing \emph{semantic} work: it asks what category names belong to and how their reference is determined by context. Its central explanatory target is \emph{nambiguity} --- the phenomenon of multiple bearers of the same name --- and its central technical move is to give names a Kaplan-style character. The local-rigidity claim is a \emph{metasemantic} claim about the cognitive coordination that supports rigid designation, whatever semantic theory of names one favours. The PRU view is compatible with Kaplanian semantics for names, with Kripke's causal-chain picture, with Millian direct reference. What it adds is a story about the cognitive operation any of these accounts presupposes when it speaks of a name ``tracking'' a bearer across worlds, contexts, or speakers.
+
+Three points of departure from the indexicalist tradition are worth marking. The first concerns the level of analysis: the indexicalist tradition gives names a semantic category and revises Kaplan-style semantics accordingly; the present account does not revise Kripkean or Kaplanian semantics at all. It addresses a question those semantics presuppose without answering. The second concerns the explanatory target: the indexicalist tradition's central case is nambiguity and the same-name-multiple-bearers phenomenon; the present account's central case is the cognitive ground of Kripkean rigidity, which is a different problem.\footnote{This is not to say the present account has nothing to say about nambiguity. Multiple-bearer cases are handled by the linguistic pattern \(\langle N \rangle\) admitting multiple anchorings \(\mathcal{R}(h_1^o, N^c)\), \(\mathcal{R}(h_2^o, N^c)\), etc., with context determining which anchoring is operative in a given use. The question is downstream of the local-rigidity claim, and is not the present section's main concern.} The third concerns common nouns: the indexicalist accounts are tailored to proper names specifically and do not naturally generalize to ``that bird,'' ``this dog,'' or other common kind-terms used demonstratively. The present account treats the demonstrative use of ``bird'' and the use of ``Aristotle'' as cases of the same underlying coordination, differing in the practice that sustains the coordination rather than in the kind of cognitive operation involved.
+
+With local rigidity in place and the preserved-link framing developed, the chapter has a unified account of what rigidity is at the cognitive level. The same coordination operates in demonstrative use and in name-use; what differs is the social-linguistic infrastructure that sustains the coordination across absence. The next section uses the level distinction to re-read de re and de dicto modality. The section after that handles the necessary a posteriori as a case where the same individual is held fixed at \(x^o\) (necessary) while the inference connecting two concept-mode designators of that individual requires empirical work (a posteriori). Chapter 5 develops the positive account of baptism and the causal chain as the practice that lifts local rigidity into the durable form proper names exhibit.
+
+\subsection{\texorpdfstring{De Re and De Dicto as Predication at \(x^o\) and \(x^c\)}{De Re and De Dicto as Predication at x\^{}o and x\^{}c}}\label{de-re-and-de-dicto-as-predication-at-xo-and-xc}
+
+The de re / de dicto distinction is medieval in origin and gets its modern form in Quine's puzzle about quantifying into modal contexts.\footnote{Quine, ``Reference and Modality,'' in \emph{From a Logical Point of View} (1953); Kaplan, ``Quantifying In,'' \emph{Synthese} 19 (1968): 178--214. The medieval background is reviewed in Knuuttila, \emph{Modalities in Medieval Philosophy} (1993).} Consider the canonical example:
+
+\begin{quote}
+Necessarily, the number of planets is greater than seven.
+\end{quote}
+
+The sentence is ambiguous. On one reading --- de dicto, or narrow scope --- the description ``the number of planets'' is evaluated at each world. In every world, the number of planets in that world must be greater than seven. The reading is false: there are possible worlds with fewer than seven planets. On the other reading --- de re, or wide scope --- the description picks out the actual number of planets, eight, and the modal claim is about that number. Of eight, necessarily it is greater than seven. The reading is true.
+
+Two standard treatments handle this. Russell's scope-of-the-quantifier solution treats the ambiguity as one of logical form: the description can take scope inside or outside the modal operator, and the two scopes yield the two readings.\footnote{Russell, ``On Denoting,'' \emph{Mind} 14 (1905): 479--93, on scope generally; the modal application is developed in Smullyan, ``Modality and Description,'' \emph{Journal of Symbolic Logic} 13 (1948): 31--37.} Kripke's rigidity solution treats it as a feature of the difference between names and descriptions: names are rigid and behave like wide-scope descriptions in modal contexts; descriptions can be evaluated either way.\footnote{Kripke, \emph{Naming and Necessity}, pp.~48--60 and the scope footnote at p.~12. Chapter 3 §3.2 worked through the scope material in detail.} The two treatments are not in conflict; they handle the same phenomenon at different levels of theory.
+
+The present reading takes the ambiguity to be a manifestation of the \(x^o/x^c\) mode distinction. On this reading, ``the number of planets'' can function in either mode. In \(x^c\) mode, the description operates within \(\langle \text{number of planets} \rangle\) --- the linguistic pattern in which the term has its conditions of application, evaluated world by world. This is the de dicto reading. In \(x^o\) mode, the description coordinates with the particular it picks out in the actual context --- the number eight --- and that particular is held fixed across the modal evaluation. This is the de re reading. The ambiguity is not, on this view, a feature of the modal operator's scope or of a category difference between names and descriptions; it is a feature of which mode the singular term is being used in.
+
+A few consequences are worth noting. The first: the de re / de dicto distinction is not specific to descriptions. Any term that can be used in either mode admits the distinction. ``Birds, necessarily, are not amphibians'' has a de dicto reading (whatever the practice picks out as ``birds'' in each world is, by the practice's standards, not amphibian) and a de re reading (of birds --- the actual ones, which form a particular natural kind --- necessarily, none of them is an amphibian). The reading depends on whether ``birds'' is operating in \(x^c\) mode within the linguistic pattern \(\langle \text{birds} \rangle\) or in \(x^o\) mode, coordinating with the actual kind.\footnote{Wiggins's \emph{Sameness and Substance} (1980) develops a related though differently framed point about sortals and individuation. Fine's ``Essence and Modality,'' \emph{Philosophical Perspectives} 8 (1994): 1--16, presses a different question: whether essence (rather than modality) is the fundamental notion. Both questions are downstream of the level distinction at issue here; the present section makes no commitment on either.}
+
+The second: rigid designation, on this reading, is the case where a term is \emph{exclusively} in \(x^o\) mode for modal evaluation. Proper names, as Chapter 3 argued, function this way: ``Aristotle'' has no de dicto reading, no reading on which the modal evaluation re-picks-out whoever fills certain conditions in each world. The term is in \(x^o\) mode constitutively, by virtue of the baptismal coordination that fixed it. Rigidity, on this picture, is what happens to the modal behavior of a term when its mode is invariant across modal evaluation.
+
+The third: Quine's worry about quantifying into modal contexts was that essentialism --- the idea that things have essential properties independent of how they are described --- was metaphysically suspect.\footnote{Quine, ``Reference and Modality'' (1953); ``Three Grades of Modal Involvement,'' \emph{Proceedings of the XIth International Congress of Philosophy} 14 (1953): 65--81.} The present reading addresses this worry indirectly. The de re reading does not require essentialism in Quine's sense. It requires only that the speaker is using the term in \(x^o\) mode, coordinating with a particular and holding the coordination fixed across modal variation. What properties the particular has across worlds is a separate question, on which the framework here takes no stand. Quine's worry assumed that de re modality presupposes a metaphysics of essential properties; the present account locates the de re reading in the cognitive operation of holding a particular fixed, not in any metaphysical commitment about what the particular essentially is.
+
+The unification this section achieves is modest. The de re / de dicto distinction has been handled before, in scope-theoretic terms and in rigidity-theoretic terms. What is added by the present reading is that the distinction is one consequence of the wider \(x^o/x^c\) mode distinction --- the same level distinction that handles rigid designation in the previous section and the necessary a posteriori in the next. The de re / de dicto distinction is not, on this view, a separate problem with its own solution; it is what the level distinction looks like when the modal operator is applied to a non-name singular term.
+
+\subsection{The Necessary A Posteriori at the Level Distinction}\label{the-necessary-a-posteriori-at-the-level-distinction}
+
+Kripke's claim that some identities are necessary but a posteriori broke a connection that had been taken for granted in much of the analytic tradition: that necessity goes with analyticity and a priori knowability, while a posteriori truths are contingent. The classical examples are identities involving rigid designators --- ``Hesperus is Phosphorus,'' ``water is \(H_2O\),'' ``this very table is made of wood.'' Each is necessary, on Kripke's account, because both flanking terms rigidly designate the same particular or natural kind. Each is a posteriori because the identity was established empirically.\footnote{Kripke, \emph{Naming and Necessity}, pp.~100--105 on Hesperus/Phosphorus; pp.~116--18 on water/\(H_2O\); the general thesis is at pp.~35--39. The pre-Kripkean connection between necessity, the a priori, and analyticity was defended in different forms by Carnap, Ayer, and others, and is the standard target of Kripke's first lecture.}
+
+The phenomenon has been read by some as paradoxical. If ``Hesperus is Phosphorus'' is necessary, why was the identity not known a priori, like ``2 + 2 = 4''? If it is a posteriori, how can it be necessary rather than contingent? The puzzlement is real on a picture where necessity is identified with analyticity and epistemic accessibility tracks metaphysical modality. On the picture developed in this chapter, the puzzlement has a clean source: it conflates two levels of language use that should be kept apart.
+
+The necessity lives at \(x^o\). When Hesperus is observed in the evening and Phosphorus in the morning, the same celestial body is the object of two demonstrative coordinations --- once at dusk, once at dawn. At the level of \(x^o\), there is only one Venus: \(E\{VENUS\}\) activated in the evening is, as it happens, \(E\{VENUS\}\) activated in the morning. The identity of the planet is constitutive at the demonstrative-coordination level: the same particular is being tracked in both cases. Once it is granted that there is one star out there that the two demonstrative coordinations track, the identity at \(x^o\) is immediate. No discovery is needed at this level.
+
+The a posteriority lives at \(x^c\). The concept-mode designators \(\langle Hesperus \rangle\) and \(\langle Phosphorus \rangle\) are distinct linguistic patterns. Each was established by an independent baptismal lifting: one anchored in the evening-sky coordination, the other in the morning-sky coordination. As concept-mode terms they have different usage histories, different inferential connections, different roles in their respective linguistic patterns. Establishing that they coordinate to the same particular requires empirical work --- astronomical observation, theoretical inference, and acceptance of the identification by the community. The inference \(\mathcal{R}(Hesperus^c, Phosphorus^c)\), that the two concept-mode patterns share a referent, is a posteriori in the standard sense.
+
+The phenomenon is not a paradox on this reading. It is a structural fact about how language operates at two levels. The identity is necessary at the level where the same particular is being coordinated with; the discovery of the identity is a posteriori at the level where the two linguistic patterns are reconciled. There is no single statement that is both necessary and a posteriori in a single sense; there is a statement that picks up necessity from its \(x^o\) aspect and a posteriority from its \(x^c\) aspect, and these aspects belong to different levels of language use. The traditional connection between necessity and a priori knowability assumed that there is only one level at which the statement operates. The \(x^o/x^c\) distinction blocks the assumption.
+
+The same applies to ``water is \(H_2O\).'' At the level of \(x^o\), the natural kind whose instances were demonstratively tracked by speakers using ``water'' is the same natural kind whose instances are chemically composed of \(H_2O\) molecules. There is one kind, and the demonstrative tracking by ordinary speakers and the chemical analysis by scientists coordinate to it. The identity is necessary at this level. At the level of \(x^c\), the two terms --- the ordinary-language \(\langle water \rangle\) and the chemical-formula \(\langle H_2O \rangle\) --- are different linguistic patterns with different inferential roles. Establishing that they coordinate to the same kind required scientific investigation. The identity is a posteriori at this level.\footnote{The water-\(H_2O\) case raises additional questions about natural kinds, essence, and the role of scientific theorizing in fixing reference. These are discussed in Putnam, ``The Meaning of `Meaning','' in \emph{Mind, Language and Reality} (1975), and have generated a substantial literature. The present section makes no commitment on the metaphysics of natural kinds; the level distinction handles the modal-epistemic shape of the case without taking a position on whether being \(H_2O\) is the essence of water in any deeper sense.}
+
+What the section adds. The necessary a posteriori has been handled in the literature through theories of trans-world identity, essentialism about substances and natural kinds, and two-dimensional semantics.\footnote{Salmon, \emph{Reference and Essence} (1981); Chalmers, ``The Foundations of Two-Dimensional Semantics,'' in \emph{Two-Dimensional Semantics} (2006); and the survey in Soames, \emph{Beyond Rigidity} (2002), chs.~7--9.} The present treatment does not contest any of these accounts at the semantic level. It locates the apparent paradox at the cognitive-linguistic level: necessity at \(x^o\), a posteriority at \(x^c\). The two levels were conflated in the tradition Kripke broke from, and they remain easy to conflate even after Kripke. The level distinction marks them apart and gives a structural account of why the necessary-a-posteriori cases have the shape they have.
+
+The chapter closes here. The \(x^o/x^c\) distinction has been introduced and motivated; the coordination operator \(\mathcal{R}\) has been specified and contrasted with function-application and inferentialist alternatives; local rigidity has been developed and positioned against the indexicalist tradition; the de re / de dicto distinction has been re-read as the modal expression of the level distinction; and the necessary a posteriori has been reconstructed as a structural consequence of the level distinction. The next chapter develops the positive account of baptism, the causal chain, and the metasemantic role of PRU: how speakers come to inhabit Kripkean models, what baptism does at the cognitive level, how surrogate objects and testimonial networks sustain the coordination across the centuries, and why this account complements rather than competes with the semantic apparatus Kripke and his successors developed.
+
+\section{Bibliography}\label{bibliography}
+
+\subsection{Primary Literature}\label{primary-literature}
+
+\emph{(Texts the dissertation directly analyzes or argues against)}
+
+\textbf{Donnellan, K.}~(1966). ``Reference and Definite Descriptions.''~\emph{Philosophical Review}, 75(3), 281--304.
+
+\textbf{Frege, G.}~(1892). ``Über Sinn und Bedeutung.''~\emph{Zeitschrift für Philosophie und philosophische Kritik}, 100, 25--50. {[}Trans. as ``On Sense and Reference'' in P. Geach \& M. Black (eds.),~\emph{Translations from the Philosophical Writings of Gottlob Frege}. Oxford: Blackwell, 1952.{]}
+
+\textbf{Kaplan, D.}~(1989). ``Demonstratives.'' In J. Almog, J. Perry \& H. Wettstein (eds.),~\emph{Themes from Kaplan}. Oxford: Oxford University Press, pp.~481--563.
+
+\textbf{Kripke, S. A.}~(1971). ``Identity and Necessity.'' In M. K. Munitz (ed.),~\emph{Identity and Individuation}. New York: New York University Press, pp.~135--164.
+
+\textbf{Kripke, S. A.}~(1980).~\emph{Naming and Necessity}. Cambridge, MA: Harvard University Press.
+
+\textbf{Lewis, D.}~(1973).~\emph{Counterfactuals}. Cambridge, MA: Harvard University Press.
+
+\textbf{Lewis, D.}~(1986).~\emph{On the Plurality of Worlds}. Cambridge, MA: Blackwell.
+
+\textbf{Quine, W. V. O.}~(1948). ``On What There Is.''~\emph{Review of Metaphysics}, 2(5), 21--38.
+
+\textbf{Russell, B.}~(1905). ``On Denoting.''~\emph{Mind}, 14(56), 479--493.
+
+\textbf{Wittgenstein, L.}~(1922).~\emph{Tractatus Logico-Philosophicus}. Trans. C. K. Ogden. London: Routledge \& Kegan Paul.
+
+\subsection{Secondary Literature}\label{secondary-literature}
+
+\textbf{Devitt, M.}~(1981).~\emph{Designation}. New York: Columbia University Press.
+
+\textbf{Evans, G.}~(1982).~\emph{The Varieties of Reference}. Oxford: Oxford University Press.
+
+\textbf{Fine, K.}~(1994). ``Essence and Modality.''~\emph{Philosophical Perspectives}, 8, 1--16.
+
+\textbf{Perry, J.}~(1980). ``A Problem About Continued Belief.''~\emph{Pacific Philosophical Quarterly}, 61(4), 317--332.
+
+\textbf{Putnam, H.}~(1975). ``The Meaning of `Meaning'.''~\emph{Minnesota Studies in the Philosophy of Science}, 7, 131--193.
+
+\textbf{Recanati, F.}~(2012).~\emph{Mental Files}. Oxford: Oxford University Press.
+
+\textbf{Stalnaker, R.}~(1968). ``A Theory of Conditionals.''~\emph{American Philosophical Quarterly Monographs}, 2, 98--112.
+
+\textbf{Williamson, T.}~(2007).~\emph{The Philosophy of Philosophy}. Oxford: Blackwell.
+
+\subsection{Author's Own Work}\label{authors-own-work}
+
+\textbf{Cojocariu, F.}~(2025). ``Immediate and Mediated Existence: An Inquiry into Different Uses of `Exists'.'' Unpublished manuscript.
+
+(Cojocariu, 2026) ``Pattern-Recognition Unity: A Framework Specification.'' Preprint \href{https://dx.doi.org/10.2139/ssrn.6285878}{http://dx.doi.org/10.2139/ssrn.6285878}
+
+\emph{Notes:}
+
+\begin{itemize}
+\tightlist
+\item
+  \emph{Last updated: 2026-04-11}
+\item
+  \emph{Donnellan, Quine, Lewis, and Stalnaker promoted to Primary Literature (directly engaged in Chapter 2 and Chapter 6).}
+\item
+  \emph{Cojocariu (2025) added: precursor essay on dual existence quantifiers, referenced in §8.3.4.}
+\end{itemize}
+
+\protect\phantomsection\label{refs}
+\begin{CSLReferences}{0}{0}
+\bibitem[\citeproctext]{ref-cojocariuPatternRecognitionUnityPRU}
+Cojocariu F. Pattern-Recognition Unity (PRU): A Framework Specification 2026. \url{https://doi.org/10.2139/ssrn.6285878}.
+
+\end{CSLReferences}
+
+\vfill
+\noindent\rule{\textwidth}{0.4pt}\\[2pt]
+{\tiny florin.cojocariu@s.unibuc.ro, \today}
+
+\end{document}

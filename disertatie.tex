@@ -1,0 +1,296 @@
+% =====================================================================
+% Disertație template — Universitatea din București, Facultatea de Filosofie
+% Conformant cu Ghidul de redactare, 31 iulie 2023.
+%
+% Pandoc usage (Zettlr / CLI):
+%   pandoc input.md -o out.pdf \
+%     --template=disertatie.tex --top-level-division=section \
+%     --pdf-engine=xelatex
+%
+% Required YAML frontmatter (example):
+%   ---
+%   title: "The Cognitive Foundation of Rigid Designation"
+%   subtitle: "How Pattern-Recognition Unity Grounds Kripkean Semantics"
+%   author: "Florin Cojocariu"
+%   program: "Master in Analytic Philosophy"
+%   advisor: "Mircea Dumitru"
+%   advisor-title: "Prof. Univ. Dr."
+%   work-type: "Lucrare de disertație"   # optional, this is the default
+%   date: "2026"
+%   abstract: |
+%     Two paragraphs at most.
+%   ---
+% =====================================================================
+
+\documentclass[12pt,a4paper]{article}
+
+% —— Core packages ——
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{textcomp}
+\usepackage{times}                       % Times New Roman per guide
+\usepackage{amsmath,amssymb}
+\usepackage{stmaryrd}
+\usepackage[a4paper,left=2.5cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+\usepackage{microtype}
+\emergencystretch=1em
+\usepackage{setspace}
+\onehalfspacing                          % 1.5 line spacing per guide
+\usepackage[most]{tcolorbox}
+\tcbuselibrary{theorems,skins,breakable}
+
+% Optional: Romanian hyphenation/quotes — uncomment if writing in Romanian
+% \usepackage[romanian]{babel}
+
+% —— Modal logic, Greek, set-theoretic symbols ——
+\DeclareUnicodeCharacter{03B9}{\ensuremath{\iota}}
+\DeclareUnicodeCharacter{25A1}{\ensuremath{\Box}}
+\DeclareUnicodeCharacter{25C7}{\ensuremath{\Diamond}}
+\DeclareUnicodeCharacter{03BB}{\ensuremath{\lambda}}
+\DeclareUnicodeCharacter{03C6}{\ensuremath{\varphi}}
+\DeclareUnicodeCharacter{00AC}{\ensuremath{\neg}}
+\DeclareUnicodeCharacter{22A2}{\ensuremath{\vdash}}
+\DeclareUnicodeCharacter{2203}{\ensuremath{\exists}}
+\DeclareUnicodeCharacter{2200}{\ensuremath{\forall}}
+\DeclareUnicodeCharacter{2227}{\ensuremath{\wedge}}
+\DeclareUnicodeCharacter{2228}{\ensuremath{\vee}}
+\DeclareUnicodeCharacter{2192}{\ensuremath{\rightarrow}}
+\DeclareUnicodeCharacter{2194}{\ensuremath{\leftrightarrow}}
+\DeclareUnicodeCharacter{2234}{\ensuremath{\therefore}}
+\DeclareUnicodeCharacter{2248}{\ensuremath{\approx}}
+\DeclareUnicodeCharacter{2208}{\ensuremath{\in}}
+\DeclareUnicodeCharacter{2260}{\ensuremath{\neq}}
+\DeclareUnicodeCharacter{2713}{\checkmark}
+\DeclareUnicodeCharacter{2212}{-}
+
+% —— Definition box ——
+\newenvironment{definitionbox}[1][]{%
+  \begin{center}
+  \begin{tcolorbox}[
+    enhanced, breakable, width=0.8\textwidth,
+    colback=gray!2, colframe=gray!60, coltitle=black,
+    fonttitle=\bfseries, title={Definition: #1},
+    boxed title style={colback=gray!3, colframe=black!60,
+      sharp corners, boxrule=0.5pt},
+    boxrule=0.5pt, sharp corners,
+    left=6pt, right=6pt, top=6pt, bottom=6pt,
+    before skip=12pt, after skip=12pt,
+  ]}%
+  {\end{tcolorbox}\end{center}}
+
+% —— Tables ——
+\usepackage{array}
+\usepackage{longtable}
+\usepackage{booktabs}
+\usepackage{calc}
+\newcolumntype{C}[1]{>{\raggedright\arraybackslash}p{\dimexpr#1\linewidth-4\tabcolsep\relax}}
+
+% —— Paragraph formatting per guide ——
+% First-line indent 1.27 cm on EVERY paragraph (including those that
+% follow a heading — indentfirst ensures that).
+\usepackage{indentfirst}
+\setlength{\parindent}{1.27cm}
+\setlength{\parskip}{0pt}
+\raggedbottom
+
+% —— Heading formatting per guide ——
+\usepackage{titlesec}
+\usepackage{needspace}
+\usepackage{etoolbox}
+
+\setcounter{secnumdepth}{3}
+
+% \section corresponds to a Chapter (Markdown H1 via --top-level-division=section).
+% Guide: bold, centered, each new chapter starts on a new page.
+\titleformat{\section}[block]
+  {\normalfont\Large\bfseries\filcenter}
+  {\thesection.}{0.5em}{}
+\titlespacing*{\section}{0pt}{0pt}{1.5em}
+\pretocmd{\section}{\clearpage}{}{}
+
+% \subsection corresponds to a Section (H2).
+% Guide: bold, indented 1.27 cm from left margin, NOT centered.
+\titleformat{\subsection}[hang]
+  {\normalfont\normalsize\bfseries}
+  {\thesubsection.}{0.5em}{}
+\titlespacing*{\subsection}{1.27cm}{1.4em}{0.6em}
+
+% \subsubsection corresponds to a Subsection (H3) — same convention.
+\titleformat{\subsubsection}[hang]
+  {\normalfont\normalsize\bfseries}
+  {\thesubsubsection.}{0.5em}{}
+\titlespacing*{\subsubsection}{1.27cm}{1em}{0.4em}
+
+% —— TOC formatting ——
+\usepackage{tocloft}
+\renewcommand{\cftsecfont}{\small}
+\renewcommand{\cftsubsecfont}{\small}
+\renewcommand{\cftsubsubsecfont}{\small}
+\renewcommand{\cftsecpagefont}{\small}
+\renewcommand{\cftsubsecpagefont}{\small}
+\renewcommand{\cftsubsubsecpagefont}{\small}
+\setlength{\cftbeforesecskip}{0.3em}
+\setlength{\cftbeforesubsecskip}{0.1em}
+\setlength{\cftbeforesubsubsecskip}{0.1em}
+
+% —— Lists ——
+\usepackage{enumitem}
+\setlist{nosep, leftmargin=2em, topsep=0.4em, partopsep=0pt,
+         parsep=0.2em, itemsep=0.2em}
+\setlist[itemize,1]{label=\textbullet}
+\setlist[itemize,2]{label=\textendash}
+
+% —— Figures ——
+\usepackage{graphicx}
+\usepackage{float}
+\setkeys{Gin}{keepaspectratio,width=0.7\linewidth}
+\makeatletter
+\def\fps@figure{H}
+\makeatother
+\graphicspath{{figures/}}
+
+% —— URLs / DOIs ——
+\usepackage{xurl}
+
+% —— CSL bibliography ——
+\newlength{\cslhangindent}
+\setlength{\cslhangindent}{1.5em}
+\newenvironment{CSLReferences}[2]%
+  {\begin{enumerate}[label={[\arabic*]},leftmargin=\cslhangindent,itemsep=0pt]%
+   \raggedright\sloppy
+   \renewcommand{\bibitem}[2][]{\item}}%
+  {\end{enumerate}}
+\providecommand{\CSLLeftMargin}[1]{\item[#1]}
+\providecommand{\CSLRightInline}[1]{#1}
+
+% —— Hyperref (near last) ——
+\usepackage[colorlinks=true, linkcolor=black, urlcolor=blue, citecolor=blue]{hyperref}
+\urlstyle{same}
+
+% —— Pandoc / longtable compatibility ——
+\makeatletter
+\@ifundefined{c@none}{\newcounter{none}}{}
+\makeatother
+\renewcommand{\thenone}{}
+\providecommand*{\theHnone}{\arabic{none}}
+\providecommand{\tightlist}{}
+\providecommand{\pandocbounded}[1]{#1}
+
+% —— Citeproc compatibility ——
+\makeatletter
+\providecommand{\citeproctext}{}
+\let\@oldprotect\protect
+\def\@citeprocprotection{\let\protect\@oldprotect}
+\newcommand{\citeproc}[2]{#2}
+\protected\def\citeprocfootnote#1{\footnote{#1}}
+\makeatother
+
+% —— Block quotes ——
+\renewenvironment{quote}{%
+  \par\vskip 0.5em
+  \leftskip=2em\rightskip=2em\small
+  \noindent\ignorespaces
+}{\par\vskip 0.5em}
+
+% —— Custom notation (PRU) ——
+\newcommand{\llangle}{\langle\!\langle}
+\newcommand{\rrangle}{\rangle\!\rangle}
+\DeclareUnicodeCharacter{27EA}{\ensuremath{\llangle}}
+\DeclareUnicodeCharacter{27EB}{\ensuremath{\rrangle}}
+\newcommand{\Rfr}[2]{\ensuremath{\mathcal{R}(#1, #2)}}
+\newcommand{\LPC}[1]{\ensuremath{\llangle#1\rrangle}}
+
+% —— Document metadata ——
+\title{$if(title)$$title$$endif$}
+\author{$if(author)$$author$$else$Florin Cojocariu$endif$}
+\date{$if(date)$$date$$else$$if(year)$$year$$endif$$endif$}
+
+\begin{document}
+
+% Continuous arabic numbering starting at the cover; display is suppressed
+% on front matter pages and resumes at the body (the Introduction).
+\pagenumbering{arabic}
+\pagestyle{empty}
+
+% =====================================================================
+% COVER PAGE (page 1, number hidden) — Anexa II expanded per III.2.a
+% =====================================================================
+\begin{center}
+\vspace*{0.5cm}
+{\large UNIVERSITATEA DIN BUCUREȘTI}\\[0.3em]
+{\large FACULTATEA DE FILOSOFIE}
+$if(program)$\\[0.3em]
+{\normalsize $program$}
+$endif$
+
+\vfill
+
+{\large\bfseries $if(work-type)$$work-type$$else$Lucrare de disertație$endif$}
+
+\vspace{2em}
+
+{\LARGE\bfseries $if(title)$$title$$endif$}
+$if(subtitle)$\\[1em]
+{\Large $subtitle$}
+$endif$
+
+\vfill
+\end{center}
+
+\noindent
+\begin{minipage}[t]{0.45\textwidth}
+\raggedright
+\textbf{Coordonator științific:}\\
+$if(advisor-title)$$advisor-title$ $endif$$if(advisor)$$advisor$$endif$
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{0.45\textwidth}
+\raggedleft
+\textbf{Absolvent:}\\
+$if(author)$$author$$else$Florin Cojocariu$endif$
+\end{minipage}
+
+\vspace{1.5cm}
+
+\begin{center}
+{\large București}\\[0.3em]
+{\large $if(date)$$date$$else$$if(year)$$year$$endif$$endif$}
+\end{center}
+
+\clearpage
+
+% =====================================================================
+% ABSTRACT (page hidden)
+% =====================================================================
+$if(abstract)$
+\begin{center}
+{\large\bfseries Rezumat}
+\end{center}
+\vspace{1em}
+\noindent $abstract$
+\clearpage
+$endif$
+
+% =====================================================================
+% TABLE OF CONTENTS (pages hidden)
+% =====================================================================
+\setcounter{tocdepth}{3}
+\tableofcontents
+% tocloft forces \thispagestyle{plain} on the first TOC page; override it.
+% (If the TOC ever spans more than one page, also wrap with \pagestyle{empty}
+% on each page — handled here because outer \pagestyle{empty} is still active.)
+\thispagestyle{empty}
+\clearpage
+
+% =====================================================================
+% BODY — page numbers become visible from here
+% =====================================================================
+\pagestyle{plain}
+
+$body$
+
+\vfill
+\noindent\rule{\textwidth}{0.4pt}\\[2pt]
+{\tiny florin.cojocariu@s.unibuc.ro, \today}
+
+\end{document}

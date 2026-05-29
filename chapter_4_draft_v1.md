@@ -6,11 +6,13 @@ status: draft_v1
 date: 2026-05-22
 ---
 
+# The Functional-Mode Distinction
+
 Chapter 3 closed at the point where a specific cognitive gap had been identified. Kripke's semantic account of rigid designation is well-motivated but leaves three connected aspects unspecified at the cognitive level: how rigid tracking is sustained by the speaker, what cognitive event constitutes a baptism, and how the causal chain is psychologically realized. The leading existing implementations — Evans's discriminating conception, Recanati's mental files, Devitt's causal-descriptive hybrid — each address part of the gap but share a representational template that, on the reading developed there, stops short of the primitive tracking capacity the thesis requires.
 
 The present chapter introduces the analytical vocabulary in terms of which the rest of the dissertation closes the gap. The framework's basic primitives — the experiential pattern $\{X\}$, the linguistic pattern $\langle x \rangle$, and the coordination operator $\mathcal{R}$ — are set out in detail in the PRU framework document and are not duplicated here. The chapter takes them as given and develops what they support: a functional-mode distinction between $x^o$ and $x^c$, a treatment of predication as coordination rather than function-application, the notion of local rigidity, and re-readings of two classical modal puzzles. The next section develops the $x^o/x^c$ distinction, the chapter's central analytical move. The section after that treats $\mathcal{R}$ as a coordination operator that unifies what would otherwise be several distinct predicative and referential relations. The third section introduces local rigidity, the cognitive ground of rigid designation as the thesis here understands it. The fourth and fifth sections apply the resulting apparatus to the de re / de dicto distinction and to the necessary a posteriori. Chapter 5 develops the positive account of baptism and the causal chain in the same vocabulary.
 
-# The $x^o/x^c$ Functional-Mode Distinction
+## The $x^o/x^c$ Functional-Mode Distinction
 
 A word, on the account developed here, has two functional modes. As $x^o$, it coordinates with a particular instance of an experiential pattern $\{X\}$. As $x^c$, it operates within the linguistic pattern $\langle x \rangle$ — the network of utterances, frames, and inferential relations in which the word figures. The distinction is functional rather than lexical: the same word-form, "bird," can play either role, and which role it plays in a given utterance depends on what work the word is being asked to do.
 
@@ -42,7 +44,7 @@ What the distinction earns. The originality of the move is not in noticing that 
 
 [^4]: Goodman, "Against the Mental Files Conception of Singular Thought," _Review of Philosophy and Psychology_ 7 (2016): 437–61, presses a related point from a different angle: that some file-based thought is descriptive rather than singular, so the identification of file-based thought with singular thought breaks down.
 
-# $\mathcal{R}$ as Coordination
+## $\mathcal{R}$ as Coordination
 
 The relation $\mathcal{R}$ is the framework's coordination operator. It describes how the items of the two-side topology — words in $\langle x \rangle$ and patterns in $\{X\}$ — stand in relation to one another. The relation can be of several kinds, depending on what is being coordinated. A word in object-mode can coordinate with an experiential activation: $\mathcal{R}(bird^o, E\{BIRD\})$ describes the binding by which "bird" used demonstratively coordinates with a particular bird in view. A word in object-mode can coordinate with a word in concept-mode: $\mathcal{R}(bird^o, white^c)$ describes the predicative coordination by which "that bird is white" attaches the concept-mode predicate to the object-mode subject. A word in concept-mode can coordinate with another word in concept-mode: $\mathcal{R}(bird^c, fly^c)$ describes the generic coordination by which "birds fly" connects the two concept-mode items within the linguistic pattern.[^5]
 
@@ -66,7 +68,7 @@ With $\mathcal{R}$ in place, the chapter can handle predication, reference, and 
 
 [^7]: Brandom, _Making It Explicit_ (1994), esp. chs. 3–4; _Articulating Reasons_ (2000), ch. 1. For critique of Brandom's account of singular terms specifically — relevant since singular reference is the topic of the present chapter — see McCullagh, "Inferentialism and Singular Reference," _Canadian Journal of Philosophy_ 35 (2005): 183–220.
 
-# Local Rigidity at $x^o$
+## Local Rigidity at $x^o$
 
 Consider the utterance "that bird could have been larger." A speaker pointing at a bird in front of her makes the counterfactual claim. The bird in question is held fixed across the modal variation: the speaker is not imagining a different bird that is larger; she is imagining _that very bird_ having been larger. The word "bird" in $x^o$ mode coordinates with the same particular across the modal scope of "could have been." Whatever properties of the bird are varied — size, color, vigor, age — the bird stays the same, by virtue of the demonstrative coordination already in place.
 
@@ -98,7 +100,7 @@ With local rigidity in place and the preserved-link framing developed, the chapt
 
 [^12]: This is not to say the present account has nothing to say about nambiguity. Multiple-bearer cases are handled by the linguistic pattern $\langle N \rangle$ admitting multiple anchorings $\mathcal{R}(h_1^o, N^c)$, $\mathcal{R}(h_2^o, N^c)$, etc., with context determining which anchoring is operative in a given use. The question is downstream of the local-rigidity claim, and is not the present section's main concern.
 
-# De Re and De Dicto as Predication at $x^o$ and $x^c$
+## De Re and De Dicto as Predication at $x^o$ and $x^c$
 
 The de re / de dicto distinction is medieval in origin and gets its modern form in Quine's puzzle about quantifying into modal contexts.[^13] Consider the canonical example:
 
@@ -128,7 +130,7 @@ The unification this section achieves is modest. The de re / de dicto distinctio
 
 [^17]: Quine, "Reference and Modality" (1953); "Three Grades of Modal Involvement," _Proceedings of the XIth International Congress of Philosophy_ 14 (1953): 65–81.
 
-# The Necessary A Posteriori at the Level Distinction
+## The Necessary A Posteriori at the Level Distinction
 
 Kripke's claim that some identities are necessary but a posteriori broke a connection that had been taken for granted in much of the analytic tradition: that necessity goes with analyticity and a priori knowability, while a posteriori truths are contingent. The classical examples are identities involving rigid designators — "Hesperus is Phosphorus," "water is $H_2O$," "this very table is made of wood." Each is necessary, on Kripke's account, because both flanking terms rigidly designate the same particular or natural kind. Each is a posteriori because the identity was established empirically.[^18]
 
