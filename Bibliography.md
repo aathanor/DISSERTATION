@@ -4,52 +4,56 @@
 
 _(Texts the dissertation directly analyzes or argues against)_
 
-**Donnellan, K.** (1966). "Reference and Definite Descriptions." _Philosophical Review_, 75(3), 281–304.
+**Kaplan, D.** (1968). "Quantifying In." _Synthese_, 19(1–2), 178–214.
 
-**Frege, G.** (1892). "Über Sinn und Bedeutung." _Zeitschrift für Philosophie und philosophische Kritik_, 100, 25–50. \[Trans. as "On Sense and Reference" in P. Geach & M. Black (eds.), _Translations from the Philosophical Writings of Gottlob Frege_. Oxford: Blackwell, 1952.]
+**Kaplan, D.** (1989). "Demonstratives." In J. Almog, J. Perry & H. Wettstein (eds.), _Themes from Kaplan_. Oxford: Oxford University Press, pp. 481–563.
 
-**Kaplan, D.** (1989). "Demonstratives." In J. Almog, J. Perry & H. Wettstein (eds.), _Themes from Kaplan_. Oxford: Oxford University Press, pp. 481–563.
+**Kripke, S. A.** (1971). "Identity and Necessity." In M. K. Munitz (ed.), _Identity and Individuation_. New York: New York University Press, pp. 135–164.
 
-**Kripke, S. A.** (1971). "Identity and Necessity." In M. K. Munitz (ed.), _Identity and Individuation_. New York: New York University Press, pp. 135–164.
+**Kripke, S. A.** (1980). _Naming and Necessity_. Cambridge, MA: Harvard University Press.
 
-**Kripke, S. A.** (1980). _Naming and Necessity_. Cambridge, MA: Harvard University Press.
+**Quine, W. V. O.** (1953). "Reference and Modality." In _From a Logical Point of View_. Cambridge, MA: Harvard University Press, pp. 139–159.
 
-**Lewis, D.** (1973). _Counterfactuals_. Cambridge, MA: Harvard University Press.
+**Russell, B.** (1905). "On Denoting." _Mind_, 14(56), 479–493.
 
-**Lewis, D.** (1986). _On the Plurality of Worlds_. Cambridge, MA: Blackwell.
+**Russell, B.** (1918). "The Philosophy of Logical Atomism." _The Monist_, 28–29. [Repr. in R. C. Marsh (ed.), _Logic and Knowledge_. London: Allen & Unwin, 1956, pp. 177–281.]
 
-**Quine, W. V. O.** (1948). "On What There Is." _Review of Metaphysics_, 2(5), 21–38.
+**Wittgenstein, L.** (1922). _Tractatus Logico-Philosophicus_. Trans. C. K. Ogden. London: Routledge & Kegan Paul.
 
-**Russell, B.** (1905). "On Denoting." _Mind_, 14(56), 479–493.
-
-**Wittgenstein, L.** (1922). _Tractatus Logico-Philosophicus_. Trans. C. K. Ogden. London: Routledge & Kegan Paul.
+**Wittgenstein, L.** (1953). _Philosophical Investigations_. Trans. G. E. M. Anscombe. Oxford: Blackwell.
 
 ## Secondary Literature
 
-**Devitt, M.** (1981). _Designation_. New York: Columbia University Press.
+**Burgess, J. P.** (2014). "On a Derivation of the Necessity of Identity." _Synthese_, 191(7), 1567–1585.
 
-**Evans, G.** (1982). _The Varieties of Reference_. Oxford: Oxford University Press.
+**Chalmers, D.** (2006). "The Foundations of Two-Dimensional Semantics." In M. García-Carpintero & J. Macià (eds.), _Two-Dimensional Semantics_. Oxford: Oxford University Press, pp. 55–140.
 
-**Fine, K.** (1994). "Essence and Modality." _Philosophical Perspectives_, 8, 1–16.
+**Devitt, M.** (1981). _Designation_. New York: Columbia University Press.
 
-**Perry, J.** (1980). "A Problem About Continued Belief." _Pacific Philosophical Quarterly_, 61(4), 317–332.
+**Evans, G.** (1982). _The Varieties of Reference_. Oxford: Oxford University Press.
 
-**Putnam, H.** (1975). "The Meaning of 'Meaning'." _Minnesota Studies in the Philosophy of Science_, 7, 131–193.
+**Fine, K.** (1994). "Essence and Modality." _Philosophical Perspectives_, 8, 1–16.
 
-**Recanati, F.** (2012). _Mental Files_. Oxford: Oxford University Press.
+**Garson, J. W.** (2024). "Logics for Rigidity." In Y. Weiss & R. Birman (eds.), _Saul Kripke on Modal Logic_. Cham: Springer, pp. 193–208.
 
-**Stalnaker, R.** (1968). "A Theory of Conditionals." _American Philosophical Quarterly Monographs_, 2, 98–112.
+**Knuuttila, S.** (1993). _Modalities in Medieval Philosophy_. London & New York: Routledge.
 
-**Williamson, T.** (2007). _The Philosophy of Philosophy_. Oxford: Blackwell.
+**LaPorte, J.** (2022). "Rigid Designators." In E. N. Zalta (ed.), _The Stanford Encyclopedia of Philosophy_ (Spring 2022 ed.). [https://plato.stanford.edu/entries/rigid-designators/](https://plato.stanford.edu/entries/rigid-designators/)
+
+**Putnam, H.** (1975). "The Meaning of 'Meaning'." In _Mind, Language and Reality: Philosophical Papers, Vol. 2_. Cambridge: Cambridge University Press, pp. 215–271. [Also _Minnesota Studies in the Philosophy of Science_, 7, 131–193.]
+
+**Recanati, F.** (2012). _Mental Files_. Oxford: Oxford University Press.
+
+**Salmon, N.** (1981). _Reference and Essence_. Princeton: Princeton University Press.
+
+**Smullyan, A. F.** (1948). "Modality and Description." _Journal of Symbolic Logic_, 13(1), 31–37.
+
+**Soames, S.** (2002). _Beyond Rigidity: The Unfinished Semantic Agenda of_ Naming and Necessity. New York: Oxford University Press.
+
+**Wiggins, D.** (1980). _Sameness and Substance_. Oxford: Blackwell.
 
 ## Author's Own Work
 
-**Cojocariu, F.** (2025). "Immediate and Mediated Existence: An Inquiry into Different Uses of 'Exists'." Unpublished manuscript.
+**Cojocariu, F.** (2025). "Immediate and Mediated Existence: An Inquiry into Different Uses of 'Exists'." Unpublished manuscript.
 
-[@cojocariuPatternRecognitionUnityPRU] "Pattern-Recognition Unity: A Framework Specification." Preprint [http://dx.doi.org/10.2139/ssrn.6285878](https://dx.doi.org/10.2139/ssrn.6285878)
-
-_Notes:_
-
-* _Last updated: 2026-04-11_
-* _Donnellan, Quine, Lewis, and Stalnaker promoted to Primary Literature (directly engaged in Chapter 2 and Chapter 6)._
-* _Cojocariu (2025) added: precursor essay on dual existence quantifiers, referenced in §8.3.4._
+**Cojocariu, F.** (2026). "Pattern-Recognition Unity: A Framework Specification." Preprint. [https://dx.doi.org/10.2139/ssrn.6285878](https://dx.doi.org/10.2139/ssrn.6285878)

@@ -9,17 +9,22 @@
 %
 % Required YAML frontmatter (example):
 %   ---
-%   title: "The Cognitive Foundation of Rigid Designation"
-%   subtitle: "How Pattern-Recognition Unity Grounds Kripkean Semantics"
+%   title: "From Local to Portable Rigidity"
+%   subtitle: "Demonstrative Reference and the Cognitive Ground of Rigid Designation"
 %   author: "Florin Cojocariu"
 %   program: "Master in Analytic Philosophy"
 %   advisor: "Mircea Dumitru"
-%   advisor-title: "Prof. Univ. Dr."
+%   advisor-title: "Prof. Dr."
 %   work-type: "Lucrare de disertație"   # optional, this is the default
 %   date: "2026"
 %   abstract: |
 %     Two paragraphs at most.
 %   ---
+%
+% NOTE: The cover page below is HARDCODED (does not read YAML). Edit the
+% cover block directly to change title/subtitle/advisor/date on the cover.
+% The \title/\author/\date metadata commands are retained but unused on
+% the cover.
 % =====================================================================
 
 \documentclass[12pt,a4paper]{article}
@@ -200,7 +205,7 @@
 \newcommand{\Rfr}[2]{\ensuremath{\mathcal{R}(#1, #2)}}
 \newcommand{\LPC}[1]{\ensuremath{\llangle#1\rrangle}}
 
-% —— Document metadata ——
+% —— Document metadata (retained but unused on the hardcoded cover) ——
 \title{$if(title)$$title$$endif$}
 \author{$if(author)$$author$$else$Florin Cojocariu$endif$}
 \date{$if(date)$$date$$else$$if(year)$$year$$endif$$endif$}
@@ -219,44 +224,35 @@
 \vspace*{0.5cm}
 {\large UNIVERSITATEA DIN BUCUREȘTI}\\[0.3em]
 {\large FACULTATEA DE FILOSOFIE}
-$if(program)$\\[0.3em]
-{\normalsize $program$}
-$endif$
 
 \vfill
 
-{\large\bfseries $if(work-type)$$work-type$$else$Lucrare de disertație$endif$}
+{\large\bfseries Lucrare de disertație}
 
 \vspace{2em}
 
-{\LARGE\bfseries $if(title)$$title$$endif$}
-$if(subtitle)$\\[1em]
-{\Large $subtitle$}
-$endif$
+{\LARGE\bfseries From Local to Portable Rigidity}\\[1em]
+{\Large Demonstrative Reference and the Cognitive Ground of Rigid Designation}
 
 \vfill
 \end{center}
-
 \noindent
 \begin{minipage}[t]{0.45\textwidth}
 \raggedright
 \textbf{Coordonator științific:}\\
-$if(advisor-title)$$advisor-title$ $endif$$if(advisor)$$advisor$$endif$
+Prof. Dr. Mircea Dumitru
 \end{minipage}%
 \hfill
 \begin{minipage}[t]{0.45\textwidth}
 \raggedleft
 \textbf{Absolvent:}\\
-$if(author)$$author$$else$Florin Cojocariu$endif$
+Florin Cojocariu
 \end{minipage}
-
 \vspace{1.5cm}
-
 \begin{center}
 {\large București}\\[0.3em]
-{\large $if(date)$$date$$else$$if(year)$$year$$endif$$endif$}
+{\large 2026-05-24}
 \end{center}
-
 \clearpage
 
 % =====================================================================
