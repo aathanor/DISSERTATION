@@ -30,7 +30,7 @@ Russell's acquaintance was meant to identify a special form of reference: a cont
 
 $x^o$ is the PRU implementation of acquaintance with two specific modifications. PRU's grounding is **fallible**: $E(\{X\})$ can misfire, the basin $\{X\}$ is reshaped by later encounters, and I can be wrong about properties of what I am tracking. PRU's grounding is also **dynamic**: the attractor state is sculpted continuously, not given once and for all. These features make $x^o$ less like Russell's punctual sense-datum and more like the standing capacity of a speaker to keep a particular fixed through engagement with it. Kripke's own account already permits the speaker to be wrong about the bearer of a name; the rigidity does not depend on infallibility. PRU pushes this point further into the cognitive substrate: tracking does not require certainty, only stability.
 
-The cognitive primitive is therefore the $x^o$-coordination—the word in object-mode locked onto an experienced instance. Rigidity is what this coordination has constitutively. It is not a property added to reference; it is what reference is at its primitive level.
+The cognitive primitive is therefore the $x^o$-coordination—the word in object-mode locked onto an experienced instance. At the primitive level, this coordination exhibits the clearest case of non-descriptive holding-fixed; it provides the basic model from which the later account proceeds. It is not a property added to reference; it is what reference is at its primitive level.
 
 ## The Problem of Absence
 
@@ -38,17 +38,17 @@ The primitive form of reference has a limitation built into it. When the bearer 
 
 The natural descriptivist response is to substitute description for tracking: in the absence of the bird, refer to it as "the bird I saw earlier in the willow." But Chapter 3 has already shown that descriptions cannot do the work of names. They pick out world-by-world satisfiers; they fail in modal contexts; they are constitutively $x^c$ and have no $x^o$ anchoring of their own to draw on. A speaker who has only descriptions to work with has, in the relevant sense, lost the particular.
 
-This is the problem names solve. A name is a device for exporting $x^o$-rigidity into the space of absence. The rigidity is real where the speaker is present; what is needed is a way to carry it forward when the speaker is not. Names are best understood as portable demonstratives: linguistic artifacts engineered to maintain rigid tracking when perceptual contact is no longer available.
+This is the problem names solve. A name is a device for extending, under social conditions, the holding-fixed function first visible in $x^o$-coordination into the space of absence. The rigidity is real where the speaker is present; what is needed is a way to carry it forward when the speaker is not. Names are best understood as portable demonstratives: linguistic artifacts engineered to maintain rigid tracking when perceptual contact is no longer available.
 
 ## Baptism as Lifting
 
-A baptismal act exploits an existing $x^o$-coordination to inaugurate a new linguistic pattern. At the moment of baptism, some speaker is in perceptual contact with the individual to be named. $E(human^o, \{HUMAN\})$ is in place, I experience a particular human, this human;  the object-mode word "human," or "child," or "this one," is rigidly coordinated with the particular instance. The baptism does two things simultaneously: it introduces a new concept-word $N^c$ (the name), and it forms a coordination between the already-rigid $h^o$ and this newly introduced $N^c$:
+A baptismal act exploits an existing $x^o$-coordination to inaugurate a new linguistic pattern. At the moment of baptism, some speaker is in perceptual contact with the individual to be named. $\mathcal{R}(human^o, E(\{HUMAN\}))$ is in place, I experience a particular human, this human;  the object-mode word "human," or "child," or "this one," is rigidly coordinated with the particular instance. The baptism does two things simultaneously: it introduces a new concept-word $N^c$ (the name), and it forms a coordination between the already-rigid $h^o$ and this newly introduced $N^c$:
 
 $$\mathcal{R}(h^o, N^c)$$
 for example: $$\mathcal{R}(h^o, {N^c}_{aristotle})$$
-This is basically to say "Let this human be named Aristotle". But because N is conceptual in nature (there is no $Aristotle^o$, the name only designates) what this accomplishes is not metaphysical but practical. A new linguistic pattern $\langle aristotle \rangle$ enters the community's vocabulary. Its standing function — fixed by the baptismal context and maintained by subsequent use — is to track the same individual the demonstrative grip was holding. The rigidity of $h^o$ in encounter is **lifted** into $N^c$. Not transferred and not duplicated: lifted in the sense that what was confined to the duration of perceptual contact becomes available for use beyond it.
+This effectively states, 'Let this human be named Aristotle.' But because proper names are introduced as standing linguistic devices rather than as passing demonstratives, what this accomplishes is practical rather than metaphysical. A new linguistic pattern $\langle aristotle \rangle$ enters the community’s vocabulary. Its standing function — fixed by the baptismal context and maintained by subsequent use — is to track the same individual the demonstrative grip was holding. The rigidity of $h^o$ in encounter is **lifted** into $N^c$. Not transferred and not duplicated: lifted in the sense that what was confined to the duration of perceptual contact becomes available for use beyond it.
 
-This is why it is not baptism itself that creates rigidity. The rigidity was already there in $\mathcal{R}(h^o, \{H\})$. What baptism does is change its locus: from a fleeting demonstrative coordination to a durable, socially maintained linguistic pattern. The name inherits its modal profile from the demonstrative act at its origin. Specifically, it inherits scope-ambiguity-freedom: where a description has descriptive structure that interacts with modal operators in two ways, $N^c$ has no such structure to interact with at all. It is rigid because the act that founded it had nothing variable to begin with.
+This is why it is not baptism itself that creates rigidity. The rigidity was already there in $\mathcal{R}(h^o, \{HUMAN\})$. What baptism does is change its locus: from a fleeting demonstrative coordination to a durable, socially maintained linguistic pattern. The name inherits its modal profile from the demonstrative act at its origin. Specifically, it inherits scope-ambiguity-freedom: where a description has descriptive structure that interacts with modal operators in two ways, $N^c$ has no such structure to interact with at all. It is rigid because the act that founded it had nothing variable to begin with.
 
 Kripke's "initial baptism" is the same event described from the outside. What his account leaves implicit — that some speaker had to be tracking the individual at the moment the name was introduced — is what PRU makes explicit. The picture is not new; the cognitive precondition is.
 
@@ -64,9 +64,9 @@ This is what Kripke's causal-historical chain comes to in cognitive terms. The c
 
 ## Attribution after Transmission
 
-A speaker who has acquired $N^c$ through the chain — but who has no $x^o$-access to the bearer — is in an asymmetric position. The name in her vocabulary inherits its rigidity from a baptismal $\mathcal{R}(h^o, N^c)$ she never performed and could not perform. Her own cognitive engagement with the bearer runs through a different kind of coordination. What is she actually doing with the name?
+A downstream speaker who acquires $N^c$ through the causal chain—but who lacks direct perceptual access to the bearer—is in an asymmetric position. The name in her vocabulary inherits its rigidity from a baptismal coordination she never performed. Her cognitive engagement with the bearer must rely on a different mechanism. What is she actually doing when she uses the name?
 
-The descriptivist answer is: she is using the name as shorthand for the descriptions she associates with it. Chapter 3 showed this answer fails — it leaves reference hostage to the descriptions, and reference does not behave that way. The PRU answer is structurally different. The descriptions are not constituting reference; they are being **attributed** to a name-concept that already has its reference fixed.
+The classical descriptivist answer is that she uses the name as shorthand for the descriptions she associates with it. As Kripke demonstrated, this fails because it leaves reference hostage to the accuracy of those descriptions. The present framework offers a structurally different answer: descriptions do not constitute reference; rather, they are attributed to a name-concept that already carries a fixed reference.
 
 Let $\mathcal{D}$ denote a description, formally an $\iota$-structured compound within $\langle x \rangle$-space. For Aristotle, a contemporary scholar might form several such descriptions:
 
@@ -97,11 +97,9 @@ $$\mathcal{R}(\mathcal{D}_{\text{evening star}}, N^c_{\text{Hesperus}})$$
 
 The discovery is the recognition that $N^c_{\text{Hesperus}}$ and $N^c_{\text{Phosphorus}}$ are inherited from causal chains that converge on the same baptismal act — that the two name-concepts are, in the relevant sense, one. The fact that the same star is baptized with different names becomes:
 $$\mathcal{R}(star^o, N^c_{\text{Phosphorus}}) \wedge \mathcal{R}(star^o, N^c_{\text{Hesperus}})$$
-The post-discovery configuration is:
-$$\mathcal{R}(star^o, N^c_{\text{new name}})$$
-or
 
-Two attributions, one name-concept. The necessary a posteriori falls out structurally. The necessity belongs to $N^c_{\text{Venus}} = N^c_{\text{Venus}}$, an identity statement whose two terms are anchored by the same baptismal $\mathcal{R}$. The a-posteriority belongs to the discovery that two separately-acquired attributions actually attach to the same anchor. Necessity comes from the $\mathcal{R}(h^o, N^c)$ stratum; a-posteriority comes from the $\mathcal{R}(\mathcal{D}, N^c)$ stratum; both strata are present in any contentful use of the name.
+The post-discovery configuration recognizes a single anchor under two inherited names: $$\mathcal{R}(star^o, N^c_{\text{Hesperus}}) \wedge \mathcal{R}(star^o, N^c_{\text{Phosphorus}}), \quad N^c_{\text{Hesperus}} = N^c_{\text{Phosphorus}}$$
+Two attributions, one name-concept. But writing $N^c_{\text{Hesperus}} = N^c_{\text{Phosphorus}}$ is just a logical consequence, and does not make sense in natural language use; both names will be the same and the logical sollution is to replace them with another name, in this case "Venus": $N^c_{\text{Hesperus}} = N^c_{\text{Phosphorus}} = N^c_{\text{Venus}}$$ The necessary a posteriori falls out structurally. Necessity comes from the $\mathcal{R}(h^o, N^c)$ stratum; a-posteriority comes from the $\mathcal{R}(\mathcal{D}, N^c)$ stratum; both strata are present in any contentful use of the name.
 
 This is also what allows the cognitive engagement of a contemporary scholar with a long-dead figure to be substantive without being descriptivist. The scholar engages with Aristotle through her attributions. The attributions can be revised, refined, defended, or dropped. Through all such revisions, she continues to refer to the same individual — because $N^c_{\text{Aristotle}}$ continues to do its rigid work, independent of what she attributes to it.
 
@@ -115,6 +113,6 @@ The $x^o$-coordination is the cognitive primitive, present already in pre-lingui
 
 The Kripkean model captures the output. PRU describes the process by which an agent comes to participate in that output. The two are not in competition. They operate at different levels of abstraction. The model stipulates $\mathcal{I}(N) = d$; PRU explains how a speaker is positioned to use $N$ such that the stipulation correctly describes her semantic practice.
 
-This is the sense in which PRU is metasemantics, not rival semantics. It supplies what Kripke's apparatus presupposes but does not develop. It identifies the cognitive precondition Russell saw and retreated from. It accounts for the asymmetry between names and descriptions in the modal idiom by locating that asymmetry in the cognitive operations that underlie them. And it explains the phenomenology of post-baptismal reference — how I engage with names like "Aristotle" or "Caesar" through descriptions without thereby making those descriptions constitutive of my reference.
+This is the sense in which PRU is metasemantics, not rival semantics. PRU supplies what Kripke's apparatus presupposes — the cognitive precondition Russell located and retreated from — without contesting the formal semantics.
 
 The argument is now in place. The objections that this account is bound to attract are taken up in Chapter 6.

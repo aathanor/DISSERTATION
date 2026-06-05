@@ -72,7 +72,7 @@ Joseph LaPorte characterizes Kripke’s appeal to stipulation as “more like a 
 
 ## Existing Cognitive Implementations
 
-There are three serious attempts to fill Kripke's cognitive gap — Evans's discriminating conception, Recanati's mental files, Devitt's causal-descriptivism. All share a representationalist template: an internal item (conception/file/complex) related to an external referent. Each presupposes rather than explains the prior capacity to single out a particular. That capacity is what I will call local rigidity.
+There are several prominent attempts to fill Kripke’s cognitive gap, most notably Evans’s discriminating conception, Recanati’s mental files, and Dickie’s perceptual-attention framework. These accounts correctly recognize that reference requires a non-descriptive cognitive link to an object (what Recanati calls an 'Epistemologically Rewarding relation'). The present account builds on this insight but shifts the focus: rather than treating reference-fixing primarily as a matter of internal mental representations or private files, it frames it as a publicly usable, dual-mode linguistic operation ($x^o / x^c$). The prior capacity to single out a particular in an encounter is what I will call _local rigidity_.
 
 ## Summary and Transition
 

@@ -24,19 +24,11 @@ _(Texts the dissertation directly analyzes or argues against)_
 
 ## Secondary Literature
 
-**Burgess, J. P.** (2014). "On a Derivation of the Necessity of Identity." _Synthese_, 191(7), 1567–1585.
-
-**Chalmers, D.** (2006). "The Foundations of Two-Dimensional Semantics." In M. García-Carpintero & J. Macià (eds.), _Two-Dimensional Semantics_. Oxford: Oxford University Press, pp. 55–140.
-
 **Devitt, M.** (1981). _Designation_. New York: Columbia University Press.
 
+**Dickie, I.** (2015). _Fixing Reference_. Oxford: Oxford University Press.
+
 **Evans, G.** (1982). _The Varieties of Reference_. Oxford: Oxford University Press.
-
-**Fine, K.** (1994). "Essence and Modality." _Philosophical Perspectives_, 8, 1–16.
-
-**Garson, J. W.** (2024). "Logics for Rigidity." In Y. Weiss & R. Birman (eds.), _Saul Kripke on Modal Logic_. Cham: Springer, pp. 193–208.
-
-**Knuuttila, S.** (1993). _Modalities in Medieval Philosophy_. London & New York: Routledge.
 
 **LaPorte, J.** (2022). "Rigid Designators." In E. N. Zalta (ed.), _The Stanford Encyclopedia of Philosophy_ (Spring 2022 ed.). [https://plato.stanford.edu/entries/rigid-designators/](https://plato.stanford.edu/entries/rigid-designators/)
 
@@ -49,8 +41,6 @@ _(Texts the dissertation directly analyzes or argues against)_
 **Smullyan, A. F.** (1948). "Modality and Description." _Journal of Symbolic Logic_, 13(1), 31–37.
 
 **Soames, S.** (2002). _Beyond Rigidity: The Unfinished Semantic Agenda of_ Naming and Necessity. New York: Oxford University Press.
-
-**Wiggins, D.** (1980). _Sameness and Substance_. Oxford: Blackwell.
 
 ## Author's Own Work
 
