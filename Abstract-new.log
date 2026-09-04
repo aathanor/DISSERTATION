@@ -1,19 +1,16 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.5.8)  30 JUN 2026 12:42
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.5.8)  15 JUN 2026 20:24
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**"From Local to Portable Rigidity -- Demonstratives and the Metasemantic Theor
-y of Names.tex"
-
-(./From Local to Portable Rigidity -- Demonstratives and the Metasemantic Theor
-y of Names.tex
+**Abstract-new.tex
+(./Abstract-new.tex
 LaTeX2e <2025-11-01>
 L3 programming layer <2026-01-19>
 (/usr/local/texlive/2026/texmf-dist/tex/latex/base/article.cls
 Document Class: article 2025/01/22 v1.4n Standard LaTeX document class
-(/usr/local/texlive/2026/texmf-dist/tex/latex/base/size12.clo
-File: size12.clo 2025/01/22 v1.4n Standard LaTeX file (size option)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/base/size11.clo
+File: size11.clo 2025/01/22 v1.4n Standard LaTeX file (size option)
 )
 \c@part=\count275
 \c@section=\count276
@@ -27,20 +24,6 @@ File: size12.clo 2025/01/22 v1.4n Standard LaTeX file (size option)
 \belowcaptionskip=\skip50
 \bibindent=\dimen148
 )
-(/usr/local/texlive/2026/texmf-dist/tex/latex/base/inputenc.sty
-Package: inputenc 2024/02/08 v1.3d Input encoding file
-\inpenc@prehook=\toks17
-\inpenc@posthook=\toks18
-)
-(/usr/local/texlive/2026/texmf-dist/tex/latex/base/fontenc.sty
-Package: fontenc 2025/07/18 v2.1d Standard LaTeX package
-)
-(/usr/local/texlive/2026/texmf-dist/tex/latex/base/textcomp.sty
-Package: textcomp 2024/04/24 v2.1b Standard LaTeX package
-)
-(/usr/local/texlive/2026/texmf-dist/tex/latex/psnfss/times.sty
-Package: times 2020/03/25 PSNFSS-v9.3 (SPQR) 
-)
 (/usr/local/texlive/2026/texmf-dist/tex/latex/amsmath/amsmath.sty
 Package: amsmath 2025/07/09 v2.17z AMS math features
 \@mathmargin=\skip51
@@ -51,7 +34,7 @@ Package: amstext 2024/11/17 v2.01 AMS text
 
 (/usr/local/texlive/2026/texmf-dist/tex/latex/amsmath/amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0 generic functions
-\@emptytoks=\toks19
+\@emptytoks=\toks17
 \ex@=\dimen149
 ))
 (/usr/local/texlive/2026/texmf-dist/tex/latex/amsmath/amsbsy.sty
@@ -91,21 +74,21 @@ LaTeX Info: Redefining \Relbar on input line 970.
 \dotsspace@=\muskip17
 \c@parentequation=\count290
 \dspbrk@lvl=\count291
-\tag@help=\toks20
+\tag@help=\toks18
 \row@=\count292
 \column@=\count293
 \maxfields@=\count294
-\andhelp@=\toks21
+\andhelp@=\toks19
 \eqnshift@=\dimen152
 \alignsep@=\dimen153
 \tagshift@=\dimen154
 \tagwidth@=\dimen155
 \totwidth@=\dimen156
 \lineht@=\dimen157
-\@envbody=\toks22
+\@envbody=\toks20
 \multlinegap=\skip52
 \multlinetaggap=\skip53
-\mathdisplay@stack=\toks23
+\mathdisplay@stack=\toks21
 LaTeX Info: Redefining \[ on input line 2950.
 LaTeX Info: Redefining \] on input line 2951.
 )
@@ -125,6 +108,17 @@ Package: stmaryrd 1994/03/03 St Mary's Road symbol package
 \symstmry=\mathgroup6
 LaTeX Font Info:    Overwriting symbol font `stmry' in version `bold'
 (Font)                  U/stmry/m/n --> U/stmry/b/n on input line 89.
+)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/base/inputenc.sty
+Package: inputenc 2024/02/08 v1.3d Input encoding file
+\inpenc@prehook=\toks22
+\inpenc@posthook=\toks23
+)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/base/textcomp.sty
+Package: textcomp 2024/04/24 v2.1b Standard LaTeX package
+)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/psnfss/times.sty
+Package: times 2020/03/25 PSNFSS-v9.3 (SPQR) 
 )
 (/usr/local/texlive/2026/texmf-dist/tex/latex/geometry/geometry.sty
 Package: geometry 2026/03/07 v6.0 Page Geometry
@@ -185,9 +179,6 @@ Package microtype Info: Loading configuration file microtype.cfg.
 File: microtype.cfg 2026/03/01 v3.2d microtype main configuration file (RS)
 )
 LaTeX Info: Redefining \microtypesetup on input line 3065.
-)
-(/usr/local/texlive/2026/texmf-dist/tex/latex/setspace/setspace.sty
-Package: setspace 2022/12/04 v6.7b set line spacing
 )
 (/usr/local/texlive/2026/texmf-dist/tex/latex/tcolorbox/tcolorbox.sty
 Package: tcolorbox 2025/11/28 version 6.9.0 text color boxes
@@ -669,19 +660,8 @@ Library (tcolorbox): 'tcbposter.code.tex' version '6.9.0'
    defining Unicode char U+03BB (decimal 955)
    defining Unicode char U+03C6 (decimal 966)
    defining Unicode char U+00AC (decimal 172)
-   defining Unicode char U+22A2 (decimal 8866)
-   defining Unicode char U+2203 (decimal 8707)
-   defining Unicode char U+2200 (decimal 8704)
    defining Unicode char U+2227 (decimal 8743)
-   defining Unicode char U+2228 (decimal 8744)
-   defining Unicode char U+2192 (decimal 8594)
-   defining Unicode char U+2194 (decimal 8596)
-   defining Unicode char U+2234 (decimal 8756)
-   defining Unicode char U+2248 (decimal 8776)
-   defining Unicode char U+2208 (decimal 8712)
-   defining Unicode char U+2260 (decimal 8800)
-   defining Unicode char U+2713 (decimal 10003)
-   defining Unicode char U+2212 (decimal 8722)
+   defining Unicode char U+22A2 (decimal 8866)
  (/usr/local/texlive/2026/texmf-dist/tex/latex/tools/array.sty
 Package: array 2025/09/25 v2.6n Tabular extension package (FMi)
 \col@sep=\dimen283
@@ -744,9 +724,15 @@ LaTeX Info: Redefining \addtolength on input line 87.
 \calc@Ccount=\count350
 \calc@Cskip=\skip63
 )
-(/usr/local/texlive/2026/texmf-dist/tex/latex/tools/indentfirst.sty
-Package: indentfirst 2023/07/02 v1.03 Indent first paragraph (DPC)
-)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/parskip/parskip.sty
+Package: parskip 2021-03-14 v2.0h non-zero parskip adjustments
+
+(/usr/local/texlive/2026/texmf-dist/tex/latex/kvoptions/kvoptions.sty
+Package: kvoptions 2022-06-15 v3.15 Key value format for package options (HO)
+
+(/usr/local/texlive/2026/texmf-dist/tex/latex/kvsetkeys/kvsetkeys.sty
+Package: kvsetkeys 2022-10-05 v1.19 Key value parser (HO)
+)))
 (/usr/local/texlive/2026/texmf-dist/tex/latex/titlesec/titlesec.sty
 Package: titlesec 2025/01/04 v2.17 Sectioning titles
 \ttl@box=\box89
@@ -798,8 +784,12 @@ Package tocloft Info: The document has section divisions on input line 51.
 \cftbeforetabskip=\skip94
 \cfttabindent=\skip95
 \cfttabnumwidth=\skip96
-)
-(/usr/local/texlive/2026/texmf-dist/tex/latex/enumitem/enumitem.sty
+
+
+Package tocloft Warning: \@starttoc has already been redefined; tocloft bailing
+ out. on input line 1156.
+
+) (/usr/local/texlive/2026/texmf-dist/tex/latex/enumitem/enumitem.sty
 Package: enumitem 2025/02/06 v3.11 Customized lists
 \labelindent=\skip97
 \enit@outerparindent=\dimen306
@@ -828,9 +818,6 @@ Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 (/usr/local/texlive/2026/texmf-dist/tex/latex/hyperref/hyperref.sty
 Package: hyperref 2026-01-29 v7.01p Hypertext links for LaTeX
 
-(/usr/local/texlive/2026/texmf-dist/tex/latex/kvsetkeys/kvsetkeys.sty
-Package: kvsetkeys 2022-10-05 v1.19 Key value parser (HO)
-)
 (/usr/local/texlive/2026/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty
 Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
 )
@@ -846,16 +833,13 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 (/usr/local/texlive/2026/texmf-dist/tex/generic/gettitlestring/gettitlestring.s
 ty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
- (/usr/local/texlive/2026/texmf-dist/tex/latex/kvoptions/kvoptions.sty
-Package: kvoptions 2022-06-15 v3.15 Key value format for package options (HO)
-))
+)
 \c@section@level=\count356
 )
 \@linkdim=\dimen307
 \Hy@linkcounter=\count357
 \Hy@pagecounter=\count358
-
-(/usr/local/texlive/2026/texmf-dist/tex/latex/hyperref/pd1enc.def
+ (/usr/local/texlive/2026/texmf-dist/tex/latex/hyperref/pd1enc.def
 File: pd1enc.def 2026-01-29 v7.01p Hyperref: PDFDocEncoding definition (HO)
 Now handling font encoding PD1 ...
 ... no UTF-8 mapping file for font encoding PD1
@@ -922,66 +906,76 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 \Hy@SectionHShift=\skip99
 )
 \c@none=\count367
+   defining Unicode char U+2203 (decimal 8707)
+   defining Unicode char U+2200 (decimal 8704)
+   defining Unicode char U+2227 (decimal 8743)
+   defining Unicode char U+2228 (decimal 8744)
+   defining Unicode char U+2192 (decimal 8594)
+   defining Unicode char U+2194 (decimal 8596)
+   defining Unicode char U+2234 (decimal 8756)
+   defining Unicode char U+2248 (decimal 8776)
+   defining Unicode char U+2208 (decimal 8712)
+   defining Unicode char U+2260 (decimal 8800)
+   defining Unicode char U+2713 (decimal 10003)
+   defining Unicode char U+2212 (decimal 8722)
    defining Unicode char U+27EA (decimal 10218)
    defining Unicode char U+27EB (decimal 10219)
-LaTeX Font Info:    Trying to load font information for T1+ptm on input line 21
-3.
- (/usr/local/texlive/2026/texmf-dist/tex/latex/psnfss/t1ptm.fd
-File: t1ptm.fd 2001/06/04 font definitions for T1/ptm.
+LaTeX Font Info:    Trying to load font information for OT1+ptm on input line 2
+03.
+ (/usr/local/texlive/2026/texmf-dist/tex/latex/psnfss/ot1ptm.fd
+File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 )
 (/usr/local/texlive/2026/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2025-10-09 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count368
 )
-(./From Local to Portable Rigidity -- Demonstratives and the Metasemantic Theor
-y of Names.aux)
-\openout1 = `"From Local to Portable Rigidity -- Demonstratives and the Metasem
-antic Theory of Names.aux"'.
+(./Abstract-new.aux)
+\openout1 = `Abstract-new.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 213.
-LaTeX Font Info:    ... okay on input line 213.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 213.
-LaTeX Font Info:    ... okay on input line 213.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 213.
-LaTeX Font Info:    ... okay on input line 213.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 213.
-LaTeX Font Info:    ... okay on input line 213.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 213.
-LaTeX Font Info:    ... okay on input line 213.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 213.
-LaTeX Font Info:    ... okay on input line 213.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 213.
-LaTeX Font Info:    ... okay on input line 213.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 213.
-LaTeX Font Info:    ... okay on input line 213.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 213.
-LaTeX Font Info:    ... okay on input line 213.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 203.
+LaTeX Font Info:    ... okay on input line 203.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 203.
+LaTeX Font Info:    ... okay on input line 203.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 203.
+LaTeX Font Info:    ... okay on input line 203.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 203.
+LaTeX Font Info:    ... okay on input line 203.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 203.
+LaTeX Font Info:    ... okay on input line 203.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 203.
+LaTeX Font Info:    ... okay on input line 203.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 203.
+LaTeX Font Info:    ... okay on input line 203.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 203.
+LaTeX Font Info:    ... okay on input line 203.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 203.
+LaTeX Font Info:    ... okay on input line 203.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
 * driver: pdftex
-* paper: a4paper
+* paper: <default>
 * layout: <same size as paper>
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
 * modes: 
-* h-part:(L,W,R)=(71.13188pt, 469.47049pt, 56.9055pt)
-* v-part:(T,H,B)=(56.9055pt, 731.23584pt, 56.9055pt)
-* \paperwidth=597.50787pt
-* \paperheight=845.04684pt
-* \textwidth=469.47049pt
-* \textheight=731.23584pt
-* \oddsidemargin=-1.1381pt
-* \evensidemargin=-1.1381pt
-* \topmargin=-52.36449pt
+* h-part:(L,W,R)=(72.26999pt, 469.75502pt, 72.26999pt)
+* v-part:(T,H,B)=(72.26999pt, 650.43001pt, 72.26999pt)
+* \paperwidth=614.295pt
+* \paperheight=794.96999pt
+* \textwidth=469.75502pt
+* \textheight=650.43001pt
+* \oddsidemargin=0.0pt
+* \evensidemargin=0.0pt
+* \topmargin=-37.0pt
 * \headheight=12.0pt
 * \headsep=25.0pt
-* \topskip=12.0pt
+* \topskip=11.0pt
 * \footskip=30.0pt
-* \marginparwidth=35.0pt
+* \marginparwidth=59.0pt
 * \marginparsep=10.0pt
 * \columnsep=10.0pt
-* \skip\footins=10.8pt plus 4.0pt minus 2.0pt
+* \skip\footins=10.0pt plus 4.0pt minus 2.0pt
 * \hoffset=0.0pt
 * \voffset=0.0pt
 * \mag=1000
@@ -991,13 +985,13 @@ LaTeX Font Info:    ... okay on input line 213.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-LaTeX Info: Redefining \microtypecontext on input line 213.
-Package microtype Info: Applying patch `item' on input line 213.
-Package microtype Info: Applying patch `toc' on input line 213.
-Package microtype Info: Applying patch `eqnum' on input line 213.
-Package microtype Info: Applying patch `footnote' on input line 213.
-Package microtype Info: Applying patch `verbatim' on input line 213.
-LaTeX Info: Redefining \microtypesetup on input line 213.
+LaTeX Info: Redefining \microtypecontext on input line 203.
+Package microtype Info: Applying patch `item' on input line 203.
+Package microtype Info: Applying patch `toc' on input line 203.
+Package microtype Info: Applying patch `eqnum' on input line 203.
+Package microtype Info: Applying patch `footnote' on input line 203.
+Package microtype Info: Applying patch `verbatim' on input line 203.
+LaTeX Info: Redefining \microtypesetup on input line 203.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
@@ -1034,22 +1028,18 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
 \c@lstlisting=\count375
-Package hyperref Info: Link coloring ON on input line 213.
+Package hyperref Info: Link coloring ON on input line 203.
 
-(./From Local to Portable Rigidity -- Demonstratives and the Metasemantic Theor
-y of Names.out)
-(./From Local to Portable Rigidity -- Demonstratives and the Metasemantic Theor
-y of Names.out)
+(./Abstract-new.out) (./Abstract-new.out)
 \@outlinefile=\write4
-\openout4 = `"From Local to Portable Rigidity -- Demonstratives and the Metasem
-antic Theory of Names.out"'.
+\openout4 = `Abstract-new.out'.
 
 
 (/usr/local/texlive/2026/texmf-dist/tex/latex/microtype/mt-cmr.cfg
 File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman 
 (RS)
 )
-LaTeX Font Info:    Trying to load font information for U+msa on input line 225
+LaTeX Font Info:    Trying to load font information for U+msa on input line 206
 .
 
 (/usr/local/texlive/2026/texmf-dist/tex/latex/amsfonts/umsa.fd
@@ -1058,7 +1048,7 @@ File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 (/usr/local/texlive/2026/texmf-dist/tex/latex/microtype/mt-msa.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 225
+LaTeX Font Info:    Trying to load font information for U+msb on input line 206
 .
 
 (/usr/local/texlive/2026/texmf-dist/tex/latex/amsfonts/umsb.fd
@@ -1068,213 +1058,40 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 )
 LaTeX Font Info:    Trying to load font information for U+stmry on input line 2
-25.
+06.
 
 (/usr/local/texlive/2026/texmf-dist/tex/latex/stmaryrd/Ustmry.fd) [1
 
 {/usr/local/texlive/2026/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/usr/loc
-al/texlive/2026/texmf-dist/fonts/enc/dvips/base/8r.enc}]
-(./From Local to Portable Rigidity -- Demonstratives and the Metasemantic Theor
-y of Names.toc [2
+al/texlive/2026/texmf-dist/fonts/enc/dvips/base/8r.enc}] [2
 
-])
-\tf@toc=\write5
-\openout5 = `"From Local to Portable Rigidity -- Demonstratives and the Metasem
-antic Theory of Names.toc"'.
-
- [3] [4
-
-
-] [5
-
-] [6] [7
-
-] [8] [9
-
-] [10] [11] [12
-
-] [13] [14]
-[15] [16] [17
-
-] [18] [19] [20
-
-] [21]
-
-LaTeX Warning: Command \textlangle invalid in math mode on input line 467.
-
-LaTeX Info: Symbol \textlangle not provided by
-            font family ptm in TS1 encoding.
-            Default family used instead on input line 467.
-
-LaTeX Warning: Command \textlangle invalid in math mode on input line 467.
-
-
-LaTeX Warning: Command \textlangle invalid in math mode on input line 467.
-
-
-LaTeX Warning: Command \textrangle invalid in math mode on input line 467.
-
-LaTeX Info: Symbol \textrangle not provided by
-            font family ptm in TS1 encoding.
-            Default family used instead on input line 467.
-
-LaTeX Warning: Command \textrangle invalid in math mode on input line 467.
-
-
-LaTeX Warning: Command \textrangle invalid in math mode on input line 467.
-
-
-LaTeX Warning: Command \textlangle invalid in math mode on input line 471.
-
-LaTeX Info: Symbol \textlangle not provided by
-            font family ptm in TS1 encoding.
-            Default family used instead on input line 471.
-
-LaTeX Warning: Command \textlangle invalid in math mode on input line 471.
-
-
-LaTeX Warning: Command \textlangle invalid in math mode on input line 471.
-
-
-LaTeX Warning: Command \textrangle invalid in math mode on input line 471.
-
-LaTeX Info: Symbol \textrangle not provided by
-            font family ptm in TS1 encoding.
-            Default family used instead on input line 471.
-
-LaTeX Warning: Command \textrangle invalid in math mode on input line 471.
-
-
-LaTeX Warning: Command \textrangle invalid in math mode on input line 471.
-
-
-LaTeX Warning: Command \textlangle invalid in math mode on input line 471.
-
-LaTeX Info: Symbol \textlangle not provided by
-            font family ptm in TS1 encoding.
-            Default family used instead on input line 471.
-
-LaTeX Warning: Command \textlangle invalid in math mode on input line 471.
-
-
-LaTeX Warning: Command \textlangle invalid in math mode on input line 471.
-
-
-LaTeX Warning: Command \textrangle invalid in math mode on input line 471.
-
-LaTeX Info: Symbol \textrangle not provided by
-            font family ptm in TS1 encoding.
-            Default family used instead on input line 471.
-
-LaTeX Warning: Command \textrangle invalid in math mode on input line 471.
-
-
-LaTeX Warning: Command \textrangle invalid in math mode on input line 471.
-
-
-LaTeX Warning: Command \textlangle invalid in math mode on input line 471.
-
-LaTeX Info: Symbol \textlangle not provided by
-            font family ptm in TS1 encoding.
-            Default family used instead on input line 471.
-
-LaTeX Warning: Command \textlangle invalid in math mode on input line 471.
-
-
-LaTeX Warning: Command \textlangle invalid in math mode on input line 471.
-
-
-LaTeX Warning: Command \textrangle invalid in math mode on input line 471.
-
-LaTeX Info: Symbol \textrangle not provided by
-            font family ptm in TS1 encoding.
-            Default family used instead on input line 471.
-
-LaTeX Warning: Command \textrangle invalid in math mode on input line 471.
-
-
-LaTeX Warning: Command \textrangle invalid in math mode on input line 471.
-
-[22] [23] [24] [25]
-
-LaTeX Warning: Command \textlangle invalid in math mode on input line 509.
-
-LaTeX Info: Symbol \textlangle not provided by
-            font family ptm in TS1 encoding.
-            Default family used instead on input line 509.
-
-LaTeX Warning: Command \textlangle invalid in math mode on input line 509.
-
-
-LaTeX Warning: Command \textlangle invalid in math mode on input line 509.
-
-
-LaTeX Warning: Command \textrangle invalid in math mode on input line 509.
-
-LaTeX Info: Symbol \textrangle not provided by
-            font family ptm in TS1 encoding.
-            Default family used instead on input line 509.
-
-LaTeX Warning: Command \textrangle invalid in math mode on input line 509.
-
-
-LaTeX Warning: Command \textrangle invalid in math mode on input line 509.
-
-[26]
-Overfull \hbox (4.27402pt too wide) in paragraph at lines 533--534
-[]\T1/ptm/m/n/12 (-20) The \T1/ptm/m/it/12 (-20) a pos-te-ri-or-ity \T1/ptm/m/n
-/12 (-20) lives at $\OML/cmm/m/it/12 x[]$\T1/ptm/m/n/12 (-20) . The concept-mod
-e des-ig-na-tors $\OMS/cmsy/m/n/12 h\OML/cmm/m/it/12 Hesperus\OMS/cmsy/m/n/12 i
-$ \T1/ptm/m/n/12 (-20) and $\OMS/cmsy/m/n/12 h\OML/cmm/m/it/12 Phosphorus\OMS/c
-msy/m/n/12 i$
- []
-
-[27] [28] [29
-
-] [30] [31] [32] [33] [34] [35] [36] [37
-
-] [38] [39] [40] [41]
-[42] [43
-
-] [44] [45] [46
-
-] [47]
-(./From Local to Portable Rigidity -- Demonstratives and the Metasemantic Theor
-y of Names.aux)
+] (./Abstract-new.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2026-01-19>
  ***********
-Package rerunfilecheck Info: File `"From Local to Portable Rigidity -- Demonstr
-atives and the Metasemantic Theory of Names".out' has not changed.
-(rerunfilecheck)             Checksum: 402C253FF4B790BEB92A4D8407D1DFE3;8857.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+Package rerunfilecheck Info: File `Abstract-new.out' has not changed.
+(rerunfilecheck)             Checksum: B37AC422AE93C77A94EF5DB780ADEAE1;83.
  ) 
 Here is how much of TeX's memory you used:
- 31821 strings out of 467525
- 624222 string characters out of 5418983
- 1078357 words of memory out of 5000000
- 59614 multiletter control sequences out of 15000+600000
- 718245 words of font info for 420 fonts, out of 8000000 for 9000
+ 30947 strings out of 467525
+ 610696 string characters out of 5418983
+ 1068454 words of memory out of 5000000
+ 59226 multiletter control sequences out of 15000+600000
+ 655854 words of font info for 159 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 116i,9n,121p,2088b,508s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb
-></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb>
-</usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></
-usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></us
-r/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/
-local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/loc
-al/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/
-texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/t
-exlive/2026/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/loc
-al/texlive/2026/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive
-/2026/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/local/texlive/2026/tex
-mf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2026/texmf-dist/fo
-nts/type1/urw/times/utmri8a.pfb>
-Output written on "From Local to Portable Rigidity -- Demonstratives and the Me
-tasemantic Theory of Names.pdf" (47 pages, 303569 bytes).
+ 116i,9n,121p,1201b,457s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/local/texlive/2026/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/lo
+cal/texlive/2026/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texliv
+e/2026/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on Abstract-new.pdf (2 pages, 46651 bytes).
 PDF statistics:
- 616 PDF objects out of 1000 (max. 8388607)
- 511 compressed objects within 6 object streams
- 116 named destinations out of 1000 (max. 500000)
- 85509 words of extra memory for PDF output out of 89155 (max. 10000000)
+ 76 PDF objects out of 1000 (max. 8388607)
+ 41 compressed objects within 1 object stream
+ 3 named destinations out of 1000 (max. 500000)
+ 45221 words of extra memory for PDF output out of 51595 (max. 10000000)
 

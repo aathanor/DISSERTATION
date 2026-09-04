@@ -1,13 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.5.8)  30 JUN 2026 12:42
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.5.8)  16 JUN 2026 09:43
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**"From Local to Portable Rigidity -- Demonstratives and the Metasemantic Theor
-y of Names.tex"
-
-(./From Local to Portable Rigidity -- Demonstratives and the Metasemantic Theor
-y of Names.tex
+**disertatie.tex
+(./disertatie.tex
 LaTeX2e <2025-11-01>
 L3 programming layer <2026-01-19>
 (/usr/local/texlive/2026/texmf-dist/tex/latex/base/article.cls
@@ -933,10 +930,8 @@ File: t1ptm.fd 2001/06/04 font definitions for T1/ptm.
 File: l3backend-pdftex.def 2025-10-09 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count368
 )
-(./From Local to Portable Rigidity -- Demonstratives and the Metasemantic Theor
-y of Names.aux)
-\openout1 = `"From Local to Portable Rigidity -- Demonstratives and the Metasem
-antic Theory of Names.aux"'.
+(./disertatie.aux)
+\openout1 = `disertatie.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 213.
 LaTeX Font Info:    ... okay on input line 213.
@@ -1036,13 +1031,9 @@ e
 \c@lstlisting=\count375
 Package hyperref Info: Link coloring ON on input line 213.
 
-(./From Local to Portable Rigidity -- Demonstratives and the Metasemantic Theor
-y of Names.out)
-(./From Local to Portable Rigidity -- Demonstratives and the Metasemantic Theor
-y of Names.out)
+(./disertatie.out) (./disertatie.out)
 \@outlinefile=\write4
-\openout4 = `"From Local to Portable Rigidity -- Demonstratives and the Metasem
-antic Theory of Names.out"'.
+\openout4 = `disertatie.out'.
 
 
 (/usr/local/texlive/2026/texmf-dist/tex/latex/microtype/mt-cmr.cfg
@@ -1073,208 +1064,41 @@ LaTeX Font Info:    Trying to load font information for U+stmry on input line 2
 (/usr/local/texlive/2026/texmf-dist/tex/latex/stmaryrd/Ustmry.fd) [1
 
 {/usr/local/texlive/2026/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/usr/loc
-al/texlive/2026/texmf-dist/fonts/enc/dvips/base/8r.enc}]
-(./From Local to Portable Rigidity -- Demonstratives and the Metasemantic Theor
-y of Names.toc [2
+al/texlive/2026/texmf-dist/fonts/enc/dvips/base/8r.enc}] [2
 
-])
+] (./disertatie.toc)
 \tf@toc=\write5
-\openout5 = `"From Local to Portable Rigidity -- Demonstratives and the Metasem
-antic Theory of Names.toc"'.
+\openout5 = `disertatie.toc'.
 
- [3] [4
+ [3
 
+]
+[4
 
-] [5
-
-] [6] [7
-
-] [8] [9
-
-] [10] [11] [12
-
-] [13] [14]
-[15] [16] [17
-
-] [18] [19] [20
-
-] [21]
-
-LaTeX Warning: Command \textlangle invalid in math mode on input line 467.
-
-LaTeX Info: Symbol \textlangle not provided by
-            font family ptm in TS1 encoding.
-            Default family used instead on input line 467.
-
-LaTeX Warning: Command \textlangle invalid in math mode on input line 467.
-
-
-LaTeX Warning: Command \textlangle invalid in math mode on input line 467.
-
-
-LaTeX Warning: Command \textrangle invalid in math mode on input line 467.
-
-LaTeX Info: Symbol \textrangle not provided by
-            font family ptm in TS1 encoding.
-            Default family used instead on input line 467.
-
-LaTeX Warning: Command \textrangle invalid in math mode on input line 467.
-
-
-LaTeX Warning: Command \textrangle invalid in math mode on input line 467.
-
-
-LaTeX Warning: Command \textlangle invalid in math mode on input line 471.
-
-LaTeX Info: Symbol \textlangle not provided by
-            font family ptm in TS1 encoding.
-            Default family used instead on input line 471.
-
-LaTeX Warning: Command \textlangle invalid in math mode on input line 471.
-
-
-LaTeX Warning: Command \textlangle invalid in math mode on input line 471.
-
-
-LaTeX Warning: Command \textrangle invalid in math mode on input line 471.
-
-LaTeX Info: Symbol \textrangle not provided by
-            font family ptm in TS1 encoding.
-            Default family used instead on input line 471.
-
-LaTeX Warning: Command \textrangle invalid in math mode on input line 471.
-
-
-LaTeX Warning: Command \textrangle invalid in math mode on input line 471.
-
-
-LaTeX Warning: Command \textlangle invalid in math mode on input line 471.
-
-LaTeX Info: Symbol \textlangle not provided by
-            font family ptm in TS1 encoding.
-            Default family used instead on input line 471.
-
-LaTeX Warning: Command \textlangle invalid in math mode on input line 471.
-
-
-LaTeX Warning: Command \textlangle invalid in math mode on input line 471.
-
-
-LaTeX Warning: Command \textrangle invalid in math mode on input line 471.
-
-LaTeX Info: Symbol \textrangle not provided by
-            font family ptm in TS1 encoding.
-            Default family used instead on input line 471.
-
-LaTeX Warning: Command \textrangle invalid in math mode on input line 471.
-
-
-LaTeX Warning: Command \textrangle invalid in math mode on input line 471.
-
-
-LaTeX Warning: Command \textlangle invalid in math mode on input line 471.
-
-LaTeX Info: Symbol \textlangle not provided by
-            font family ptm in TS1 encoding.
-            Default family used instead on input line 471.
-
-LaTeX Warning: Command \textlangle invalid in math mode on input line 471.
-
-
-LaTeX Warning: Command \textlangle invalid in math mode on input line 471.
-
-
-LaTeX Warning: Command \textrangle invalid in math mode on input line 471.
-
-LaTeX Info: Symbol \textrangle not provided by
-            font family ptm in TS1 encoding.
-            Default family used instead on input line 471.
-
-LaTeX Warning: Command \textrangle invalid in math mode on input line 471.
-
-
-LaTeX Warning: Command \textrangle invalid in math mode on input line 471.
-
-[22] [23] [24] [25]
-
-LaTeX Warning: Command \textlangle invalid in math mode on input line 509.
-
-LaTeX Info: Symbol \textlangle not provided by
-            font family ptm in TS1 encoding.
-            Default family used instead on input line 509.
-
-LaTeX Warning: Command \textlangle invalid in math mode on input line 509.
-
-
-LaTeX Warning: Command \textlangle invalid in math mode on input line 509.
-
-
-LaTeX Warning: Command \textrangle invalid in math mode on input line 509.
-
-LaTeX Info: Symbol \textrangle not provided by
-            font family ptm in TS1 encoding.
-            Default family used instead on input line 509.
-
-LaTeX Warning: Command \textrangle invalid in math mode on input line 509.
-
-
-LaTeX Warning: Command \textrangle invalid in math mode on input line 509.
-
-[26]
-Overfull \hbox (4.27402pt too wide) in paragraph at lines 533--534
-[]\T1/ptm/m/n/12 (-20) The \T1/ptm/m/it/12 (-20) a pos-te-ri-or-ity \T1/ptm/m/n
-/12 (-20) lives at $\OML/cmm/m/it/12 x[]$\T1/ptm/m/n/12 (-20) . The concept-mod
-e des-ig-na-tors $\OMS/cmsy/m/n/12 h\OML/cmm/m/it/12 Hesperus\OMS/cmsy/m/n/12 i
-$ \T1/ptm/m/n/12 (-20) and $\OMS/cmsy/m/n/12 h\OML/cmm/m/it/12 Phosphorus\OMS/c
-msy/m/n/12 i$
- []
-
-[27] [28] [29
-
-] [30] [31] [32] [33] [34] [35] [36] [37
-
-] [38] [39] [40] [41]
-[42] [43
-
-] [44] [45] [46
-
-] [47]
-(./From Local to Portable Rigidity -- Demonstratives and the Metasemantic Theor
-y of Names.aux)
+] (./disertatie.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2026-01-19>
  ***********
-Package rerunfilecheck Info: File `"From Local to Portable Rigidity -- Demonstr
-atives and the Metasemantic Theory of Names".out' has not changed.
-(rerunfilecheck)             Checksum: 402C253FF4B790BEB92A4D8407D1DFE3;8857.
+Package rerunfilecheck Info: File `disertatie.out' has not changed.
+(rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 31821 strings out of 467525
- 624222 string characters out of 5418983
- 1078357 words of memory out of 5000000
- 59614 multiletter control sequences out of 15000+600000
- 718245 words of font info for 420 fonts, out of 8000000 for 9000
+ 31158 strings out of 467525
+ 614276 string characters out of 5418983
+ 1065942 words of memory out of 5000000
+ 59456 multiletter control sequences out of 15000+600000
+ 671977 words of font info for 145 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 116i,9n,121p,2088b,508s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb
-></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb>
-</usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></
-usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></us
-r/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/
-local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/loc
-al/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/
-texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/t
-exlive/2026/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/loc
-al/texlive/2026/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive
-/2026/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/local/texlive/2026/tex
-mf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2026/texmf-dist/fo
-nts/type1/urw/times/utmri8a.pfb>
-Output written on "From Local to Portable Rigidity -- Demonstratives and the Me
-tasemantic Theory of Names.pdf" (47 pages, 303569 bytes).
+ 116i,9n,121p,1007b,457s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb
+></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><
+/usr/local/texlive/2026/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local
+/texlive/2026/texmf-dist/fonts/type1/urw/times/utmr8a.pfb>
+Output written on disertatie.pdf (4 pages, 53269 bytes).
 PDF statistics:
- 616 PDF objects out of 1000 (max. 8388607)
- 511 compressed objects within 6 object streams
- 116 named destinations out of 1000 (max. 500000)
- 85509 words of extra memory for PDF output out of 89155 (max. 10000000)
+ 85 PDF objects out of 1000 (max. 8388607)
+ 46 compressed objects within 1 object stream
+ 5 named destinations out of 1000 (max. 500000)
+ 50333 words of extra memory for PDF output out of 51595 (max. 10000000)
 

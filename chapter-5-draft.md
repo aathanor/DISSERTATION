@@ -12,7 +12,7 @@ The present chapter offers the constructive proposal. It does not contest Kripke
 
 ## The PRU Framework
 
-Only what is needed for the argument will be introduced here. The full framework is developed in a distinct preprint [@cojocariuPatternRecognitionUnityPRU]. Three notions matter.
+Only what is needed for the argument will be introduced here. The full framework is developed in a distinct preprint (Cojocariu, 2026). Three notions matter.
 
 A **pattern-constellation** $\{X\}$ is a unified attractor state in a cognitive system, sculpted by repeated encounters and integrating sensory, motor, affective, and interoceptive dimensions as a single learned configuration. We never encounter $\{X\}$ as such; we encounter particular instances. A pattern-recognition event $E(\{X\})$ is the system's falling into the $\{X\}$-basin in response to a partial cue. Recognition and reaction are aspects of one event, not a detection step followed by a separate response — this is the Pattern-Recognition Unity thesis from which the framework takes its name.
 
@@ -52,6 +52,8 @@ This is why it is not baptism itself that creates rigidity. The rigidity was alr
 
 Kripke's "initial baptism" is the same event described from the outside. What his account leaves implicit — that some speaker had to be tracking the individual at the moment the name was introduced — is what PRU makes explicit. The picture is not new; the cognitive precondition is.
 
+The lifting account as stated covers baptisms in which the baptizer is in perceptual contact with the bearer. Baptisms that fix reference through a description of an unencountered cause — "Neptune," "Jack the Ripper" — have a different structure, and their treatment is deferred to the open questions of Chapter 7.
+
 ## Causal Chains as Testimonial Networks
 
 The question is how rigid tracking propagates through a community when only the first speaker(s) had $x^o$-access. What is the mechanic of the causal chains that Kripke mentions?
@@ -90,16 +92,31 @@ Two consequences follow.
 
 The asymmetry between rigid names and non-rigid descriptions becomes formally visible. $N^c_{Aristotle}$ is rigid in virtue of the baptismal $\mathcal{R}(h^o, N^c_{Aristotle})$ it inherits. Any $\mathcal{D}_i$ remains non-rigid: it picks out world-by-world satisfiers, and in worlds where Aristotle did not study under Plato, $\mathcal{D}_3$ either fails or picks out someone else. The attributive $\mathcal{R}(\mathcal{D}_3, N^c_{Aristotle})$ is itself a contingent claim about the actual world. Each attribution can be false. None of these contingencies touches the rigidity of $N^c_{Aristotle}$.
 
-The Hesperus/Phosphorus case acquires a transparent structure. Before the astronomical discovery, two name-concepts had been independently propagated, each with its own attributions:
+The Hesperus/Phosphorus case acquires a transparent structure. Before the
+astronomical discovery, two name-concepts had been independently established
+— two baptisms of one celestial body, one anchored in the evening-sky
+coordination, one in the morning-sky coordination — and independently
+propagated, each with its own attributions:
+$$\mathcal{R}(\mathcal{D}_{\text{morning star}}, N^{c}_{\text{Phosphorus}})$$
+$$\mathcal{R}(\mathcal{D}_{\text{evening star}}, N^{c}_{\text{Hesperus}})$$
 
-$$\mathcal{R}(\mathcal{D}_{\text{morning star}}, N^c_{\text{Phosphorus}})$$
-$$\mathcal{R}(\mathcal{D}_{\text{evening star}}, N^c_{\text{Hesperus}})$$
+The discovery is the recognition that the two chains are anchored in the
+same individual:
 
-The discovery is the recognition that $N^c_{\text{Hesperus}}$ and $N^c_{\text{Phosphorus}}$ are inherited from causal chains that converge on the same baptismal act — that the two name-concepts are, in the relevant sense, one. The fact that the same star is baptized with different names becomes:
-$$\mathcal{R}(star^o, N^c_{\text{Phosphorus}}) \wedge \mathcal{R}(star^o, N^c_{\text{Hesperus}})$$
+$$\mathcal{R}(\textit{star}^{\,o}, N^{c}_{\text{Hesperus}}) \;\wedge\;
+\mathcal{R}(\textit{star}^{\,o}, N^{c}_{\text{Phosphorus}})$$
 
-The post-discovery configuration recognizes a single anchor under two inherited names: $$\mathcal{R}(star^o, N^c_{\text{Hesperus}}) \wedge \mathcal{R}(star^o, N^c_{\text{Phosphorus}}), \quad N^c_{\text{Hesperus}} = N^c_{\text{Phosphorus}}$$
-Two attributions, one name-concept. But writing $N^c_{\text{Hesperus}} = N^c_{\text{Phosphorus}}$ is just a logical consequence, and does not make sense in natural language use; both names will be the same and the logical sollution is to replace them with another name, in this case "Venus": $N^c_{\text{Hesperus}} = N^c_{\text{Phosphorus}} = N^c_{\text{Venus}}$$ The necessary a posteriori falls out structurally. Necessity comes from the $\mathcal{R}(h^o, N^c)$ stratum; a-posteriority comes from the $\mathcal{R}(\mathcal{D}, N^c)$ stratum; both strata are present in any contentful use of the name.
+Note what the discovery is *not*: it is not the identity of the
+name-concepts. $\langle\text{Hesperus}\rangle$ and $\langle\text{Phosphorus}\rangle$ remain distinct linguistic patterns, with distinct usage histories and distinct attribution-sets — which is why the
+identity statement is informative, and why its a posteriority has a subject
+matter (§4.5). What is one is the anchor; what were two, and remain two, are
+the concept-words. Co-anchoring, not concept-identity, is the formal content
+of "Hesperus is Phosphorus." The community's subsequent preference for a
+third name, "Venus," is a fact about the practice — chains carrying
+co-anchored names tend to consolidate — not a logical consequence of the
+discovery.
+
+The necessary a posteriori falls out structurally: necessity comes from the $\mathcal{R}(x^o,N^c)$ stratum; a-posteriority from the $\mathcal{R}(\mathcal{D},N^c)$ stratum; both strata are present in any contentful use of the name.
 
 This is also what allows the cognitive engagement of a contemporary scholar with a long-dead figure to be substantive without being descriptivist. The scholar engages with Aristotle through her attributions. The attributions can be revised, refined, defended, or dropped. Through all such revisions, she continues to refer to the same individual — because $N^c_{\text{Aristotle}}$ continues to do its rigid work, independent of what she attributes to it.
 

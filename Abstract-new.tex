@@ -1,0 +1,253 @@
+\documentclass[11pt]{article}
+
+% —— Core packages ——
+\usepackage{amsmath,amssymb}
+\usepackage{stmaryrd}
+\usepackage[utf8]{inputenc}
+\usepackage{textcomp}
+\usepackage{times}
+\usepackage[margin=1in]{geometry}
+\usepackage{microtype}
+\emergencystretch=1em
+\usepackage[most]{tcolorbox}
+\tcbuselibrary{theorems,skins,breakable}
+
+% —— Modal logic and Greek ——
+\DeclareUnicodeCharacter{03B9}{\ensuremath{\iota}}   % ι iota
+\DeclareUnicodeCharacter{25A1}{\ensuremath{\Box}}     % □ necessity
+\DeclareUnicodeCharacter{25C7}{\ensuremath{\Diamond}} % ◇ possibility
+\DeclareUnicodeCharacter{03BB}{\ensuremath{\lambda}}  % λ lambda (precaution)
+\DeclareUnicodeCharacter{03C6}{\ensuremath{\varphi}}  % φ phi (precaution)
+\DeclareUnicodeCharacter{00AC}{\ensuremath{\neg}}     % ¬ negation
+\DeclareUnicodeCharacter{2227}{\ensuremath{\wedge}}   % ∧ (already listed but verify)
+\DeclareUnicodeCharacter{22A2}{\ensuremath{\vdash}}   % ⊢ turnstile (precaution)
+
+\newenvironment{definitionbox}[1][]{%
+  \begin{center}
+  \begin{tcolorbox}[
+    enhanced,
+    breakable,
+    width=0.8\textwidth,
+    colback=gray!2,
+    colframe=gray!60,
+    coltitle=black,
+    fonttitle=\bfseries,
+    title={Definition: #1},
+    boxed title style={
+      colback=gray!3,
+      colframe=black!60,
+      sharp corners,
+      boxrule=0.5pt,
+    },
+    boxrule=0.5pt,
+    sharp corners,
+    left=6pt,right=6pt,top=6pt,bottom=6pt,
+    before skip=12pt,
+    after skip=12pt,
+  ]}%
+  {\end{tcolorbox}\end{center}}
+
+% —— Tables ——
+\usepackage{array}
+\usepackage{longtable}
+\usepackage{booktabs}
+
+\usepackage{calc}
+\newcolumntype{C}[1]{>{\raggedright\arraybackslash}p{\dimexpr#1\linewidth-4\tabcolsep\relax}}
+
+% —— Fix paragraph indent after lists ——
+\usepackage{parskip}
+\setlength{\parindent}{1.5em}
+\setlength{\parskip}{0.5em}
+
+% —— Section formatting ——
+\usepackage{titlesec}
+\usepackage{needspace}
+\usepackage{etoolbox}
+
+\setcounter{secnumdepth}{3}
+
+\titleformat{\section}[hang]
+  {\normalfont\Large\bfseries}
+  {\thesection.}{1em}{}
+\titleformat{\subsection}[hang]
+  {\normalfont\large\bfseries}
+  {\thesubsection.}{1em}{}
+\titleformat{\subsubsection}[hang]
+  {\normalfont\normalsize\bfseries}
+  {\thesubsubsection.}{1em}{}
+
+\titlespacing*{\section}{0pt}{1.8em}{0.8em}
+\titlespacing*{\subsection}{0pt}{1.4em}{0.6em}
+\titlespacing*{\subsubsection}{0pt}{1em}{0.4em}
+
+\newcommand{\sectionbreak}{\vspace{0.8\baselineskip}}
+
+% —— TOC formatting ——
+\usepackage{tocloft}
+\renewcommand{\cftsecfont}{\small}
+\renewcommand{\cftsubsecfont}{\small}
+\renewcommand{\cftsubsubsecfont}{\small}
+\renewcommand{\cftsecpagefont}{\small}
+\renewcommand{\cftsubsecpagefont}{\small}
+\renewcommand{\cftsubsubsecpagefont}{\small}
+\setlength{\cftbeforesecskip}{0.3em}
+\setlength{\cftbeforesubsecskip}{0.1em}
+\setlength{\cftbeforesubsubsecskip}{0.1em}
+
+% —— Lists ——
+\usepackage{enumitem}
+\setlist{
+  nosep,
+  leftmargin=2em,
+  topsep=0.4em,
+  partopsep=0pt,
+  parsep=0.2em,
+  itemsep=0.2em
+}
+\setlist[itemize,1]{label=\textbullet}
+\setlist[itemize,2]{label=\textendash}
+
+% —— Figures ——
+\usepackage{graphicx}
+\usepackage{float}
+\setkeys{Gin}{keepaspectratio,width=0.7\linewidth}
+\makeatletter
+\def\fps@figure{H}
+\makeatother
+\graphicspath{{figures/}}
+
+% —— URL/DOI wrapping ——
+\usepackage{xurl}
+
+% —— CSL bibliography ——
+\newlength{\cslhangindent}
+\setlength{\cslhangindent}{1.5em}
+\newenvironment{CSLReferences}[2]%
+  {\begin{enumerate}[label={[\arabic*]},leftmargin=\cslhangindent,itemsep=0pt]%
+   \raggedright\sloppy
+   \renewcommand{\bibitem}[2][]{\item}}%
+  {\end{enumerate}}
+\providecommand{\CSLLeftMargin}[1]{\item[#1]}
+\providecommand{\CSLRightInline}[1]{#1}
+
+% —— Hyperref (must be near last) ——
+\usepackage[colorlinks=true, linkcolor=black, urlcolor=blue, citecolor=blue]{hyperref}
+\urlstyle{same}
+
+% —— Fix for Pandoc/longtable "none" counter ——
+\makeatletter
+\@ifundefined{c@none}{%
+  \newcounter{none}%
+}{}
+\makeatother
+\renewcommand{\thenone}{}          % don't actually print a number
+\providecommand*{\theHnone}{\arabic{none}} % for hyperref's anchors
+
+% —— Paragraph formatting (block style) ——
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.6em}
+\linespread{1.05}
+\raggedbottom
+
+% —— Block quotes ——
+\renewenvironment{quote}{%
+  \par\vskip 0.5em
+  \leftskip=2em\rightskip=2em\small\itshape
+  \noindent\ignorespaces
+}{\par\vskip 0.5em}
+
+% —— Pandoc compatibility ——
+\providecommand{\tightlist}{}
+\providecommand{\pandocbounded}[1]{#1}
+
+% —— Citeproc fixes ——
+\makeatletter
+\providecommand{\citeproctext}{} % do NOT force a constant label
+\let\@oldprotect\protect
+\def\@citeprocprotection{\let\protect\@oldprotect}
+\newcommand{\citeproc}[2]{#2}
+\protected\def\citeprocfootnote#1{\footnote{#1}}
+\makeatother
+
+% —— Special character definitions ——
+\DeclareUnicodeCharacter{2203}{\ensuremath{\exists}}
+\DeclareUnicodeCharacter{2200}{\ensuremath{\forall}}
+\DeclareUnicodeCharacter{2227}{\ensuremath{\wedge}}
+\DeclareUnicodeCharacter{2228}{\ensuremath{\vee}}
+\DeclareUnicodeCharacter{2192}{\ensuremath{\rightarrow}}
+\DeclareUnicodeCharacter{2194}{\ensuremath{\leftrightarrow}}
+\DeclareUnicodeCharacter{2234}{\ensuremath{\therefore}}
+\DeclareUnicodeCharacter{2248}{\ensuremath{\approx}}
+\DeclareUnicodeCharacter{2208}{\ensuremath{\in}}
+\DeclareUnicodeCharacter{2260}{\ensuremath{\neq}}
+\DeclareUnicodeCharacter{2713}{\checkmark}
+\DeclareUnicodeCharacter{2212}{-}
+
+% —— Angle brackets for LPCs ——
+\newcommand{\llangle}{\langle\!\langle}
+\newcommand{\rrangle}{\rangle\!\rangle}
+\DeclareUnicodeCharacter{27EA}{\ensuremath{\llangle}}
+\DeclareUnicodeCharacter{27EB}{\ensuremath{\rrangle}}
+
+% —— Custom commands for frequent notation ——
+\newcommand{\Rfr}[2]{\ensuremath{\mathcal{R}(#1, #2)}}
+\newcommand{\LPC}[1]{\ensuremath{\llangle#1\rrangle}}
+
+% —— Document metadata ——
+\title{Abstract%
+}
+\author{Florin Cojocariu} 
+\date{}
+
+\begin{document}
+\begin{center}
+\vspace*{0.5cm}
+{\large UNIVERSITATEA DIN BUCUREȘTI}\\[0.3em]
+{\large FACULTATEA DE FILOSOFIE}
+
+\vfill
+
+{\large\bfseries Lucrare de disertație}
+
+\vspace{2em}
+
+{\LARGE\bfseries From Local to Portable Rigidity}\\[1em]
+{\Large Demonstrative Reference and the Cognitive Ground of Rigid Designation}
+
+\vfill
+\end{center}
+\noindent
+\begin{minipage}[t]{0.45\textwidth}
+\raggedright
+\textbf{Coordonator științific:}\\
+Prof. Dr. Mircea Dumitru
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{0.45\textwidth}
+\raggedleft
+\textbf{Absolvent:}\\
+Florin Cojocariu
+\end{minipage}
+\vspace{1.5cm}
+\begin{center}
+{\large București}\\[0.3em]
+{\large 2026-05-24}
+\end{center}
+\clearpage
+\section*{Abstract}\label{abstract}
+\addcontentsline{toc}{section}{Abstract}
+
+The dissertation argues that Kripke's account of rigid designation rests on a cognitive precondition his semantics presupposes but does not describe. The semantic results of \emph{Naming and Necessity} specify what rigid designators do --- a name holds its referent fixed across every world in which that referent exists --- and Kripke argues for those results on grounds that owe nothing to the necessity-of-identity formula. What the results do not specify is the cognitive operation a speaker performs such that her words behave as the semantics describes. Kripke's causal-historical picture of baptism and transmission names this operation from the outside without describing it, and offers itself, in his own words, as a better picture rather than a theory. The dissertation describes the operation.
+
+The proposal starts from a more primitive phenomenon than Kripkean rigidity, which it calls \emph{local rigidity}. When a speaker tracks a particular through encounter and uses a word to pick it out, the word coordinates with that particular directly, without descriptive mediation; within the modal scope of such a use there is nothing for scope to interact with, and the word holds its object fixed across whatever is imagined about it. This is rigidity in the demonstrative case, constituted by the coordination rather than built into the word as a standing property. The dissertation's central claim is that Kripkean rigidity is not primitive but is local rigidity made portable: what a proper name does is carry the singular anchoring first visible in demonstrative encounter into conditions under which the encounter is no longer available.
+
+The argument runs through Russell, Kripke, and the post-Kripkean cognitive literature. Russell identified the relevant operation --- direct, non-descriptive reference under acquaintance --- and then restricted it to incorrigible sense-data on Cartesian grounds, leaving it unavailable for ordinary public names. Prising apart two properties Russell ran together, directness and infallibility, frees the operation for ordinary objects at the cost of nothing the account needs. Among more recent cognitive accounts, Evans's discriminating conception, Recanati's mental files, and Dickie's account of aboutness each capture part of the explanatory burden while leaving the operation itself undescribed. The dissertation locates that operation in object-mode coordination --- a word's grip on an experienced particular --- and treats baptism as the act that stabilizes such a grip into a public name, with testimonial transmission and revisable description carrying the name through the bearer's absence.
+
+The account is metasemantic, not a rival semantics. It does not contest Kripke's model or propose a different one; it explains how a speaker comes to be positioned such that the model's stipulation correctly describes her practice. Its scope is the single speaker's anchoring of a word to a particular --- the question of what one speaker does in getting a grip on an individual --- and not the distinct question of how a community of speakers coordinates on a shared referent, which the dissertation marks as a connected problem and reserves for separate work. Within that scope, the result is narrow and specific: not a theory of reference, but the closing of one gap in an existing theory, by describing the cognitive operation that Kripke's semantics presupposes and Russell located before placing it out of reach.
+
+\vfill
+\noindent\rule{\textwidth}{0.4pt}\\[2pt]
+{\tiny florin.cojocariu@s.unibuc.ro, \today}
+
+\end{document}
